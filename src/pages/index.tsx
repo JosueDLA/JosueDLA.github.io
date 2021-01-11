@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "../components/Layout/NavBar/navBar";
+import Layout from "../components/Layout/Layout";
 import GlobalStyle from "../globalStyles";
 
 const IndexPage = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <NavBar />
+      <Layout>Content </Layout>
     </React.Fragment>
   );
 };
