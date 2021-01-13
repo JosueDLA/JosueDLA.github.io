@@ -1,30 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import GlobalStyle from "../style/globalStyles";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../style/theme";
-import { useDarkMode } from "../hooks/useDarkMode";
-import Toggle from "../components/Layout/NavBar/Toggle";
+import { Link } from "gatsby";
 
 const IndexPage = () => {
-  const [theme, toggleTheme, componentMounted] = useDarkMode();
-
-  const themeMode = theme === "light" ? lightTheme : darkTheme;
-
-  if (!componentMounted) {
-    return <div />;
-  }
-
   return (
-    <ThemeProvider theme={themeMode}>
-      <React.Fragment>
-        <GlobalStyle />
-        <Layout>
-          Theme
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
-        </Layout>
-      </React.Fragment>
-    </ThemeProvider>
+    <React.Fragment>
+      <Layout>Welcome to my website! :D</Layout>
+      <Link to="/blog">Blog</Link>
+    </React.Fragment>
   );
 };
 
