@@ -11,7 +11,7 @@ import Toggle from "./NavBar/Toggle";
 export interface LayoutProps {}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import getInitialThemeMode from "./../initTheme";
+import getInitialThemeMode from "../initTheme";
 
 export const useDarkMode = () => {
-  const initial = getInitialThemeMode();
+  const initial = getInitialThemeMode() || "";
   const [theme, setTheme] = useState(initial);
-  const [componentMounted, setComponentMounted] = useState(false);
 
   const setMode = (mode: string) => {
     window.localStorage.setItem("theme", mode);
@@ -29,9 +28,7 @@ export const useDarkMode = () => {
       : localTheme
       ? setTheme(localTheme)
       : setMode("light");
-
-    setComponentMounted(true);
   }, []);
 
-  return [theme, toggleTheme, componentMounted] as const;
+  return [theme, toggleTheme] as const;
 };
