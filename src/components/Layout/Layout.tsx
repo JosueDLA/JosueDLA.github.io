@@ -14,10 +14,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
-  if (!componentMounted) {
-    return <div />;
-  }
-
   return (
     <ThemeProvider theme={themeMode}>
       <React.Fragment>

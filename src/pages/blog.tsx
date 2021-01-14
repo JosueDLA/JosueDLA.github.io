@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout/Layout";
 
@@ -7,7 +8,7 @@ const Blog: React.FC<BlogProps> = () => {
   return (
     <Layout>
       <h1>Blog</h1>
-      <p>Work in progress</p>
+      <Link to="/">Home</Link>
     </Layout>
   );
 };

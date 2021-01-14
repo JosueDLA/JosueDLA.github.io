@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     body{
         margin: 0;
         padding: 0;
-        background: ${({ theme }) => theme.body};
+        background-color: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
     }
 `;

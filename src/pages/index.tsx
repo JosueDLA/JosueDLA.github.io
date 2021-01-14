@@ -5,8 +5,10 @@ import { Link } from "gatsby";
 const IndexPage = () => {
   return (
     <React.Fragment>
-      <Layout>Welcome to my website! :D</Layout>
-      <Link to="/blog">Blog</Link>
+      <Layout>
+        <h1>Welcome to my website! :D</h1>
+        <Link to="/blog">Blog</Link>
+      </Layout>
     </React.Fragment>
   );
 };
