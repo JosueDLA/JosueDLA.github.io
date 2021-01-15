@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
         margin: 0;
         padding: 0;
         font-family: 'Roboto Mono', monospace;
-        background-color: ${({ theme }) => theme.body};
-        color: ${({ theme }) => theme.text};
+        background-color: ${({ theme }) => theme.bgPrimary};
+        color: ${({ theme }) => theme.textPrimary};
     }
 `;
 

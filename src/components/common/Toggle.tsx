@@ -31,7 +31,7 @@ const SwitchWrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${(t) => t.theme.accent};
+    background-color: ${(t) => t.theme.accentSecondary};
     --webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
@@ -44,14 +44,14 @@ const SwitchWrapper = styled.div`
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: ${(t) => t.theme.primary};
+    background-color: ${(t) => t.theme.accentPrimary};
     --webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
   }
 
   input:checked + .circle {
-    background-color: ${(t) => t.theme.accent};
+    background-color: ${(t) => t.theme.accentSecondary};
   }
 
   input:checked + .circle:before {
