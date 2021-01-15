@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { DefaultTheme } from "./theme";
+import scrollBar from "./scrollBar";
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap');
@@ -11,6 +12,8 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
         background-color: ${({ theme }) => theme.bgPrimary};
         color: ${({ theme }) => theme.textPrimary};
     }
+
+    ${scrollBar}
 `;
 
 export default GlobalStyle;
