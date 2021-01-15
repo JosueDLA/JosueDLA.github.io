@@ -6,7 +6,7 @@ import GlobalStyle from "./../../style/globalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import Toggle from "./NavBar/Toggle";
+import Toggle from "../common/Toggle";
 
 export interface LayoutProps {}
 
