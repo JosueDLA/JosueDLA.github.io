@@ -8,9 +8,6 @@ export interface ToggleProps {
 }
 
 const SwitchWrapper = styled.div`
-  font-weight: bold;
-  font-size: 14px;
-
   .switch {
     position: relative;
     display: inline-block;

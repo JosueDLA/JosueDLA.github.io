@@ -3,7 +3,7 @@ import { DefaultTheme } from "./theme";
 import scrollBar from "./scrollBar";
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap'); */
 
     body{
         margin: 0;
@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
         font-family: 'Roboto Mono', monospace;
         background-color: ${({ theme }) => theme.bgPrimary};
         color: ${({ theme }) => theme.textPrimary};
+    }
+
+    main{
+        
     }
 
     ${scrollBar}

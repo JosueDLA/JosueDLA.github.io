@@ -16,13 +16,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <React.Fragment>
-        <GlobalStyle />
-        <NavBar>Navbar</NavBar>
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
-        {children}
-        <Footer />
-      </React.Fragment>
+      <GlobalStyle />
+      <NavBar />
+
+      <Toggle theme={theme} toggleTheme={toggleTheme} />
+      {children}
+
+      <Footer />
     </ThemeProvider>
   );
 };
