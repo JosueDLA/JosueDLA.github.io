@@ -12,15 +12,17 @@ import {
   NavBtnLink,
 } from "./NavItems";
 
-export interface NavBarProps {}
+export interface NavBarProps {
+  toggleNav: () => void;
+}
 
-const NavBar: React.FC<NavBarProps> = () => {
+const NavBar: React.FC<NavBarProps> = ({ toggleNav }) => {
   return (
     <React.Fragment>
       <Nav>
         <NavContainer>
           <NavLogo href="/blog">JosueDLA</NavLogo>
-          <NavIcon>
+          <NavIcon onClick={toggleNav}>
             <FaBars />
           </NavIcon>
           <NavMenu>
