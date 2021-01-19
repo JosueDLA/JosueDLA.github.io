@@ -33,7 +33,6 @@ export const NavLogo = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -42,7 +41,9 @@ export const NavIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;

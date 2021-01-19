@@ -39,6 +39,8 @@ export const SideBarMenu = styled.ul`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
   text-align: center;
+  padding: 0;
+  margin: 0;
 
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
@@ -70,10 +72,10 @@ export const SideBtnWrap = styled.div`
 
 export const SideBarRoute = styled.a`
   border-radius: 50px;
-  background: ${(t) => t.theme.bgSecondary};
+  background: ${(t) => t.theme.accentSecondary};
   white-space: nowrap;
   padding: 16px 64px;
-  color: ${(t) => t.theme.textPrimary};
+  color: ${(t) => t.theme.textSecondary};
   font-size: 16px;
   outline: none;
   border: none;
@@ -84,6 +86,6 @@ export const SideBarRoute = styled.a`
   &:hover {
     transition: all 0.2 ease-in-out;
     background: ${(t) => t.theme.accentPrimary};
-    color: ${(t) => t.theme.accentPrimary};
+    color: ${(t) => t.theme.textPrimary};
   }
 `;
