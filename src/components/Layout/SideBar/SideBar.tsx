@@ -17,7 +17,7 @@ export interface SideBarProps {
 
 const SideBar: React.FC<SideBarProps> = ({ isOpen, toggleNav }) => {
   return (
-    <SideBarContainer isOpen={isOpen} onClick={toggleNav}>
+    <SideBarContainer onClick={toggleNav} isOpen={isOpen}>
       <Icon onClick={toggleNav}>
         <CloseIcon />
       </Icon>
