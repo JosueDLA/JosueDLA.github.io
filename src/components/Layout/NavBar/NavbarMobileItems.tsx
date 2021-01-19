@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 
-export interface SideBarContainerProps {
+interface ISideBarContainer {
   isOpen: boolean;
 }
 
-export const SideBarContainer = styled("aside")<SideBarContainerProps>`
+export const MobileContainer = styled("aside")<ISideBarContainer>`
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -34,11 +34,11 @@ export const Icon = styled.div`
   outline: none;
 `;
 
-export const SideBarWrapper = styled.div`
+export const MobileWrapper = styled.div`
   color: #fff;
 `;
 
-export const SideBarMenu = styled.ul`
+export const MobileMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
@@ -47,11 +47,11 @@ export const SideBarMenu = styled.ul`
   margin: 0;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(6, 80px);
   }
 `;
 
-export const SideBarLink = styled.a`
+export const MobileLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,12 +69,12 @@ export const SideBarLink = styled.a`
   }
 `;
 
-export const SideBtnWrap = styled.div`
+export const MobileBtnWrap = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const SideBarRoute = styled.a`
+export const MobileRoute = styled.a`
   border-radius: 50px;
   background: ${(t) => t.theme.accentSecondary};
   white-space: nowrap;

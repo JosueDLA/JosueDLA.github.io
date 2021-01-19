@@ -1,48 +1,22 @@
-import * as React from "react";
-import { FaBars } from "react-icons/fa";
-import Toggle from "../../common/Toggle";
-import {
-  Nav,
-  NavContainer,
-  NavLogo,
-  NavIcon,
-  NavLinks,
-  NavItem,
-  NavMenu,
-  NavBtn,
-} from "./NavItems";
+import React, { useState } from "react";
+import NavbarDesktop from "./NavbarDesktop";
+import NavbarMobile from "./NavbarMobile";
 
-export interface NavBarProps {
-  toggleNav: () => void;
-}
+export interface NavbarProps {}
 
-const NavBar: React.FC<NavBarProps> = ({ toggleNav }) => {
+const Navbar: React.FC<NavbarProps> = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <React.Fragment>
-      <Nav>
-        <NavContainer>
-          <NavLogo href="/blog">JosueDLA</NavLogo>
-          <NavIcon onClick={toggleNav}>
-            <FaBars />
-          </NavIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks href="/about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="/contact">Contact</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="/blog">Blog</NavLinks>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <Toggle />
-          </NavBtn>
-        </NavContainer>
-      </Nav>
+      <NavbarDesktop toggleNav={toggleNav} />
+      <NavbarMobile isOpen={isOpen} toggleNav={toggleNav} />
     </React.Fragment>
   );
 };
 
-export default NavBar;
+export default Navbar;
