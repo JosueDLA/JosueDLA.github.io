@@ -1,11 +1,6 @@
-import React from "react";
-import { func, string } from "prop-types";
+import React, { useContext } from "react";
 import styled from "styled-components";
-
-export interface ToggleProps {
-  toggleTheme: () => void;
-  theme: string;
-}
+import ThemeToggleContext from "./ThemeContext";
 
 const SwitchWrapper = styled.div`
   .switch {
@@ -59,8 +54,8 @@ const SwitchWrapper = styled.div`
   }
 `;
 
-const Toggle: React.FC<ToggleProps> = (props) => {
-  const { theme, toggleTheme } = props;
+const Toggle: React.FC = () => {
+  const { theme, toggleTheme } = useContext(ThemeToggleContext);
 
   return (
     <SwitchWrapper>
@@ -75,11 +70,6 @@ const Toggle: React.FC<ToggleProps> = (props) => {
       </label>
     </SwitchWrapper>
   );
-};
-
-Toggle.propTypes = {
-  toggleTheme: func.isRequired,
-  theme: string.isRequired,
 };
 
 export default Toggle;

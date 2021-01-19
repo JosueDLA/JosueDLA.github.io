@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FaBars } from "react-icons/fa";
+import Toggle from "../../common/Toggle";
 import {
   Nav,
   NavContainer,
@@ -9,7 +10,6 @@ import {
   NavItem,
   NavMenu,
   NavBtn,
-  NavBtnLink,
 } from "./NavItems";
 
 export interface NavBarProps {
@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav }) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink>Theme</NavBtnLink>
+            <Toggle />
           </NavBtn>
         </NavContainer>
       </Nav>

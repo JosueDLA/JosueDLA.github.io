@@ -6,8 +6,8 @@ import GlobalStyle from "./../../style/globalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import Toggle from "../common/Toggle";
 import SideBar from "./SideBar/SideBar";
+import ThemeToggleContext from "../common/ThemeContext";
 
 export interface LayoutProps {}
 
@@ -24,10 +24,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
-      <NavBar toggleNav={toggleNav} />
-      <SideBar isOpen={isOpen} toggleNav={toggleNav} />
 
-      <Toggle theme={theme} toggleTheme={toggleTheme} />
+      <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
+        <NavBar toggleNav={toggleNav} />
+        <SideBar isOpen={isOpen} toggleNav={toggleNav} />
+      </ThemeToggleContext.Provider>
+
       {children}
 
       <Footer />
