@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import ThemeContext from "../common/ThemeContext";
-import Navbar from "./NavBar/Navbar";
+import Navbar from "./Navbar/NavBar";
 
 export interface LayoutProps {}
 

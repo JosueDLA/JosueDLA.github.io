@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  background-color: ${(t) => t.theme.bgSecondary};
+  background: ${(t) => t.theme.bgSecondary};
   height: 3.5rem;
   margin-top: -3.5rem;
   display: flex;
