@@ -5,14 +5,15 @@ import {
   AboutContainer,
   ImgContainer,
   AboutP,
+  AboutBg,
 } from "./AboutItems";
 
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
   return (
-    <React.Fragment>
-      <AboutWrapper id="about">
+    <AboutWrapper id="about">
+      <AboutBg>
         <Tittle text="About" />
         <AboutContainer className="container">
           <ImgContainer></ImgContainer>
@@ -31,12 +32,8 @@ const About: React.FC<AboutProps> = () => {
             nobis corrupti quas beatae.
           </AboutP>
         </AboutContainer>
-      </AboutWrapper>
-      <br />
-      <br />
-      <br />
-      <br />
-    </React.Fragment>
+      </AboutBg>
+    </AboutWrapper>
   );
 };
 

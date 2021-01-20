@@ -1,9 +1,21 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: -2rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+`;
+
+export const AboutBg = styled.div`
   background: ${(t) => t.theme.bgSecondary};
   padding: 4rem 0;
-  text-align: center;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
 
   @media screen and (max-width: 768px) {
