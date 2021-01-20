@@ -1,10 +1,11 @@
 export const lightTheme = {
   bgPrimary: "#fcfcfc",
-  bgSecondary: "#e3daf7",
+  bgSecondary: "#BBB7ED",
   textPrimary: "#0c0c0c",
-  textSecondary: "#5180d8",
-  accentPrimary: "#6D83F2",
+  textSecondary: "#0c0909",
+  accentPrimary: "#6880f6",
   accentSecondary: "#96a4e7",
+  videobg: "#6D83F2",
 };
 
 export const darkTheme = {
@@ -14,6 +15,7 @@ export const darkTheme = {
   textSecondary: "#f8f8f8",
   accentPrimary: "#6D83F2",
   accentSecondary: "#303030",
+  videobg: "#1f2449",
 };
 
 export interface DefaultTheme {

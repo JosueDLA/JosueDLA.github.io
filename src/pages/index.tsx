@@ -1,13 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import { Link } from "gatsby";
+import Home from "../components/Home/Home";
 
 const IndexPage = () => {
   return (
     <React.Fragment>
       <Layout>
-        <h1>Welcome to my website! :D</h1>
-        <Link to="/blog">Blog2</Link>
+        <Home />
       </Layout>
     </React.Fragment>
   );

@@ -16,6 +16,11 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap"
+          rel="stylesheet"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
