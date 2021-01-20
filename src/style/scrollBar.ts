@@ -9,9 +9,8 @@ const scrollBar = css`
     background: ${(t) => t.theme.bgSecondary};
   }
 
-  body::-webkit-scrollbar-thumb{
-    background: ${(t) => t.theme.accentPrimary}
-  }
+  body::-webkit-scrollbar-thumb {
+    background: ${(t) => t.theme.accentPrimary};
   }
 `;
 
