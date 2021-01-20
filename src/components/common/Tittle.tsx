@@ -7,8 +7,8 @@ export const Header = styled.header`
   text-align: center;
   border-top: solid 2px ${(t) => t.theme.textPrimary};
   top: 1em;
-  margin-top: 3em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   background: inherit;
 
   .major {

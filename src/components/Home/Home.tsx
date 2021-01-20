@@ -1,6 +1,5 @@
 import React from "react";
 import video from "../../videos/video.mp4";
-
 import {
   HomeContainer,
   HomeBg,

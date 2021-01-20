@@ -13,7 +13,14 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
   .container{
     margin: 0 auto;
-    width: 80%;
+    width: 75%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container{
+      margin: 0 auto;
+      width: 85%;
+    }
   }
 
   @media screen and (max-width: 480px) {
