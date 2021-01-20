@@ -8,10 +8,11 @@ export const Header = styled.header`
   border-top: solid 2px ${(t) => t.theme.textPrimary};
   top: 1em;
   margin-top: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+  background: inherit;
 
   .major {
-    background: ${(t) => t.theme.bgPrimary};
+    background: inherit;
     font-size: 2rem;
     position: relative;
     top: -0.65em;
