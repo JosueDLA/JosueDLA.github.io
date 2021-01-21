@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
+  background: ${(t) => t.theme.bgPrimary};
   height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   margin-top: -2rem;
+  flex-direction: column;
 
   @media screen and (max-width: 768px) {
     margin: 0;

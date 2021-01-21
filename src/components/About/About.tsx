@@ -1,4 +1,5 @@
 import React from "react";
+import { Hr } from "../common/Hr";
 import Tittle from "./../common/Tittle";
 import {
   AboutWrapper,
@@ -13,8 +14,8 @@ export interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   return (
     <AboutWrapper id="about">
+      <Tittle className="container" text="About" />
       <AboutBg>
-        <Tittle text="About" />
         <AboutContainer className="container">
           <ImgContainer></ImgContainer>
           <AboutP>
@@ -33,6 +34,7 @@ const About: React.FC<AboutProps> = () => {
           </AboutP>
         </AboutContainer>
       </AboutBg>
+      <Hr className="container" />
     </AboutWrapper>
   );
 };
