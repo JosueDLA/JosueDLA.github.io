@@ -1,10 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-export interface ImageProps {}
+export interface ImageProps {
+  src: string;
+}
 
-const Image: React.FC<ImageProps> = () => {
+const Image: React.FC<ImageProps> = ({ src, ...rest }) => {
   const data = useStaticQuery(graphql`
     query Images {
       image: file(relativePath: { eq: "skills/code.png" }) {
@@ -21,13 +24,11 @@ const Image: React.FC<ImageProps> = () => {
     }
   `);
 
-  console.log(data);
+  return <Img fluid={data.image.childImageSharp.fluid} {...rest} />;
+};
 
-  return (
-    <React.Fragment>
-      <Img fluid={data.image.childImageSharp.fluid} />
-    </React.Fragment>
-  );
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
 };
 
 export default Image;

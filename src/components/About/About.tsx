@@ -1,6 +1,7 @@
 import React from "react";
 import { Hr } from "../common/Hr";
 import Tittle from "./../common/Tittle";
+import Image from "../../components/common/Image";
 import {
   AboutWrapper,
   AboutContainer,
@@ -17,7 +18,9 @@ const About: React.FC<AboutProps> = () => {
       <Tittle className="container" text="About" />
       <AboutBg>
         <AboutContainer className="container">
-          <ImgContainer></ImgContainer>
+          <ImgContainer>
+            <Image src="/skills/code.png" alt="code" />
+          </ImgContainer>
           <AboutP>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
             numquam officiis magni atque voluptas quo quibusdam mollitia error
