@@ -1,14 +1,22 @@
 import styled from "styled-components";
 
+export const CardRow = styled.div`
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  place-items: center;
+  padding-bottom: 4rem;
+  overflow-x: hidden;
+`;
+
 export const Card = styled.div`
   background: ${(t) => t.theme.bgSecondary};
-  max-width: 360px;
+  max-width: 22rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-radius: 2rem;
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
-  margin: 2rem 0;
 `;
 
 export const Banner = styled.div`
