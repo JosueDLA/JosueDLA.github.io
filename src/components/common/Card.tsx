@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const CardRow = styled.div`
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-  place-items: center;
-  padding-bottom: 4rem;
-  overflow-x: hidden;
+  box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const Card = styled.div`
@@ -17,6 +17,11 @@ export const Card = styled.div`
   overflow: hidden;
   border-radius: 2rem;
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  justify-content: space-evenly;
+
+  @media (max-width: 1495px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Banner = styled.div`
@@ -30,7 +35,7 @@ export const Banner = styled.div`
     background-color: black;
     width: 10rem;
     height: 10rem;
-    box-shadow: 0 0.5rem 1rem rgba(black, 0.3);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
