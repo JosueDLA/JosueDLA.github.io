@@ -6,8 +6,10 @@ import {
   CloseIcon,
   MobileWrapper,
   MobileMenu,
-  MobileLink,
+  MobileLinkS,
+  MobileLinkR,
   MobileBtnWrap,
+  MovileItem,
 } from "./NavbarMobileItems";
 
 export interface NavbarMobileProps {
@@ -23,18 +25,33 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({ isOpen, toggleNav }) => {
       </Icon>
       <MobileWrapper>
         <MobileMenu>
-          <MobileLink>
-            <a href="#">About</a>
-          </MobileLink>
-          <MobileLink>
-            <a href="#">Contact</a>
-          </MobileLink>
-          <MobileLink>
-            <a href="#">Blog</a>
-          </MobileLink>
-          <MobileLink>
-            <a href="#">Theme</a>
-          </MobileLink>
+          <MovileItem>
+            <MobileLinkS
+              to="about"
+              smooth={true}
+              duration={500}
+              hashSpy
+              onClick={toggleNav}
+            >
+              About
+            </MobileLinkS>
+          </MovileItem>
+          <MovileItem>
+            <MobileLinkS
+              to="contact"
+              smooth={true}
+              duration={500}
+              hashSpy
+              onClick={toggleNav}
+            >
+              Contact
+            </MobileLinkS>
+          </MovileItem>
+          <MovileItem>
+            <MobileLinkR to="/blog" onClick={toggleNav}>
+              Blog
+            </MobileLinkR>
+          </MovileItem>
         </MobileMenu>
         <MobileBtnWrap>
           <Toggle />

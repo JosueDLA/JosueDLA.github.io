@@ -6,7 +6,8 @@ import {
   NavContainer,
   NavLogo,
   NavIcon,
-  NavLinks,
+  NavLinkS,
+  NavLinkR,
   NavItem,
   NavMenu,
   NavBtn,
@@ -21,19 +22,23 @@ const NavbarDesktop: React.FC<NavbarDesktopProps> = ({ toggleNav }) => {
     <React.Fragment>
       <Nav>
         <NavContainer>
-          <NavLogo href="/blog">JosueDLA</NavLogo>
+          <NavLogo to="/">JosueDLA</NavLogo>
           <NavIcon onClick={toggleNav}>
             <FaBars />
           </NavIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks href="/about">About</NavLinks>
+              <NavLinkS to="about" smooth={true} duration={500} hashSpy>
+                About
+              </NavLinkS>
             </NavItem>
             <NavItem>
-              <NavLinks href="/contact">Contact</NavLinks>
+              <NavLinkS to="contact" smooth={true} duration={500} hashSpy>
+                Contact
+              </NavLinkS>
             </NavItem>
             <NavItem>
-              <NavLinks href="/blog">Blog</NavLinks>
+              <NavLinkR to="/blog">Blog</NavLinkR>
             </NavItem>
           </NavMenu>
           <NavBtn>

@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "gatsby";
 import { FaTimes } from "react-icons/fa";
 
 interface ISideBarContainer {
@@ -51,7 +53,11 @@ export const MobileMenu = styled.ul`
   }
 `;
 
-export const MobileLink = styled.li`
+export const MovileItem = styled.li`
+  height: 3.5rem;
+`;
+
+const LinkStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +73,14 @@ export const MobileLink = styled.li`
     color: ${(t) => t.theme.accentPrimary};
     transition: 0.2s ease-in-out;
   }
+`;
+
+export const MobileLinkS = styled(LinkS)`
+  ${LinkStyle}
+`;
+
+export const MobileLinkR = styled(LinkR)`
+  ${LinkStyle}
 `;
 
 export const MobileBtnWrap = styled.div`
