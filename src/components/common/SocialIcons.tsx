@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const SocialIconsContainer = styled.div`
   display: flex;
@@ -21,8 +22,11 @@ const SocialIconsList = styled.div`
   svg {
     color: #fff;
     position: absolute;
-    top: 0.95em;
-    left: 0.95em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     transition: all 265ms ease-out;
   }
 
@@ -33,7 +37,7 @@ const SocialIconsList = styled.div`
   a:before {
     transform: scale(1);
     -ms-transform: scale(1);
-    --webkit-transform: scale(1);
+    -webkit-transform: scale(1);
     width: 45px;
     height: 45px;
     content: " ";
@@ -50,10 +54,10 @@ const SocialIconsList = styled.div`
   }
 
   a:hover svg {
-    transform: scale(2.2);
-    -ms-transform: scale(2.2);
-    -webkit-transform: scale(2.2);
-    color: ${(t) => t.theme.textPrimary};
+    transform: translate(-50%, -50%) scale(2.2);
+    -ms-transform: translate(-50%, -50%) scale(2.2);
+    -webkit-transform: translate(-50%, -50%) scale(2.2);
+    color: #fff;
     background: -webkit-linear-gradient(45deg, #fff, #000);
     background-clip: text;
     -webkit-background-clip: text;
@@ -80,6 +84,11 @@ export const SocialIconsItem: React.FC<SocialIconsItemProps> = ({
       </a>
     </li>
   );
+};
+
+SocialIconsItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  target: PropTypes.string,
 };
 
 // Social Icons Container
