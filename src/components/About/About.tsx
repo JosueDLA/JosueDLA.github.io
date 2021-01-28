@@ -1,7 +1,10 @@
 import React from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 import { Hr } from "../common/Hr";
-import Tittle from "./../common/Tittle";
+import Tittle from "../common/Tittle";
 import Image from "../../components/common/Image";
+import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
 import {
   AboutWrapper,
   AboutContainer,
@@ -36,6 +39,18 @@ const About: React.FC<AboutProps> = () => {
             nobis corrupti quas beatae.
           </AboutP>
         </AboutContainer>
+
+        <SocialIcons>
+          <SocialIconsItem to="#" target="_blank">
+            <GrMail />
+          </SocialIconsItem>
+          <SocialIconsItem to="#" target="_blank">
+            <FaGithub />
+          </SocialIconsItem>
+          <SocialIconsItem to="#" target="_blank">
+            <FaLinkedinIn />
+          </SocialIconsItem>
+        </SocialIcons>
       </AboutBg>
       <Hr className="container" />
     </AboutWrapper>
