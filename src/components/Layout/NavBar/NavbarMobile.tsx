@@ -23,10 +23,18 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({ isOpen, toggleNav }) => {
       </Icon>
       <MobileWrapper>
         <MobileMenu>
-          <MobileLink href="#">About</MobileLink>
-          <MobileLink href="#">Contact</MobileLink>
-          <MobileLink href="#">Blog</MobileLink>
-          <MobileLink href="#">Theme</MobileLink>
+          <MobileLink>
+            <a href="#">About</a>
+          </MobileLink>
+          <MobileLink>
+            <a href="#">Contact</a>
+          </MobileLink>
+          <MobileLink>
+            <a href="#">Blog</a>
+          </MobileLink>
+          <MobileLink>
+            <a href="#">Theme</a>
+          </MobileLink>
         </MobileMenu>
         <MobileBtnWrap>
           <Toggle />

@@ -51,7 +51,7 @@ export const MobileMenu = styled.ul`
   }
 `;
 
-export const MobileLink = styled.a`
+export const MobileLink = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
