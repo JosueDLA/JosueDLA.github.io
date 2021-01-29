@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Hr } from "../common/Hr";
-import Tittle from "../common/Tittle";
+import Title from "../common/Title";
 import Image from "../../components/common/Image";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
 import {
@@ -18,7 +18,7 @@ export interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   return (
     <AboutWrapper id="about">
-      <Tittle className="container" text="About" />
+      <Title className="container" text="About" />
       <AboutBg>
         <AboutContainer className="container">
           <ImgContainer>

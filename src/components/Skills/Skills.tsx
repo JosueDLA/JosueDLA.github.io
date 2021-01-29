@@ -1,5 +1,5 @@
 import React from "react";
-import Tittle from "../common/Tittle";
+import Title from "../common/Title";
 import SkillsCards from "./SkillsCards";
 import { SkillsWrapper } from "./SkillsItems";
 
@@ -8,7 +8,7 @@ export interface SkillsProps {}
 const Skills: React.FC<SkillsProps> = () => {
   return (
     <SkillsWrapper className="container">
-      <Tittle text="Text" />
+      <Title text="Text" />
       <SkillsCards />
     </SkillsWrapper>
   );

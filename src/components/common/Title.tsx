@@ -29,12 +29,12 @@ export const Header = styled.header`
   }
 `;
 
-export interface TittleProps {
+export interface TitleProps {
   text: string;
   className?: string;
 }
 
-const Tittle: React.FC<TittleProps> = ({ text, className }) => {
+const Title: React.FC<TitleProps> = ({ text, className }) => {
   return (
     <Header className={className}>
       <h2 className="major">{text}</h2>
@@ -42,9 +42,9 @@ const Tittle: React.FC<TittleProps> = ({ text, className }) => {
   );
 };
 
-Tittle.propTypes = {
+Title.propTypes = {
   text: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
-export default Tittle;
+export default Title;

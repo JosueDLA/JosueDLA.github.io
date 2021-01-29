@@ -7,7 +7,7 @@ const SocialIconsContainer = styled.div`
   align-items: center;
 `;
 
-const SocialIconsList = styled.div`
+const SocialIconsList = styled.ul`
   padding: 0;
   list-style: none;
   margin: auto;
@@ -99,9 +99,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ children }) => {
 
   return (
     <SocialIconsContainer>
-      <SocialIconsList>
-        <ul>{children}</ul>
-      </SocialIconsList>
+      <SocialIconsList>{children}</SocialIconsList>
     </SocialIconsContainer>
   );
 };
