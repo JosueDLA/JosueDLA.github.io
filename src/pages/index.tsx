@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import Home from "../components/Home/Home";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
+import Projects from "../components/Projects/Projects";
 
 const IndexPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
         <Home />
         <About />
         <Skills />
+        <Projects />
       </Layout>
     </React.Fragment>
   );

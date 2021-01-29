@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AboutWrapper = styled.div`
+export const AboutWrapper = styled.section`
   background: ${(t) => t.theme.bgPrimary};
   height: 100%;
   min-height: 100vh;
@@ -8,6 +8,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
+  padding-top: 0;
   margin-top: -2rem;
   flex-direction: column;
 

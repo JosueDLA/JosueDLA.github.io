@@ -45,7 +45,7 @@ export const Banner = styled.div`
   }
 `;
 
-export const CardTittle = styled.h2`
+export const CardTitle = styled.h2`
   margin-top: 0;
   text-align: center;
 `;

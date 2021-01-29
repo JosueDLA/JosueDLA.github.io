@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const SkillsWrapper = styled.div`
+export const SkillsWrapper = styled.section`
   background: ${(t) => t.theme.bgPrimary};
-  margin-bottom: 4rem;
+  height: 100%;
+  min-height: 100vh;
 `;

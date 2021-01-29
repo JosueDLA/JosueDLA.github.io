@@ -13,7 +13,7 @@ export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
   return (
-    <HomeContainer id="Home">
+    <HomeContainer id="home">
       <HomeBg>
         <VideoBg autoPlay loop muted src={video} />
       </HomeBg>

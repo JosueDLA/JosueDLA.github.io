@@ -7,7 +7,7 @@ export interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = () => {
   return (
-    <SkillsWrapper className="container">
+    <SkillsWrapper id="skills" className="container">
       <Title text="Text" />
       <SkillsCards />
     </SkillsWrapper>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Banner, Card, CardTittle, CardDesc, CardRow } from "../common/Card";
+import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
 
 export interface SkillsCardsProps {}
 
@@ -10,7 +10,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
         <Banner>
           <svg viewBox="0 0 100 100"></svg>
         </Banner>
-        <CardTittle>Tittle</CardTittle>
+        <CardTitle>Title</CardTitle>
         <CardDesc>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
           pariatur error fugiat dolorum totam saepe sint soluta nam,
@@ -22,7 +22,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
         <Banner>
           <svg viewBox="0 0 100 100"></svg>
         </Banner>
-        <CardTittle>Tittle</CardTittle>
+        <CardTitle>Title</CardTitle>
         <CardDesc>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
           pariatur error fugiat dolorum totam saepe sint soluta nam,
@@ -34,7 +34,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
         <Banner>
           <svg viewBox="0 0 100 100"></svg>
         </Banner>
-        <CardTittle>Tittle 3</CardTittle>
+        <CardTitle>Title 3</CardTitle>
         <CardDesc>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
           pariatur error fugiat dolorum totam saepe sint soluta nam,

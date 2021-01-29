@@ -3,28 +3,32 @@ import { DefaultTheme } from "./theme";
 import scrollBar from "./scrollBar";
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
-  body{
+  body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     background-color: ${({ theme }) => theme.bgPrimary};
     color: ${({ theme }) => theme.textPrimary};
   }
 
-  .container{
+  section {
+    padding-top: 3.5rem;
+  }
+
+  .container {
     margin: 0 auto;
     width: 75%;
   }
 
   @media screen and (max-width: 768px) {
-    .container{
+    .container {
       margin: 0 auto;
       width: 85%;
     }
   }
 
   @media screen and (max-width: 480px) {
-    .container{
+    .container {
       margin: 0 auto;
       width: 95%;
     }
