@@ -11,7 +11,7 @@ export const CardRow = styled.div`
 
 export const Card = styled.div`
   background: ${(t) => t.theme.bgSecondary};
-  max-width: 22rem;
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;

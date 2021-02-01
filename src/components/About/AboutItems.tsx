@@ -44,7 +44,7 @@ export const ImgContainer = styled.div`
   border-radius: 50%;
   border: 5px solid #fff;
   overflow: hidden;
-  background-color: #000;
+  background: #000;
   margin-right: 3rem;
   margin: 0;
   flex: 30%;

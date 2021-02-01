@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
 
 export interface SkillsCardsProps {}

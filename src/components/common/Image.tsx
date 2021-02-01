@@ -5,17 +5,16 @@ import Img from "gatsby-image";
 
 export interface ImageProps {
   src: string;
+  className?: string;
+  alt?: string;
 }
 
 const Image: React.FC<ImageProps> = ({ src, ...rest }) => {
   const data = useStaticQuery(graphql`
     query Images {
-      image: file(relativePath: { eq: "skills/code.png" }) {
+      image: file(relativePath: { eq: "code-bg.jpg" }) {
         id
         childImageSharp {
-          fixed(width: 500) {
-            ...GatsbyImageSharpFixed
-          }
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
           }
@@ -29,6 +28,8 @@ const Image: React.FC<ImageProps> = ({ src, ...rest }) => {
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default Image;
