@@ -6,7 +6,7 @@ export const HomeContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 100vh;
+  height: calc(100vh - 3.5rem);
   position: relative;
   z-index: 1;
 `;

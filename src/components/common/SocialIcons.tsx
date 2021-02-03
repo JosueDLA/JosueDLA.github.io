@@ -95,8 +95,6 @@ SocialIconsItem.propTypes = {
 export interface SocialIconsProps {}
 
 const SocialIcons: React.FC<SocialIconsProps> = ({ children }) => {
-  console.log(children);
-
   return (
     <SocialIconsContainer>
       <SocialIconsList>{children}</SocialIconsList>

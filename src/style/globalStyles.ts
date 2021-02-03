@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     color: ${({ theme }) => theme.textPrimary};
   }
 
+  html {
+    overflow-y: scroll;
+  }
+
   section {
     padding-top: 3.5rem;
   }

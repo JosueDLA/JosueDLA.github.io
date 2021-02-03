@@ -1,10 +1,11 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaAngleDown } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Hr } from "../common/Hr";
 import Title from "../common/Title";
 import Image from "../../components/common/Image";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
+import ScrollButton from "../common/ScrollButton";
 import {
   AboutWrapper,
   AboutContainer,
@@ -51,6 +52,9 @@ const About: React.FC<AboutProps> = () => {
             <FaLinkedinIn />
           </SocialIconsItem>
         </SocialIcons>
+        <ScrollButton to="skills">
+          <FaAngleDown />
+        </ScrollButton>
       </AboutBg>
       <Hr className="container" />
     </AboutWrapper>

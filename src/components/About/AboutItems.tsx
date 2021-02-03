@@ -9,7 +9,6 @@ export const AboutWrapper = styled.section`
   text-align: center;
   justify-content: center;
   padding-top: 0;
-  margin-top: -2rem;
   flex-direction: column;
 
   @media screen and (max-width: 960px) {

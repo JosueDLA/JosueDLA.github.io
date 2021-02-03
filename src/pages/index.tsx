@@ -7,14 +7,12 @@ import Projects from "../components/Projects/Projects";
 
 const IndexPage = () => {
   return (
-    <React.Fragment>
-      <Layout>
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-      </Layout>
-    </React.Fragment>
+    <Layout>
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+    </Layout>
   );
 };
 
