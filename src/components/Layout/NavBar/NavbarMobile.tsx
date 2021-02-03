@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Toggle from "../../common/Toggle";
 import {
   MobileContainer,
@@ -6,53 +6,32 @@ import {
   CloseIcon,
   MobileWrapper,
   MobileMenu,
-  MobileLinkS,
-  MobileLinkR,
+  MobileItem,
   MobileBtnWrap,
-  MovileItem,
 } from "./NavbarMobileItems";
 
 export interface NavbarMobileProps {
   isOpen: boolean;
   toggleNav: () => void;
+  NavLinks: Array<JSX.Element>;
 }
 
-const NavbarMobile: React.FC<NavbarMobileProps> = ({ isOpen, toggleNav }) => {
+const NavbarMobile: React.FC<NavbarMobileProps> = ({
+  isOpen,
+  toggleNav,
+  NavLinks,
+}) => {
+  const navLinks = NavLinks.map((item) => (
+    <MobileItem>{<item.type {...item.props} onClick={toggleNav} />}</MobileItem>
+  ));
+
   return (
     <MobileContainer isOpen={isOpen} onClick={toggleNav}>
       <Icon onClick={toggleNav}>
         <CloseIcon />
       </Icon>
       <MobileWrapper>
-        <MobileMenu>
-          <MovileItem>
-            <MobileLinkS
-              to="about"
-              smooth={true}
-              duration={500}
-              hashSpy
-              onClick={toggleNav}
-            >
-              About
-            </MobileLinkS>
-          </MovileItem>
-          <MovileItem>
-            <MobileLinkS
-              to="contact"
-              smooth={true}
-              duration={500}
-              hashSpy
-              onClick={toggleNav}
-            >
-              Contact
-            </MobileLinkS>
-          </MovileItem>
-          <MovileItem>
-            <MobileLinkR to="/blog" onClick={toggleNav}>
-              Blog
-            </MobileLinkR>
-          </MovileItem>
-        </MobileMenu>
+        <MobileMenu>{navLinks}</MobileMenu>
         <MobileBtnWrap>
           <Toggle />
         </MobileBtnWrap>

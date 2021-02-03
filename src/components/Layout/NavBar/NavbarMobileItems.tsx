@@ -1,7 +1,6 @@
-import styled, { css } from "styled-components";
-import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "gatsby";
+import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
+import { NavLinkR, NavLinkS } from "./NavbarDesktopItems";
 
 interface ISideBarContainer {
   isOpen: boolean;
@@ -53,34 +52,26 @@ export const MobileMenu = styled.ul`
   }
 `;
 
-export const MovileItem = styled.li`
+export const MobileItem = styled.li`
   height: 3.5rem;
-`;
 
-const LinkStyle = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  color: ${(t) => t.theme.textPrimary};
-  cursor: pointer;
-
-  &:hover {
-    color: ${(t) => t.theme.accentPrimary};
+  ${NavLinkS}, ${NavLinkR} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
     transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: ${(t) => t.theme.textPrimary};
+    cursor: pointer;
+
+    &:hover {
+      color: ${(t) => t.theme.accentPrimary};
+      transition: 0.2s ease-in-out;
+    }
   }
-`;
-
-export const MobileLinkS = styled(LinkS)`
-  ${LinkStyle}
-`;
-
-export const MobileLinkR = styled(LinkR)`
-  ${LinkStyle}
 `;
 
 export const MobileBtnWrap = styled.div`

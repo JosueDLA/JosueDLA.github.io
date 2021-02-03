@@ -1,52 +1,42 @@
-import * as React from "react";
+import React from "react";
 import { FaBars } from "react-icons/fa";
 import Toggle from "../../common/Toggle";
 import {
   Nav,
   NavContainer,
-  NavLogo,
   NavIcon,
-  NavLinkS,
-  NavLinkR,
-  NavItem,
   NavMenu,
   NavBtn,
+  NavLogo,
+  NavItem,
 } from "./NavbarDesktopItems";
 
 export interface NavbarDesktopProps {
   toggleNav: () => void;
+  LogoLink: JSX.Element;
+  NavLinks: Array<JSX.Element>;
 }
 
-const NavbarDesktop: React.FC<NavbarDesktopProps> = ({ toggleNav }) => {
+const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
+  toggleNav,
+  LogoLink,
+  NavLinks,
+}) => {
+  const navLinks = NavLinks.map((item) => <NavItem>{item}</NavItem>);
+
   return (
-    <React.Fragment>
-      <Nav>
-        <NavContainer>
-          <NavLogo to="/">JosueDLA</NavLogo>
-          <NavIcon onClick={toggleNav}>
-            <FaBars />
-          </NavIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinkS to="about" smooth={true} duration={500} hashSpy>
-                About
-              </NavLinkS>
-            </NavItem>
-            <NavItem>
-              <NavLinkS to="contact" smooth={true} duration={500} hashSpy>
-                Contact
-              </NavLinkS>
-            </NavItem>
-            <NavItem>
-              <NavLinkR to="/blog">Blog</NavLinkR>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <Toggle />
-          </NavBtn>
-        </NavContainer>
-      </Nav>
-    </React.Fragment>
+    <Nav>
+      <NavContainer>
+        <NavLogo>{LogoLink}</NavLogo>
+        <NavIcon onClick={toggleNav}>
+          <FaBars />
+        </NavIcon>
+        <NavMenu>{navLinks}</NavMenu>
+        <NavBtn>
+          <Toggle />
+        </NavBtn>
+      </NavContainer>
+    </Nav>
   );
 };
 

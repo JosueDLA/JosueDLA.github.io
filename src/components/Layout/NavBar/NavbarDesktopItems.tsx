@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "gatsby";
 
@@ -13,6 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  margin-bottom: 3.5rem;
 
   @media screen and (max-width: 960px) {
     transition: 0.8 all ease;
@@ -29,14 +30,24 @@ export const NavContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkR)`
-  color: ${(t) => t.theme.textPrimary};
-  justify-self: flex-start;
-  cursor: pointer;
+export const NavLinkS = styled(LinkS)``;
+
+export const NavLinkR = styled(LinkR)``;
+
+export const NavLogo = styled.div`
   display: flex;
+  justify-self: flex-start;
   align-items: center;
-  font-weight: bold;
-  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 3.5rem;
+
+  ${NavLinkS}, ${NavLinkR} {
+    color: ${(t) => t.theme.textPrimary};
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+  }
 `;
 
 export const NavIcon = styled.div`
@@ -61,7 +72,8 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22;
+  padding: 0;
+  margin-left: -22px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -70,28 +82,20 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 3.5rem;
-`;
 
-const LinkStyle = css`
-  color: ${(t) => t.theme.textPrimary};
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
+  ${NavLinkS}, ${NavLinkR} {
+    color: ${(t) => t.theme.textPrimary};
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid ${(t) => t.theme.accentPrimary};
+    &.active {
+      border-bottom: 3px solid ${(t) => t.theme.accentPrimary};
+    }
   }
-`;
-
-export const NavLinkS = styled(LinkS)`
-  ${LinkStyle}
-`;
-
-export const NavLinkR = styled(LinkR)`
-  ${LinkStyle}
 `;
 
 export const NavBtn = styled.div`
