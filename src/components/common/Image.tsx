@@ -1,33 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
 export interface ImageProps {
-  src: string;
+  hook: () => any;
   className?: string;
   alt?: string;
 }
 
-const Image: React.FC<ImageProps> = ({ src, ...rest }) => {
-  const data = useStaticQuery(graphql`
-    query Images {
-      image: file(relativePath: { eq: "code-bg.jpg" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+const Image: React.FC<ImageProps> = ({ hook, ...rest }) => {
+  const data = hook();
 
   return <Img fluid={data.image.childImageSharp.fluid} {...rest} />;
 };
 
 Image.propTypes = {
-  src: PropTypes.string.isRequired,
+  hook: PropTypes.func.isRequired,
   className: PropTypes.string,
   alt: PropTypes.string,
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../common/Image";
+import { useProfilePicture } from "./../../hooks/useImages";
 import {
   PostCard,
   PostCardWrapper,
@@ -16,7 +17,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
   return (
     <PostCardWrapper>
       <PostCard>
-        <Image src="/skills/code.png" className="post-img" alt="code" />
+        <Image hook={useProfilePicture} className="post-img" alt="code" />
         <PostContent>
           <PostTitle>HTML Syntax</PostTitle>
           <PostDescription>

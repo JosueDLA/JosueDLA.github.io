@@ -6,6 +6,7 @@ import Title from "../common/Title";
 import Image from "../../components/common/Image";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
 import ScrollButton from "../common/ScrollButton";
+import { useProfilePicture } from "./../../hooks/useImages";
 import {
   AboutWrapper,
   AboutContainer,
@@ -23,7 +24,7 @@ const About: React.FC<AboutProps> = () => {
       <AboutBg>
         <AboutContainer className="container">
           <ImgContainer>
-            <Image src="/skills/code.png" alt="code" />
+            <Image hook={useProfilePicture} alt="code" />
           </ImgContainer>
           <AboutP>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
