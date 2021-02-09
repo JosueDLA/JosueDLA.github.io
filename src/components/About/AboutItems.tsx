@@ -11,7 +11,14 @@ export const AboutWrapper = styled.section`
   padding-top: 0;
   flex-direction: column;
 
+  @media (max-width: 1495px) {
+    padding-top: 3.5rem;
+    align-items: flex-start;
+  }
+
   @media screen and (max-width: 960px) {
+    padding-top: 3.5rem;
+    align-items: flex-start;
     margin: 0;
   }
 `;

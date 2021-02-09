@@ -6,9 +6,10 @@ export const HomeContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: calc(100vh - 3.5rem);
+  height: 100vh;
   position: relative;
   z-index: 1;
+  margin-top: -3.5rem;
 `;
 
 export const HomeBg = styled.div`
