@@ -22,7 +22,7 @@ const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   LogoLink,
   NavLinks,
 }) => {
-  const navLinks = NavLinks.map((item) => <NavItem>{item}</NavItem>);
+  const navLinks = NavLinks.map((item, i) => <NavItem key={i}>{item}</NavItem>);
 
   return (
     <Nav>

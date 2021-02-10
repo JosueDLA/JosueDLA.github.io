@@ -14,6 +14,8 @@ const ScrollButtonWrapper = styled.div`
   font-size: 2.5rem;
   margin: auto;
   margin-top: 2rem;
+  text-align: center;
+  align-items: center;
 
   .scroll-icon {
     &:before {

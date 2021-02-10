@@ -1,5 +1,7 @@
 import React from "react";
 import video from "../../videos/video.mp4";
+import ScrollButton from "../common/ScrollButton";
+import { FaAngleDown } from "react-icons/fa";
 import {
   HomeContainer,
   HomeBg,
@@ -20,6 +22,9 @@ const Home: React.FC<HomeProps> = () => {
       <HomeContent>
         <HomeH1>Josué de León</HomeH1>
         <HomeP>Software Devloper</HomeP>
+        <ScrollButton to="about">
+          <FaAngleDown />
+        </ScrollButton>
       </HomeContent>
     </HomeContainer>
   );

@@ -21,8 +21,10 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
   toggleNav,
   NavLinks,
 }) => {
-  const navLinks = NavLinks.map((item) => (
-    <MobileItem>{<item.type {...item.props} onClick={toggleNav} />}</MobileItem>
+  const navLinks = NavLinks.map((item, i) => (
+    <MobileItem key={i}>
+      {<item.type {...item.props} onClick={toggleNav} />}
+    </MobileItem>
   ));
 
   return (
