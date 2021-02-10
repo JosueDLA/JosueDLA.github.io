@@ -1,3 +1,6 @@
+// @ts-ignore
+import { window } from "browser-monads";
+
 export default function getInitialThemeMode() {
   const persistedColorPreference = window.localStorage.getItem("theme");
   const hasPersistedPreference = typeof persistedColorPreference === "string";

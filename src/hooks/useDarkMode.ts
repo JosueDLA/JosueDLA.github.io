@@ -1,3 +1,5 @@
+// @ts-ignore
+import { window } from "browser-monads";
 import { useEffect, useState } from "react";
 import getInitialThemeMode from "../initTheme";
 
