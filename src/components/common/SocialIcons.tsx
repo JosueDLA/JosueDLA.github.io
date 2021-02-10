@@ -69,7 +69,9 @@ const SocialIconsList = styled.ul`
 // Social Icons Item
 export interface SocialIconsItemProps {
   to: string;
+  "aria-label": string;
   target?: string;
+  rel?: string;
 }
 
 export const SocialIconsItem: React.FC<SocialIconsItemProps> = ({
@@ -88,7 +90,9 @@ export const SocialIconsItem: React.FC<SocialIconsItemProps> = ({
 
 SocialIconsItem.propTypes = {
   to: PropTypes.string.isRequired,
+  "aria-label": PropTypes.string.isRequired,
   target: PropTypes.string,
+  rel: PropTypes.string,
 };
 
 // Social Icons Container

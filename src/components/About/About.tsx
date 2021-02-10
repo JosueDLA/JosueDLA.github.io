@@ -43,13 +43,28 @@ const About: React.FC<AboutProps> = () => {
         </AboutContainer>
 
         <SocialIcons>
-          <SocialIconsItem to="#" target="_blank">
+          <SocialIconsItem
+            to="mailto:example@example.com"
+            target="_blank"
+            aria-label="Email"
+            rel="noreferrer"
+          >
             <GrMail />
           </SocialIconsItem>
-          <SocialIconsItem to="#" target="_blank">
+          <SocialIconsItem
+            to="https://github.com/"
+            target="_blank"
+            aria-label="GitHub"
+            rel="noreferrer"
+          >
             <FaGithub />
           </SocialIconsItem>
-          <SocialIconsItem to="#" target="_blank">
+          <SocialIconsItem
+            to="https://www.linkedin.com/"
+            target="_blank"
+            aria-label="LinkedIn"
+            rel="noreferrer"
+          >
             <FaLinkedinIn />
           </SocialIconsItem>
         </SocialIcons>
