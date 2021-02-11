@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterWraper = styled.div`
-  background: ${(t) => t.theme.bgSecondary};
+  background: var(--bg-secondary);
   height: 3.5rem;
   display: flex;
   justify-content: center;

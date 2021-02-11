@@ -40,8 +40,8 @@ export const PostCard = styled.div`
   display: flex;
   height: 24rem;
   width: 18rem;
-  background: ${(t) => t.theme.bgSecondary};
-  border: 10px solid ${(t) => t.theme.bgSecondary};
+  background: var(--bg-secondary);
+  border: 10px solid var(--bg-secondary);
   color: white;
   border-radius: 1em;
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
@@ -68,7 +68,7 @@ export const PostContent = styled.div`
 
   &:hover {
     transform: rotate(0);
-    color: ${(t) => t.theme.textPrimary};
+    color: var(--text-primary);
   }
 
   &:before,
@@ -86,13 +86,13 @@ export const PostContent = styled.div`
   }
 
   &:before {
-    background: ${(t) => t.theme.bgSecondary};
+    background: var(--bg-secondary);
     width: 250%;
     height: 250%;
   }
 
   &:after {
-    background: ${(t) => t.theme.bgSecondary};
+    background: var(--bg-secondary);
     width: 200%;
     height: 200%;
   }
@@ -103,7 +103,7 @@ export const PostContent = styled.div`
   }
 
   &:hover ${PostTags} ${Tag} {
-    background: ${(t) => t.theme.accentPrimary};
+    background: var(--accent-primary);
     color: white;
   }
 `;

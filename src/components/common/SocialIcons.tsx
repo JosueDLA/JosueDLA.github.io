@@ -43,7 +43,7 @@ const SocialIconsList = styled.ul`
     content: " ";
     border-radius: 50%;
     display: block;
-    background: ${(t) => t.theme.accentPrimary};
+    background: var(--accent-primary);
     transition: all 265ms ease-out;
   }
 

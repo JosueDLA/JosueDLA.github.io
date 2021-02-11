@@ -10,7 +10,7 @@ export const CardRow = styled.div`
 `;
 
 export const Card = styled.div`
-  background: ${(t) => t.theme.bgSecondary};
+  background: var(--bg-secondary);
   max-width: 20rem;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const Card = styled.div`
 `;
 
 export const Banner = styled.div`
-  color: ${(t) => t.theme.textPrimary};
+  color: var(--text-primary);
   height: 10rem;
   display: flex;
   justify-content: center;

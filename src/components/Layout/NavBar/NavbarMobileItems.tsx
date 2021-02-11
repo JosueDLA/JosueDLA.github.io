@@ -11,7 +11,7 @@ export const MobileContainer = styled("aside")<ISideBarContainer>`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: ${(t) => t.theme.bgSecondary};
+  background-color: var(--bg-secondary);
   display: grid;
   align-items: center;
   top: 0;
@@ -22,7 +22,7 @@ export const MobileContainer = styled("aside")<ISideBarContainer>`
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: ${(t) => t.theme.textPrimary};
+  color: var(--text-primary);
 `;
 
 export const Icon = styled.div`
@@ -64,11 +64,11 @@ export const MobileItem = styled.li`
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: ${(t) => t.theme.textPrimary};
+    color: var(--text-primary);
     cursor: pointer;
 
     &:hover {
-      color: ${(t) => t.theme.accentPrimary};
+      color: var(--accent-primary);
       transition: 0.2s ease-in-out;
     }
   }
@@ -81,10 +81,10 @@ export const MobileBtnWrap = styled.div`
 
 export const MobileRoute = styled.a`
   border-radius: 50px;
-  background: ${(t) => t.theme.accentSecondary};
+  background: var(--accent-secondary);
   white-space: nowrap;
   padding: 16px 64px;
-  color: ${(t) => t.theme.textSecondary};
+  color: var(--text-secondary);
   font-size: 16px;
   outline: none;
   border: none;
@@ -94,7 +94,7 @@ export const MobileRoute = styled.a`
 
   &:hover {
     transition: all 0.2 ease-in-out;
-    background: ${(t) => t.theme.accentPrimary};
-    color: ${(t) => t.theme.textPrimary};
+    background: var(--accent-primary);
+    color: var(--text-primary);
   }
 `;

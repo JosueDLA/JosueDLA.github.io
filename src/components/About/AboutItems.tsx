@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.section`
-  background: ${(t) => t.theme.bgPrimary};
+  background: var(--bg-primary);
   height: 100%;
   min-height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@ export const AboutWrapper = styled.section`
 `;
 
 export const AboutBg = styled.div`
-  background: ${(t) => t.theme.bgSecondary};
+  background: var(--bg-secondary);
   padding: 4rem 0;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
 

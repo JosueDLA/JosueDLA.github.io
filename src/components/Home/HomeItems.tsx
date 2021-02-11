@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.section`
-  background: ${(t) => t.theme.videobg};
+  background: var(--bg-secondary);
   display: flex;
   justify-content: center;
   align-items: center;

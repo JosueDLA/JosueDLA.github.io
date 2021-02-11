@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export const Header = styled.header`
   position: relative;
   text-align: center;
-  border-top: solid 2px ${(t) => t.theme.textPrimary};
+  border-top: solid 2px var(--text-primary);
   top: 1em;
   margin-top: 2em;
   margin-bottom: 2em;

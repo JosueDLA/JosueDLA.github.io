@@ -6,11 +6,11 @@ const scrollBar = css`
   }
 
   body::-webkit-scrollbar-track {
-    background: ${(t) => t.theme.bgSecondary};
+    background: var(--bg-secondary);
   }
 
   body::-webkit-scrollbar-thumb {
-    background: ${(t) => t.theme.accentPrimary};
+    background: var(--accent-primary);
   }
 `;
 

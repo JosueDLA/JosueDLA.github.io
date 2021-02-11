@@ -3,7 +3,7 @@ import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "gatsby";
 
 export const Nav = styled.nav`
-  background: ${(t) => t.theme.bgSecondary};
+  background: var(--bg-secondary);
   height: 3.5rem;
   margin-top: -3.5rem;
   display: flex;
@@ -43,7 +43,7 @@ export const NavLogo = styled.div`
   line-height: 3.5rem;
 
   ${NavLinkS}, ${NavLinkR} {
-    color: ${(t) => t.theme.textPrimary};
+    color: var(--text-primary);
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -63,7 +63,7 @@ export const NavIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${(t) => t.theme.textPrimary};
+    color: var(--text-primary);
   }
 `;
 
@@ -84,7 +84,7 @@ export const NavItem = styled.li`
   height: 3.5rem;
 
   ${NavLinkS}, ${NavLinkR} {
-    color: ${(t) => t.theme.textPrimary};
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -93,7 +93,7 @@ export const NavItem = styled.li`
     cursor: pointer;
 
     &.active {
-      border-bottom: 3px solid ${(t) => t.theme.accentPrimary};
+      border-bottom: 3px solid var(--accent-primary);
     }
   }
 `;
@@ -109,10 +109,10 @@ export const NavBtn = styled.div`
 
 export const NavBtnLink = styled.button`
   border-radius: 50px;
-  background: ${(t) => t.theme.accentSecondary};
+  background: var(--accent-secondary);
   white-space: nowrap;
   padding: 10px 22px;
-  color: ${(t) => t.theme.textSecondary};
+  color: var(--text-secondary);
   font-size: 16px;
   outline: none;
   border: none;
@@ -122,7 +122,7 @@ export const NavBtnLink = styled.button`
 
   &:hover {
     transition: all 0.2 ease-in-out;
-    background: ${(t) => t.theme.accentPrimary};
-    color: ${(t) => t.theme.textPrimary};
+    background: var(--accent-primary);
+    color: var(--text-primary);
   }
 `;
