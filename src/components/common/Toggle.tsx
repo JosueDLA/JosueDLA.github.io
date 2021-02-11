@@ -24,7 +24,7 @@ const SwitchWrapper = styled.div`
     right: 0;
     bottom: 0;
     background-color: ${(t) => t.theme.accentSecondary};
-    --webkit-transition: 0.4s;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
   }
@@ -37,7 +37,7 @@ const SwitchWrapper = styled.div`
     left: 4px;
     bottom: 4px;
     background-color: ${(t) => t.theme.accentPrimary};
-    --webkit-transition: 0.4s;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
   }
