@@ -20,6 +20,7 @@ const setTheme = () => {
     // return default theme.
     return "light";
   }
+
   // This constants will be replaced when setTheme() is stringify
   const light = "LIGHT_THEME";
   const dark = "DARK_THEME";
@@ -27,7 +28,9 @@ const setTheme = () => {
   const theme = getInitialThemeMode();
   const root = document.documentElement;
 
-  for (const [key, value] of Object.entries(light)) {
+  window.localStorage.setItem("theme", theme);
+
+  for (const [key] of Object.entries(light)) {
     root.style.setProperty(key, theme === "light" ? light[key] : dark[key]);
   }
 };
@@ -46,5 +49,5 @@ const MagicScript = () => {
 };
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents(<MagicScript />);
+  setPreBodyComponents(<MagicScript key="magic-script" />);
 };

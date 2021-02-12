@@ -1,7 +1,6 @@
 // @ts-ignore
 import { window } from "browser-monads";
 import { useEffect, useState } from "react";
-import getInitialThemeMode from "../initTheme";
 import { lightTheme, darkTheme } from "../style/theme";
 
 export const useDarkMode = () => {
@@ -30,8 +29,9 @@ export const useDarkMode = () => {
   };
 
   useEffect(() => {
-    setMode(getInitialThemeMode());
-  }, [getInitialThemeMode]);
+    const theme = window.localStorage.getItem("theme");
+    setMode(theme);
+  }, []);
 
   return [theme, toggleTheme] as const;
 };
