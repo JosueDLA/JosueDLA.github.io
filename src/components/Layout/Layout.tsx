@@ -7,6 +7,7 @@ import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import ThemeContext from "../common/ThemeContext";
 import Navbar from "./Navbar/NavBar";
+import BackToTopButton from "../common/BackToTop";
 
 export interface LayoutProps {}
 
@@ -23,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </ThemeContext.Provider>
 
       {children}
-
+      <BackToTopButton />
       <Footer />
     </ThemeProvider>
   );
