@@ -1,7 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import scrollBar from "./scrollBar";
+import normalize from "./normalize";
 
 const GlobalStyle = createGlobalStyle`
+  ${normalize}
+
   body {
     margin: 0;
     padding: 0;
