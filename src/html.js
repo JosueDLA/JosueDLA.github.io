@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import NoScriptNav from "./components/common/NoScriptNav";
 
 export default function HTML(props) {
   return (
@@ -25,7 +26,21 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <noscript>Please enable JavaScript</noscript>
+        <noscript>
+          <NoScriptNav
+            navText="Algunas caracteristicas podrian no estar disponibles."
+            cardTitle="No JavaScript"
+            navBtn="Leer Más"
+            cardBtn="Salir"
+          >
+            Lo sentimos, algunas caracteristicas podrian no funcionar
+            adecuadamente sin JavaScript. Por favor visita&nbsp;
+            <a href="https://www.enable-javascript.com/" target="blank_">
+              Enable-JavaScript
+            </a>
+            &nbsp;para habilitarlo.
+          </NoScriptNav>
+        </noscript>
         <div
           key={`body`}
           id="___gatsby"
