@@ -17,9 +17,8 @@ const NoScriptCss = css`
 
   @media (max-width: 960px) {
     .no-script {
-      height: 10rem;
+      height: auto;
       flex-direction: column;
-      margin-bottom: 10rem;
     }
   }
 
@@ -40,7 +39,7 @@ const NoScriptCss = css`
     background: rgba(0, 0, 0, 0.9);
     height: 100vh;
     width: 100vw;
-    z-index: 2;
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
   }

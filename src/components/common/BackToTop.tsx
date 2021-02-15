@@ -17,7 +17,7 @@ const BackToTopLink = styled("a")<IBackToTopButton>`
   width: 3rem;
   height: 3rem;
   color: #fff;
-  z-index: 1000;
+  z-index: 5;
   border-radius: 0.3rem;
   font-size: 2.5rem;
   visibility: ${({ visible }) => (visible ? "visible" : "hidden")};

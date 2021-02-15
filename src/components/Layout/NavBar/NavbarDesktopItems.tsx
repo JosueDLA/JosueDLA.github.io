@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 5;
   margin-bottom: 3.5rem;
 
   @media screen and (max-width: 960px) {
@@ -24,7 +24,6 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 3.5rem;
-  z-index: 1;
   width: 100%;
   padding: 0 24px;
   max-width: 1100px;

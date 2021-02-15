@@ -41,7 +41,7 @@ export const ImgBg = styled.img`
 `;
 
 export const HomeContent = styled.div`
-  z-index: 3;
+  z-index: 2;
   max-width: 1200px;
   position: absolute;
   padding: 0.5rem 1.5rem;
