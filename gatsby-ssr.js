@@ -48,6 +48,24 @@ const MagicScript = () => {
   return <script dangerouslySetInnerHTML={{ __html: clientCode }} />;
 };
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
+const NoScripStyle = () => {
+  let cssString = [];
+
+  for (const [key, value] of Object.entries(lightTheme)) {
+    cssString.push(`${key}: ${value};`);
+  }
+  return (
+    <style>
+      {`
+      html{
+        ${cssString.join("\n")}
+      }
+    `}
+    </style>
+  );
+};
+
+export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
+  setHeadComponents(<NoScripStyle key="no-script" />);
   setPreBodyComponents(<MagicScript key="magic-script" />);
 };
