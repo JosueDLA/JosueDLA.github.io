@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { noSelect } from "./../../style/noSelect";
 
 export const CardRow = styled.div`
   display: flex;
@@ -22,6 +23,8 @@ export const Card = styled.div`
   @media (max-width: 1495px) {
     margin: 0 auto;
   }
+
+  ${noSelect}
 `;
 
 export const Banner = styled.div`
@@ -38,10 +41,6 @@ export const Banner = styled.div`
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-
-    &:hover {
-      transform: scale(1.3);
-    }
   }
 `;
 

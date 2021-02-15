@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { NavLinkR, NavLinkS } from "./NavbarDesktopItems";
+import { noSelect } from "./../../../style/noSelect";
 
 interface ISideBarContainer {
   isOpen: boolean;
@@ -91,6 +92,7 @@ export const MobileRoute = styled.a`
   cursor: pointer;
   transition: all 0.2 ease-in-out;
   text-decoration: none;
+  ${noSelect}
 
   &:hover {
     transition: all 0.2 ease-in-out;

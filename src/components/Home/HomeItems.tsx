@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { noSelect } from "../../style/noSelect";
 
 export const HomeContainer = styled.section`
   background: var(--bg-secondary);
@@ -10,6 +11,7 @@ export const HomeContainer = styled.section`
   position: relative;
   z-index: 1;
   margin-top: -3.5rem;
+  ${noSelect}
 `;
 
 export const HomeBg = styled.div`

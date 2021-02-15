@@ -8,7 +8,7 @@ interface IBackToTopButton {
 }
 
 const BackToTopLink = styled("a")<IBackToTopButton>`
-  background-color: #424141;
+  background-color: var(--accent-secondary);
   text-align: center;
   align-items: center;
   position: fixed;

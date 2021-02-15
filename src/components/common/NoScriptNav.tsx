@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "styled-components";
-import { IoMdClose } from "react-icons/io";
+import { noSelect } from "../../style/noSelect";
+import { FaTimes } from "react-icons/fa";
 
 const NoScriptCss = css`
   .no-script {
@@ -69,6 +70,7 @@ const NoScriptCss = css`
     border-radius: 0.3rem;
     cursor: pointer;
     margin: 1rem;
+    ${noSelect}
   }
 
   .button:hover {
@@ -118,6 +120,7 @@ const NoScriptCss = css`
     padding: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    ${noSelect}
   }
 
   .close-btn:hover {
@@ -149,12 +152,12 @@ const NoScriptNav: React.FC<NoScriptNavProps> = ({
           {navBtn}
         </label>
 
-        <label className="no-script-bg" htmlFor="checkbox">
+        <label className="no-script-bg">
           <div className="no-script-card">
             <div className="title">
               <h2>{cardTitle}</h2>
               <label htmlFor="checkbox" className="close-icon">
-                <IoMdClose />
+                <FaTimes />
               </label>
             </div>
             <p className="card-text">{children}</p>

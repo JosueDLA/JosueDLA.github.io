@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "gatsby";
+import { noSelect } from "./../../../style/noSelect";
 
 export const Nav = styled.nav`
   background: var(--bg-secondary);
@@ -14,6 +15,7 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 5;
   margin-bottom: 3.5rem;
+  ${noSelect}
 
   @media screen and (max-width: 960px) {
     transition: 0.8 all ease;
