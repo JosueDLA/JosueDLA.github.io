@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaAngleDown } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-import { Hr } from "../common/Hr";
 import Title from "../common/Title";
 import Image from "../../components/common/Image";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
@@ -24,7 +23,11 @@ const About: React.FC<AboutProps> = () => {
       <AboutBg>
         <AboutContainer className="container">
           <ImgContainer>
-            <Image hook={useProfilePicture} alt="code" />
+            <Image
+              hook={useProfilePicture}
+              className="profile-img"
+              alt="code"
+            />
           </ImgContainer>
           <AboutP>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
@@ -72,7 +75,6 @@ const About: React.FC<AboutProps> = () => {
           <FaAngleDown />
         </ScrollButton>
       </AboutBg>
-      <Hr className="container" />
     </AboutWrapper>
   );
 };
