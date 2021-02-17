@@ -34,7 +34,7 @@ export const Banner = styled.div`
   justify-content: center;
   margin: 2rem 0;
 
-  svg {
+  .card-img {
     background-color: black;
     width: 10rem;
     height: 10rem;

@@ -1,5 +1,9 @@
 import React from "react";
 import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
+import Image from "../common/Image";
+import { CodeSkills } from "../../queries/CodeSkills";
+import { ServerSkills } from "../../queries/ServerSkills";
+import { ApiSkills } from "../../queries/ApiSkills";
 
 export interface SkillsCardsProps {}
 
@@ -8,7 +12,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
     <CardRow>
       <Card>
         <Banner>
-          <svg viewBox="0 0 100 100"></svg>
+          <Image hook={CodeSkills} className="card-img" alt="Code" />
         </Banner>
         <CardTitle>Title</CardTitle>
         <CardDesc>
@@ -20,7 +24,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <svg viewBox="0 0 100 100"></svg>
+          <Image hook={ServerSkills} className="card-img" alt="Code" />
         </Banner>
         <CardTitle>Title</CardTitle>
         <CardDesc>
@@ -32,7 +36,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <svg viewBox="0 0 100 100"></svg>
+          <Image hook={ApiSkills} className="card-img" alt="Code" />
         </Banner>
         <CardTitle>Title 3</CardTitle>
         <CardDesc>
