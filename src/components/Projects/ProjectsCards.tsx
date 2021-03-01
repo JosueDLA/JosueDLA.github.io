@@ -27,13 +27,13 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
             assumenda.
           </PostDescription>
+          <PostTags>
+            <Tag>HTML</Tag>
+          </PostTags>
           <GroupButton>
             <LeftButton>Left</LeftButton>
             <RightButton>Right</RightButton>
           </GroupButton>
-          <PostTags>
-            <Tag>HTML</Tag>
-          </PostTags>
         </PostContent>
       </PostCard>
     </PostCardWrapper>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { noSelect } from "../../style/noSelect";
 
 export const PostCardWrapper = styled.div`
@@ -40,17 +40,17 @@ export const GroupButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 `;
 
-export const LeftButton = styled.label`
+const Button = css`
   display: inline-block;
   padding: 0.5rem;
   background: var(--accent-primary);
   border: 1px solid var(--accent-primary);
   text-align: center;
   font-size: 1rem;
-  border-radius: 0.3rem 0 0 0.3rem;
+
   cursor: pointer;
   margin: 0;
   width: 30%;
@@ -65,25 +65,16 @@ export const LeftButton = styled.label`
   }
 `;
 
+export const LeftButton = styled.label`
+  ${Button}
+  border-radius: 0.3rem 0 0 0.3rem;
+  border-right: 1px solid black;
+`;
+
 export const RightButton = styled.label`
-  display: inline-block;
-  padding: 0.5rem;
-  background: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
-  text-align: center;
-  font-size: 1rem;
+  ${Button}
   border-radius: 0 0.3rem 0.3rem 0;
-  cursor: pointer;
-  width: 30%;
-  ${noSelect}
-
-  &:hover {
-    background: transparent;
-  }
-
-  &:active {
-    background: var(--accent-primary);
-  }
+  border-left: 1px solid black;
 `;
 
 export const PostCard = styled.div`
