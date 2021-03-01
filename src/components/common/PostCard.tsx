@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { noSelect } from "../../style/noSelect";
 
 export const PostCardWrapper = styled.div`
   display: grid;
@@ -33,6 +34,56 @@ export const Tag = styled.div`
   margin-right: 0.5em;
   line-height: 1.5em;
   transition: all, 0.5s;
+`;
+
+export const GroupButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+`;
+
+export const LeftButton = styled.label`
+  display: inline-block;
+  padding: 0.5rem;
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.3rem 0 0 0.3rem;
+  cursor: pointer;
+  margin: 0;
+  width: 30%;
+  ${noSelect}
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:active {
+    background: var(--accent-primary);
+  }
+`;
+
+export const RightButton = styled.label`
+  display: inline-block;
+  padding: 0.5rem;
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  cursor: pointer;
+  width: 30%;
+  ${noSelect}
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:active {
+    background: var(--accent-primary);
+  }
 `;
 
 export const PostCard = styled.div`

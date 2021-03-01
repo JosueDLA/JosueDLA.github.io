@@ -9,6 +9,9 @@ import {
   PostContent,
   PostTags,
   Tag,
+  LeftButton,
+  RightButton,
+  GroupButton,
 } from "../common/PostCard";
 
 export interface ProjectCardsProps {}
@@ -24,6 +27,10 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
             assumenda.
           </PostDescription>
+          <GroupButton>
+            <LeftButton>Left</LeftButton>
+            <RightButton>Right</RightButton>
+          </GroupButton>
           <PostTags>
             <Tag>HTML</Tag>
           </PostTags>
