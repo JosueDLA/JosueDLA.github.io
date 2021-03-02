@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { noSelect } from "../../style/noSelect";
 
 export const HomeContainer = styled.section`
-  background: var(--bg-secondary);
+  background: var(--bg-video);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ export const VideoBg = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
-  opacity: 0.3;
+  opacity: 0.5;
 `;
 
 export const ImgBg = styled.img`
