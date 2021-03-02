@@ -92,7 +92,7 @@ export const PostCard = styled.div`
   .post-img {
     width: 18rem;
     height: 24rem;
-    opacity: 0.5;
+    opacity: 1;
   }
 `;
 
@@ -106,7 +106,6 @@ export const PostContent = styled.div`
   padding: 1rem 1rem;
   bottom: 0;
   transition: all, 0.5s;
-  background: rgba(0, 0, 0, 0.5);
 
   &:hover {
     transform: rotate(0);
