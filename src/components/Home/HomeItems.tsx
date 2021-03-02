@@ -31,7 +31,7 @@ export const VideoBg = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
-  opacity: 0.5;
+  opacity: 0.4;
 `;
 
 export const ImgBg = styled.img`
