@@ -1,9 +1,8 @@
 import React from "react";
 import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
 import Image from "../common/Image";
-import { CodeSkills } from "../../queries/CodeSkills";
-import { ServerSkills } from "../../queries/ServerSkills";
-import { ApiSkills } from "../../queries/ApiSkills";
+import ImageGroup from "../common/ImageGroup";
+import { SkillsImages } from "../../queries/Skills";
 
 export interface SkillsCardsProps {}
 
@@ -12,7 +11,12 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
     <CardRow>
       <Card>
         <Banner>
-          <Image hook={CodeSkills} className="card-img" alt="Code" />
+          <ImageGroup
+            query={SkillsImages}
+            filename="code.png"
+            className="card-img"
+            alt="Code"
+          />
         </Banner>
         <CardTitle>Title</CardTitle>
         <CardDesc>
@@ -24,7 +28,12 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <Image hook={ServerSkills} className="card-img" alt="Code" />
+          <ImageGroup
+            query={SkillsImages}
+            filename="server.png"
+            className="card-img"
+            alt="Server"
+          />
         </Banner>
         <CardTitle>Title</CardTitle>
         <CardDesc>
@@ -36,7 +45,12 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <Image hook={ApiSkills} className="card-img" alt="Code" />
+          <ImageGroup
+            query={SkillsImages}
+            filename="api.png"
+            className="card-img"
+            alt="API"
+          />
         </Banner>
         <CardTitle>Title 3</CardTitle>
         <CardDesc>

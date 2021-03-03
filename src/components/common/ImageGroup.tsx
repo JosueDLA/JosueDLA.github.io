@@ -5,6 +5,8 @@ import Img from "gatsby-image";
 export interface ImageGroupProps {
   query: () => any;
   filename: string;
+  className?: string;
+  alt?: string;
 }
 
 const ImageGroup: React.FC<ImageGroupProps> = ({
@@ -23,6 +25,8 @@ const ImageGroup: React.FC<ImageGroupProps> = ({
 ImageGroup.propTypes = {
   query: PropTypes.func.isRequired,
   filename: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default ImageGroup;
