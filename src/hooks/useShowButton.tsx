@@ -7,20 +7,15 @@ export const useShowButton = () => {
 
   const toggleShow = () => {
     if (window.pageYOffset > 300) {
-      setVisible(true); 
+      setVisible(true);
     } else if (window.pageYOffset <= 300) {
       setVisible(false);
     }
   };
 
   useEffect(() => {
-    console.log("rendered");
     window.addEventListener("scroll", toggleShow);
   }, []);
-
-  useEffect(() => {
-    console.log("updated");
-  }, [visible]);
 
   return [visible, setVisible] as const;
 };
