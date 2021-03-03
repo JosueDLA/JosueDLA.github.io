@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GoTriangleRight } from "react-icons/go";
 
 export const AboutWrapper = styled.section`
   background: var(--bg-primary);
@@ -48,5 +49,22 @@ export const ImgContainer = styled.div`
 `;
 
 export const AboutP = styled.p`
-  margin: 3rem 0;
+  padding-top: 3rem;
+`;
+
+export const AboutUl = styled.ul`
+  columns: 2;
+  padding: 0 4rem;
+`;
+
+export const AboutLi = styled.li`
+  list-style: none;
+  padding: 0.3rem;
+
+  &:before {
+    content: "►";
+    color: var(--accent-primary);
+    padding-right: 0.2rem;
+    font-size: 1.3rem;
+  }
 `;

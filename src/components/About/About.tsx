@@ -12,6 +12,8 @@ import {
   ImgContainer,
   AboutP,
   AboutBg,
+  AboutUl,
+  AboutLi,
 } from "./AboutItems";
 
 export interface AboutProps {}
@@ -26,24 +28,30 @@ const About: React.FC<AboutProps> = () => {
             <Image hook={ProfilePicture} className="profile-img" alt="code" />
           </ImgContainer>
           <AboutP>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-            numquam officiis magni atque voluptas quo quibusdam mollitia error
-            voluptates, maxime repellat est soluta molestiae consequuntur.
-            Pariatur est adipisci aperiam numquam minima, sed fugiat id possimus
-            fuga veniam, cumque ratione. Aliquam tempore vero, obcaecati iure
-            quas mollitia maiores ea ut ducimus. Enim dolorum eum natus velit
-            nulla facere, cum fuga esse exercitationem debitis reprehenderit.
-            Repellendus, ducimus impedit vel quidem distinctio temporibus
-            reprehenderit ad animi cumque modi, consequatur, adipisci obcaecati
-            tempore non accusamus voluptatum vero culpa dolores libero odio
-            nostrum doloribus! Sint pariatur possimus eum aut aliquam. Pariatur
-            nobis corrupti quas beatae.
+            Hello! I’m Josué. <br />
+            <br />
+            I’m a software developer, with a bachelor’s degree in System
+            engineering from Mariano Gálvez University in Guatemala. I'm
+            passionate about creating new software with which I can solve
+            problems and create new experiences. <br />
+            <br />
+            Here are some of the technologies I've been working with recently:
+            <AboutUl>
+              <AboutLi>JavaScript</AboutLi>
+              <AboutLi>React</AboutLi>
+              <AboutLi>Python</AboutLi>
+              <AboutLi>Django</AboutLi>
+              <AboutLi>HTML &amp; CSS</AboutLi>
+              <AboutLi>Bootstrap</AboutLi>
+              <AboutLi>C#</AboutLi>
+              <AboutLi>ASP.NET</AboutLi>
+            </AboutUl>
           </AboutP>
         </AboutContainer>
 
         <SocialIcons>
           <SocialIconsItem
-            to="mailto:example@example.com"
+            to="mailto:josuedlavs@gmail.com"
             target="_blank"
             aria-label="Email"
             rel="noreferrer"
@@ -51,7 +59,7 @@ const About: React.FC<AboutProps> = () => {
             <GrMail />
           </SocialIconsItem>
           <SocialIconsItem
-            to="https://github.com/"
+            to="https://github.com/JosueDLA"
             target="_blank"
             aria-label="GitHub"
             rel="noreferrer"
@@ -59,7 +67,7 @@ const About: React.FC<AboutProps> = () => {
             <FaGithub />
           </SocialIconsItem>
           <SocialIconsItem
-            to="https://www.linkedin.com/"
+            to="https://www.linkedin.com/in/josuedla/"
             target="_blank"
             aria-label="LinkedIn"
             rel="noreferrer"
