@@ -40,7 +40,7 @@ export const NavLinks = (home: boolean) => {
       spy={true}
       hashSpy={true}
     >
-      Contact
+      Skills
     </NavLinkS>,
     <NavLinkR to="/blog">Blog</NavLinkR>,
   ];
@@ -48,7 +48,7 @@ export const NavLinks = (home: boolean) => {
   // Route Links
   const RouteLinks = [
     <NavLinkR to="/#about">About</NavLinkR>,
-    <NavLinkR to="/#skills">Contact</NavLinkR>,
+    <NavLinkR to="/#skills">Skills</NavLinkR>,
     <NavLinkR to="/blog">Blog</NavLinkR>,
   ];
 

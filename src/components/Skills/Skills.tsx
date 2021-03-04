@@ -8,7 +8,7 @@ export interface SkillsProps {}
 const Skills: React.FC<SkillsProps> = () => {
   return (
     <SkillsWrapper id="skills" className="container">
-      <Title text="Text" />
+      <Title text="Skills" />
       <SkillsCards />
     </SkillsWrapper>
   );

@@ -1,8 +1,7 @@
 import React from "react";
-import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
-import Image from "../common/Image";
 import ImageGroup from "../common/ImageGroup";
 import { SkillsImages } from "../../queries/Skills";
+import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
 
 export interface SkillsCardsProps {}
 
@@ -18,11 +17,10 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             alt="Code"
           />
         </Banner>
-        <CardTitle>Title</CardTitle>
+        <CardTitle>Programming</CardTitle>
         <CardDesc>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-          pariatur error fugiat dolorum totam saepe sint soluta nam,
-          consequuntur animi.
+          Knowledge of multiple programming languages, always learning new
+          skills and with great attention to detail.
         </CardDesc>
       </Card>
 
@@ -35,11 +33,10 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             alt="Server"
           />
         </Banner>
-        <CardTitle>Title</CardTitle>
+        <CardTitle>Servers &amp; DBMS</CardTitle>
         <CardDesc>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-          pariatur error fugiat dolorum totam saepe sint soluta nam,
-          consequuntur animi.
+          Experience creating and managing SQL databases; Experience managing
+          and configuring different types of servers.
         </CardDesc>
       </Card>
 
@@ -52,11 +49,10 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             alt="API"
           />
         </Banner>
-        <CardTitle>Title 3</CardTitle>
+        <CardTitle>Web API</CardTitle>
         <CardDesc>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-          pariatur error fugiat dolorum totam saepe sint soluta nam,
-          consequuntur animi.
+          Experience structuring, consuming, and designing personalized web
+          services build with different programming languages.
         </CardDesc>
       </Card>
     </CardRow>
