@@ -3,10 +3,14 @@ import { noSelect } from "../../style/noSelect";
 
 export const PostCardWrapper = styled.div`
   display: grid;
-  gap: 4rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   place-items: center;
   padding-bottom: 4rem;
+
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
 `;
 
 export const PostTitle = styled.h3`
@@ -80,8 +84,8 @@ export const RightButton = styled.label`
 export const PostCard = styled.div`
   position: relative;
   display: flex;
-  height: 24rem;
-  width: 18rem;
+  width: 90%;
+  max-width: 18rem;
   background: var(--bg-secondary);
   border: 10px solid var(--bg-secondary);
   color: white;
@@ -90,8 +94,8 @@ export const PostCard = styled.div`
   overflow: hidden;
 
   .post-img {
-    width: 18rem;
-    height: 24rem;
+    width: 100%;
+    height: 100%;
     opacity: 1;
   }
 `;
