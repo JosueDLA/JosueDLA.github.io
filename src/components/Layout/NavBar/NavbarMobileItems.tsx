@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { NavLinkR, NavLinkS } from "./NavbarDesktopItems";
 import { noSelect } from "./../../../style/noSelect";
 
 interface ISideBarContainer {
@@ -56,7 +55,7 @@ export const MobileMenu = styled.ul`
 export const MobileItem = styled.li`
   height: 3.5rem;
 
-  ${NavLinkS}, ${NavLinkR} {
+  .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;

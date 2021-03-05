@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "gatsby";
-import { noSelect } from "./../../../style/noSelect";
+import { noSelect } from "../../../style/noSelect";
 
 export const Nav = styled.nav`
   background: var(--bg-secondary);
@@ -31,10 +29,6 @@ export const NavContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLinkS = styled(LinkS)``;
-
-export const NavLinkR = styled(LinkR)``;
-
 export const NavLogo = styled.div`
   display: flex;
   justify-self: flex-start;
@@ -43,7 +37,7 @@ export const NavLogo = styled.div`
   vertical-align: middle;
   line-height: 3.5rem;
 
-  ${NavLinkS}, ${NavLinkR} {
+  .nav-logo {
     color: var(--text-primary);
     font-weight: bold;
     text-decoration: none;
@@ -84,7 +78,7 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 3.5rem;
 
-  ${NavLinkS}, ${NavLinkR} {
+  .nav-link {
     color: var(--text-primary);
     display: flex;
     align-items: center;

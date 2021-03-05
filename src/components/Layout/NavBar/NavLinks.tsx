@@ -1,23 +1,25 @@
 import React from "react";
-import { NavLinkS, NavLinkR } from "./NavbarDesktopItems";
-
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "gatsby";
 /*To update the links in the navbar just 
   change the JSX elements in the const variables.*/
 
 export const LogoLink = (home: boolean) => {
   // Logo Links
   const LogoLink = [
-    <NavLinkS
+    <LinkS
+      className="nav-logo"
       to="home"
       smooth={true}
       duration={500}
       spy={true}
       hashSpy={true}
-      offset={-56}
     >
       JosueDLA
-    </NavLinkS>,
-    <NavLinkR to="/">JosueDLA</NavLinkR>,
+    </LinkS>,
+    <LinkR className="nav-logo" to="/">
+      JosueDLA
+    </LinkR>,
   ];
 
   if (home) {
@@ -30,10 +32,18 @@ export const LogoLink = (home: boolean) => {
 export const NavLinks = (home: boolean) => {
   // Home Page Links
   const HomeLinks = [
-    <NavLinkS to="about" smooth={true} duration={500} spy={true} hashSpy={true}>
+    <LinkS
+      className="nav-link"
+      to="about"
+      smooth={true}
+      duration={500}
+      spy={true}
+      hashSpy={true}
+    >
       About
-    </NavLinkS>,
-    <NavLinkS
+    </LinkS>,
+    <LinkS
+      className="nav-link"
       to="skills"
       smooth={true}
       duration={500}
@@ -41,15 +51,23 @@ export const NavLinks = (home: boolean) => {
       hashSpy={true}
     >
       Skills
-    </NavLinkS>,
-    <NavLinkR to="/blog">Blog</NavLinkR>,
+    </LinkS>,
+    <LinkR className="nav-link" to="/blog">
+      Blog
+    </LinkR>,
   ];
 
   // Route Links
   const RouteLinks = [
-    <NavLinkR to="/#about">About</NavLinkR>,
-    <NavLinkR to="/#skills">Skills</NavLinkR>,
-    <NavLinkR to="/blog">Blog</NavLinkR>,
+    <LinkR className="nav-link" to="/#about">
+      About
+    </LinkR>,
+    <LinkR className="nav-link" to="/#skills">
+      Skills
+    </LinkR>,
+    <LinkR className="nav-link" to="/blog">
+      Blog
+    </LinkR>,
   ];
 
   if (home) {
