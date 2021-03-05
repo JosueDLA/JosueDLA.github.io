@@ -73,7 +73,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           alt="Server"
         />
         <PostContent>
-          <PostTitle>Readme Creator</PostTitle>
+          <PostTitle>MVC5 Store</PostTitle>
           <PostDescription>
             Product section of store that updates in real time.
           </PostDescription>
