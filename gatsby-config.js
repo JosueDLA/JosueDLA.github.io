@@ -22,8 +22,8 @@ module.exports = {
         name: `JosueDLA`,
         short_name: `JosueDLA`,
         start_url: `/`,
-        background_color: `#6D83F2`,
-        theme_color: `#6D83F2`,
+        background_color: `#233554`,
+        theme_color: `#112240`,
         display: `minimal-ui`,
         icon: `src/images/Logo.png`, // This path is relative to the root of the site.
       },
