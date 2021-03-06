@@ -1,7 +1,7 @@
 {
   "name": "josuedla",
   "private": true,
-  "description": "Josué de León is a software developer based in Guatemala, he enjoys learning new things and writing about them.",
+  "description": "Josué de León's personal website.",
   "version": "0.1.0",
   "author": "Josué de León <josuedlavs@gmail.com>",
   "dependencies": {

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `JosueDLA`,
-    description: `JosueDLA Description`,
+    description: `Josué de León is a software developer based in Guatemala, he enjoys learning new things and writing about them.`,
     author: `@JosueDLA`,
   },
   plugins: [
