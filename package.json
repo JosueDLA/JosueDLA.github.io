@@ -1,7 +1,7 @@
 {
   "name": "josuedla",
   "private": true,
-  "description": "Josué de León portfolio.",
+  "description": "Josué de León is a software developer based in Guatemala, he enjoys learning new things and writing about them.",
   "version": "0.1.0",
   "author": "Josué de León <josuedlavs@gmail.com>",
   "dependencies": {
@@ -33,9 +33,11 @@
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "JosueDLA"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -44,13 +46,13 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/JosueDLA/JosueDLA.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/JosueDLA/JosueDLA.github.io/issues"
   }
 }
