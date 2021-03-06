@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import SVG from "../components/common/Svg";
-import NotFoundImg from "../images/svg/not-found.svg";
+import UnderContructinImg from "../images/svg/under-construction.svg";
 import SEO from "../components/common/Seo";
 
 export interface BlogProps {}
@@ -12,7 +12,7 @@ const Blog: React.FC<BlogProps> = () => {
       <SEO title="Blog" />
       <SVG
         text="Blog Under Construction"
-        image={NotFoundImg}
+        image={UnderContructinImg}
         alt="Construction"
       />
     </Layout>

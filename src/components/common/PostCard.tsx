@@ -54,10 +54,12 @@ const Button = css`
   border: 1px solid var(--accent-primary);
   text-align: center;
   font-size: 1rem;
-
+  text-decoration: none;
+  color: var(--text-primary);
   cursor: pointer;
   margin: 0;
   width: 30%;
+
   ${noSelect}
 
   &:hover {
@@ -69,13 +71,13 @@ const Button = css`
   }
 `;
 
-export const LeftButton = styled.label`
+export const LeftButton = styled.a`
   ${Button}
   border-radius: 0.3rem 0 0 0.3rem;
   border-right: 1px solid black;
 `;
 
-export const RightButton = styled.label`
+export const RightButton = styled.a`
   ${Button}
   border-radius: 0 0.3rem 0.3rem 0;
   border-left: 1px solid black;

@@ -37,8 +37,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://peaceful-chamber-64971.herokuapp.com/"
+              target="_blank"
+              aria-label="Django Store Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/DjangoStore"
+              target="_blank"
+              aria-label="Django Store Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
@@ -60,8 +74,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>JavaScript</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://josuedla.github.io/ReadmeCreator/"
+              target="_blank"
+              aria-label="Readme Creator Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/ReadmeCreator"
+              target="_blank"
+              aria-label="Readme Creator Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
@@ -83,8 +111,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://josuedla.github.io/RealTimeStore/"
+              target="_blank"
+              aria-label="MVC Store Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/RealTimeStore/"
+              target="_blank"
+              aria-label="MVC Store Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
@@ -104,8 +146,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://josuedla.github.io/portfolio-v1/"
+              target="_blank"
+              aria-label="Portfolio V1 Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/portfolio-v1"
+              target="_blank"
+              aria-label="Portfolio V1 Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
@@ -128,8 +184,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Pillow</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://josuedla.github.io/WeatherBot/"
+              target="_blank"
+              aria-label="Twitter Bot Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/WeatherBot/"
+              target="_blank"
+              aria-label="Twitter Bot Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
@@ -151,8 +221,22 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </PostTags>
           <GroupButton>
-            <LeftButton>Left</LeftButton>
-            <RightButton>Right</RightButton>
+            <LeftButton
+              href="https://josuedla.github.io/GhibliMovies/"
+              target="_blank"
+              aria-label="Ghibli Movies Demo"
+              rel="noreferrer"
+            >
+              Demo
+            </LeftButton>
+            <RightButton
+              href="https://github.com/JosueDLA/GhibliMovies"
+              target="_blank"
+              aria-label="Ghibli Movies Code"
+              rel="noreferrer"
+            >
+              Code
+            </RightButton>
           </GroupButton>
         </PostContent>
       </PostCard>
