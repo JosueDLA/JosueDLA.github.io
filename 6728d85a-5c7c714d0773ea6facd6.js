@@ -1,0 +1,2 @@
+(self.webpackChunkjosuedla=self.webpackChunkjosuedla||[]).push([[158],{9845:function(t,e,u){"use strict";u.d(e,{tzA:function(){return a}});var n=u(1046);function a(t){return(0,n.w_)({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M23,20 L23,6 L12,15 L1,6 L1,20 L23,20 Z M12,12 L22,4 L2,4 L12,12 Z"}}]})(t)}}}]);
+//# sourceMappingURL=6728d85a-5c7c714d0773ea6facd6.js.map
