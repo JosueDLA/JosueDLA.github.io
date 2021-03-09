@@ -2,40 +2,40 @@ import React from "react";
 import ImageGroup from "../common/ImageGroup";
 import { ProjectsImages } from "../../queries/Projects";
 import {
-  PostCard,
-  PostCardWrapper,
-  PostTitle,
-  PostDescription,
-  PostContent,
-  PostTags,
+  ProjectCard,
+  ProjectCardWrapper,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectContent,
+  ProjectTags,
   Tag,
   LeftButton,
   RightButton,
   GroupButton,
-} from "../common/PostCard";
+} from "../common/ProjectCard";
 
 export interface ProjectCardsProps {}
 
 const ProjectCards: React.FC<ProjectCardsProps> = () => {
   return (
-    <PostCardWrapper>
-      <PostCard>
+    <ProjectCardWrapper>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="django.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>Django Store</PostTitle>
-          <PostDescription>
+        <ProjectContent>
+          <ProjectTitle>Django Store</ProjectTitle>
+          <ProjectDescription>
             Products section and API created with Django 3.1.
-          </PostDescription>
-          <PostTags>
+          </ProjectDescription>
+          <ProjectTags>
             <Tag>Python</Tag>
             <Tag>Django</Tag>
             <Tag>Bootstrap</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://peaceful-chamber-64971.herokuapp.com/"
@@ -54,25 +54,25 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
-      <PostCard>
+        </ProjectContent>
+      </ProjectCard>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="javascript.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>Readme Creator</PostTitle>
-          <PostDescription>
+        <ProjectContent>
+          <ProjectTitle>Readme Creator</ProjectTitle>
+          <ProjectDescription>
             Website to easily create Markdown files.
-          </PostDescription>
-          <PostTags>
+          </ProjectDescription>
+          <ProjectTags>
             <Tag>HTML</Tag>
             <Tag>Bootstrap</Tag>
             <Tag>JavaScript</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://josuedla.github.io/ReadmeCreator/"
@@ -91,25 +91,25 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
-      <PostCard>
+        </ProjectContent>
+      </ProjectCard>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="c-sharp.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>MVC5 Store</PostTitle>
-          <PostDescription>
+        <ProjectContent>
+          <ProjectTitle>MVC5 Store</ProjectTitle>
+          <ProjectDescription>
             Product section of store that updates in real time.
-          </PostDescription>
-          <PostTags>
+          </ProjectDescription>
+          <ProjectTags>
             <Tag>C#</Tag>
             <Tag>ASP.NET MVC</Tag>
             <Tag>Bootstrap</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://josuedla.github.io/RealTimeStore/"
@@ -128,23 +128,23 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
-      <PostCard>
+        </ProjectContent>
+      </ProjectCard>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="javascript.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>Portfolio V1</PostTitle>
-          <PostDescription>Previous personal portfolio.</PostDescription>
-          <PostTags>
+        <ProjectContent>
+          <ProjectTitle>Portfolio V1</ProjectTitle>
+          <ProjectDescription>Previous personal portfolio.</ProjectDescription>
+          <ProjectTags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>Bootstrap</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://josuedla.github.io/portfolio-v1/"
@@ -163,26 +163,26 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
+        </ProjectContent>
+      </ProjectCard>
 
-      <PostCard>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="python.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>Twitter Bot</PostTitle>
-          <PostDescription>
+        <ProjectContent>
+          <ProjectTitle>Twitter Bot</ProjectTitle>
+          <ProjectDescription>
             Twitter bot that provides weather information.
-          </PostDescription>
-          <PostTags>
+          </ProjectDescription>
+          <ProjectTags>
             <Tag>Python</Tag>
             <Tag>NumPy</Tag>
             <Tag>Pillow</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://josuedla.github.io/WeatherBot/"
@@ -201,25 +201,25 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
-      <PostCard>
+        </ProjectContent>
+      </ProjectCard>
+      <ProjectCard>
         <ImageGroup
           query={ProjectsImages}
           filename="javascript.png"
           className="post-img"
           alt="Server"
         />
-        <PostContent>
-          <PostTitle>Ghibli Movies</PostTitle>
-          <PostDescription>
+        <ProjectContent>
+          <ProjectTitle>Ghibli Movies</ProjectTitle>
+          <ProjectDescription>
             Landing page for Ghibli movies using Ghibli API.
-          </PostDescription>
-          <PostTags>
+          </ProjectDescription>
+          <ProjectTags>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>Bootstrap</Tag>
-          </PostTags>
+          </ProjectTags>
           <GroupButton>
             <LeftButton
               href="https://josuedla.github.io/GhibliMovies/"
@@ -238,9 +238,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               Code
             </RightButton>
           </GroupButton>
-        </PostContent>
-      </PostCard>
-    </PostCardWrapper>
+        </ProjectContent>
+      </ProjectCard>
+    </ProjectCardWrapper>
   );
 };
 
