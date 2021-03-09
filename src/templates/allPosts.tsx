@@ -4,6 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import ImageGroup from "../components/common/ImageGroup";
 import { ProjectsImages } from "../queries/Projects";
+import SVG from "../components/common/Svg";
+import UnderConstructionImg from "../images/svg/under-construction.svg";
+import SEO from "../components/common/Seo";
 import {
   DescriptionWrapper,
   ImageWrapper,
@@ -64,46 +67,62 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
     day: "numeric",
   };
 
-  return (
-    <Layout>
-      <main className="container">
-        <h1>AllPosts</h1>
-        <PostCardWrapper>
-          {posts.map((post: any) => (
-            <PostCard key={post.node.frontmatter.slug}>
-              <ImageWrapper>
-                <ImageGroup
-                  query={ProjectsImages}
-                  filename="django.png"
-                  className="post-img"
-                  alt="Server"
-                />
-              </ImageWrapper>
-              <DescriptionWrapper>
-                <PostTitle>{post.node.frontmatter.title}</PostTitle>
-                <PostDescription>
-                  {post.node.frontmatter.excerpt}
-                  <br />
-                  {new Date(post.node.frontmatter.date).toLocaleDateString(
-                    "en-US",
-                    DATE_OPTIONS
-                  )}
-                </PostDescription>
-                <PostLink>Read More {post.node.frontmatter.slug}</PostLink>
-              </DescriptionWrapper>
-            </PostCard>
-          ))}
-        </PostCardWrapper>
+  console.log("posts :>> ", posts);
 
-        <Pagination
-          isFirst={isFirst}
-          isLast={isLast}
-          previousPage={previous}
-          nextPage={next}
+  if (posts.length > 0) {
+    return (
+      <Layout>
+        <SEO title="Blog" />
+        <main className="container">
+          <h1>AllPosts</h1>
+          <PostCardWrapper>
+            {posts.map((post: any) => (
+              <PostCard key={post.node.frontmatter.slug}>
+                <ImageWrapper>
+                  <ImageGroup
+                    query={ProjectsImages}
+                    filename="django.png"
+                    className="post-img"
+                    alt="Server"
+                  />
+                </ImageWrapper>
+                <DescriptionWrapper>
+                  <PostTitle>{post.node.frontmatter.title}</PostTitle>
+                  <PostDescription>
+                    {post.node.frontmatter.excerpt}
+                    <br />
+                    {new Date(post.node.frontmatter.date).toLocaleDateString(
+                      "en-US",
+                      DATE_OPTIONS
+                    )}
+                  </PostDescription>
+                  <PostLink>Read More {post.node.frontmatter.slug}</PostLink>
+                </DescriptionWrapper>
+              </PostCard>
+            ))}
+          </PostCardWrapper>
+
+          <Pagination
+            isFirst={isFirst}
+            isLast={isLast}
+            previousPage={previous}
+            nextPage={next}
+          />
+        </main>
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout>
+        <SEO title="Blog" />
+        <SVG
+          text="Blog Under Construction"
+          image={UnderConstructionImg}
+          alt="Web Construction"
         />
-      </main>
-    </Layout>
-  );
+      </Layout>
+    );
+  }
 };
 
 export const pageQuery = graphql`

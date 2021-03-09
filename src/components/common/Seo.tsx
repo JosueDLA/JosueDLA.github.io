@@ -1,8 +1,7 @@
-import { useStaticQuery } from "gatsby";
 import React from "react";
-import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
 export interface SEOProps {
   description?: string;
@@ -73,7 +72,7 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `es`,
+  lang: `en`,
   meta: [],
   description: ``,
 };
