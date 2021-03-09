@@ -52,14 +52,18 @@ interface IDate {
 }
 
 const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
+  // Page Route
   const pagePath = "/blog/";
+
+  // Pagination props
   const { currentPage, numPages } = pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const previous =
     currentPage - 1 === 1 ? `${pagePath}` : `${pagePath}${currentPage - 1}`;
   const next = `${pagePath}${currentPage + 1}`;
-  const posts = data.allMdx.edges;
+
+  // Date Format
   const DATE_OPTIONS: IDate = {
     weekday: "short",
     year: "numeric",
@@ -67,7 +71,10 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
     day: "numeric",
   };
 
-  console.log("posts :>> ", posts);
+  // Remove test blog post
+  const posts = data.allMdx.edges.filter(
+    (post: any) => post.node.frontmatter.slug !== "hello-world"
+  );
 
   if (posts.length > 0) {
     return (
