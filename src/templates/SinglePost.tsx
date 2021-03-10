@@ -3,25 +3,35 @@ import Layout from "../components/Layout/Layout";
 import SEO from "../components/common/Seo";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import Img from "gatsby-image";
+import { PostJumbotron } from "../components/Blog/PostJumbotron";
+import { Post } from "../components/Blog/Post";
 
-export interface PostProps {
+export interface SinglePostProps {
   data: any;
 }
 
-const Post: React.FC<PostProps> = ({ data }) => {
+const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
   const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
 
   return (
     <Layout>
       <SEO title={data.mdx.frontmatter.title} />
-      <main className="container">
+      <PostJumbotron>
+        <header>
+          <h1>{data.mdx.frontmatter.title}</h1>
+          <p>{data.mdx.frontmatter.excerpt}</p>
+        </header>
+      </PostJumbotron>
+
+      <Post>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      </main>
+      </Post>
     </Layout>
   );
 };
 
-export default Post;
+export default SinglePost;
 
 export const pageQuery = graphql`
   query SinglePost($id: String!) {
