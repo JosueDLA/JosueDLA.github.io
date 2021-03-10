@@ -10,7 +10,6 @@ const FooterWraper = styled.div`
   align-items: center;
   font-size: 1rem;
   top: 0;
-  z-index: 10;
 
   @media screen and (max-width: 960px) {
     transition: 0.8 all ease;

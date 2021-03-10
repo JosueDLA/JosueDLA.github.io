@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Footer from "./Footer";
-import GlobalStyle from "../../style/globalStyles";
 import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../../style/globalStyles";
 import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import ThemeContext from "../common/ThemeContext";
 import Navbar from "./Navbar/NavBar";
+import Footer from "./Footer";
 import BackToTopButton from "../common/BackToTop";
 
 export interface LayoutProps {}
@@ -24,7 +24,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </ThemeContext.Provider>
 
       {children}
+
       <BackToTopButton />
+      <div style={{ flexGrow: 1 }}></div>
       <Footer />
     </ThemeProvider>
   );

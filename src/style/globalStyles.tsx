@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-secondary);
   }
 
+  #gatsby-focus-wrapper{
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+  }
+
   html {
     overflow-y: scroll;
   }
@@ -28,14 +34,12 @@ const GlobalStyle = createGlobalStyle`
 
   @media screen and (max-width: 768px) {
     .container {
-      margin: 0 auto;
       width: 85%;
     }
   }
 
   @media screen and (max-width: 480px) {
     .container {
-      margin: 0 auto;
       width: 95%;
     }
   }
