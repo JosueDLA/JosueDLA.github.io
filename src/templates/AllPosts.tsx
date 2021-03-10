@@ -1,7 +1,7 @@
 import React from "react";
-import Pagination from "../components/common/Pagination";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
+import Pagination from "../components/common/Pagination";
 import ImageGroup from "../components/common/ImageGroup";
 import { ProjectsImages } from "../queries/Projects";
 import SVG from "../components/common/Svg";
@@ -12,7 +12,6 @@ import {
   ImageWrapper,
   PostCard,
   PostCardWrapper,
-  PostLink,
   PostTitle,
   PostDescription,
 } from "../components/Blog/PostCard";
@@ -44,13 +43,6 @@ interface IPageContext {
   skip: number;
 }
 
-interface IDate {
-  weekday?: "long" | "short" | "narrow";
-  year?: "numeric" | "2-digit";
-  month?: "numeric" | "2-digit" | "long" | "short" | "narrow";
-  day?: "numeric" | "2-digit";
-}
-
 const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   // Page Route
   const pagePath = "/blog/";
@@ -62,14 +54,6 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   const previous =
     currentPage - 1 === 1 ? `${pagePath}` : `${pagePath}${currentPage - 1}`;
   const next = `${pagePath}${currentPage + 1}`;
-
-  // Date Format
-  const DATE_OPTIONS: IDate = {
-    weekday: "short",
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  };
 
   // Remove test blog post
   const posts = data.allMdx.edges.filter(
@@ -98,12 +82,11 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
                   <PostDescription>
                     {post.node.frontmatter.excerpt}
                     <br />
-                    {new Date(post.node.frontmatter.date).toLocaleDateString(
-                      "en-US",
-                      DATE_OPTIONS
-                    )}
+                    {post.node.frontmatter.date}
                   </PostDescription>
-                  <PostLink>Read More {post.node.frontmatter.slug}</PostLink>
+                  <Link to={post.node.frontmatter.slug} className="post-link">
+                    Read More
+                  </Link>
                 </DescriptionWrapper>
               </PostCard>
             ))}
@@ -132,6 +115,8 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   }
 };
 
+export default AllPosts;
+
 export const pageQuery = graphql`
   query AllPosts($skip: Int!, $limit: Int!) {
     allMdx(
@@ -142,7 +127,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             excerpt
             slug
             title
@@ -152,5 +137,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default AllPosts;

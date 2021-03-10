@@ -38,6 +38,18 @@ export const DescriptionWrapper = styled.div`
     top: 0;
     bottom: 0;
   }
+
+  .post-link {
+    text-align: right;
+    color: var(--accent-primary);
+    display: inline-block;
+    position: absolute;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    right: 0;
+    bottom: 0;
+  }
 `;
 
 export const PostTitle = styled.h2`
@@ -60,18 +72,6 @@ export const PostTitle = styled.h2`
 export const PostDescription = styled.p`
   padding-bottom: 3rem;
   text-align: left;
-`;
-
-export const PostLink = styled.label`
-  text-align: right;
-  color: var(--accent-primary);
-  display: inline-block;
-  position: absolute;
-  text-decoration: underline;
-  cursor: pointer;
-  padding-bottom: 1rem;
-  right: 0;
-  bottom: 0;
 `;
 
 export const PostCard = styled.article`
