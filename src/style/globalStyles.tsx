@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: "Roboto Mono", monospace;
     background-color: var(--bg-primary);
-    color: var(--text-primary);
+    color: var(--text-secondary);
   }
 
   html {
