@@ -77,6 +77,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 3.5rem;
+  margin: 0;
 
   .nav-link {
     color: var(--text-primary);

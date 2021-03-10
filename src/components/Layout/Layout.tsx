@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Footer from "./Footer";
-import GlobalStyle from "./../../style/globalStyles";
+import GlobalStyle from "../../style/globalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../style/theme";
 import { useDarkMode } from "../../hooks/useDarkMode";
