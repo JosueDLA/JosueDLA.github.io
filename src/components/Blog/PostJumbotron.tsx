@@ -16,8 +16,22 @@ export const PostJumbotron = styled.aside`
   }
 
   h1 {
-    margin: 0;
     font-size: 42;
     font-weight: 700;
+    margin: 0;
+
+    @media screen and (max-width: 480px) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 28px;
+    }
+  }
+
+  h2 {
+    font-size: 24;
+    margin: 10px 0;
+    padding: 0 0 10px;
   }
 `;

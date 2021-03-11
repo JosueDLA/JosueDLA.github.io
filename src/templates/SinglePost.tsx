@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import Img from "gatsby-image";
 import { PostJumbotron } from "../components/Blog/PostJumbotron";
 import { Post } from "../components/Blog/Post";
+import { PostWrapper } from "./../components/Blog/Post";
 
 export interface SinglePostProps {
   data: any;
@@ -20,13 +21,15 @@ const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
       <PostJumbotron>
         <header>
           <h1>{data.mdx.frontmatter.title}</h1>
-          <p>{data.mdx.frontmatter.excerpt}</p>
+          <h2>{data.mdx.frontmatter.excerpt}</h2>
         </header>
       </PostJumbotron>
 
-      <Post>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      </Post>
+      <PostWrapper>
+        <Post>
+          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        </Post>
+      </PostWrapper>
     </Layout>
   );
 };

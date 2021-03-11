@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
+export const PostWrapper = styled.div`
+  width: 100%;
+`;
+
 export const Post = styled.main`
+  line-height: 5;
   padding: 40px 10px 20px;
   max-width: 640px;
   position: relative;
@@ -88,16 +93,13 @@ export const Post = styled.main`
 
   h1 {
     font-size: 36px;
-    color: var(--text-secondary);
-    margin: 10px 0;
-    padding: 0 0 10px;
+    font-weight: 700;
   }
 
   h2 {
     font-size: 32px;
-    color: var(--text-secondary);
+    padding-bottom: 10px;
     border-bottom: 1px solid #cccccc;
-    padding: 0 0 10px;
   }
 
   h3 {
@@ -397,5 +399,77 @@ export const Post = styled.main`
   pre tt {
     background-color: transparent;
     border: none;
+  }
+
+  @media screen and (max-width: 992px) {
+    img {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 21px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 14px;
+    }
+
+    h6 {
+      font-size: 12px;
+    }
+
+    code,
+    pre {
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 21px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    h5 {
+      font-size: 14px;
+    }
+
+    h6 {
+      font-size: 12px;
+    }
+
+    code,
+    pre {
+      min-width: 240px;
+      max-width: 320px;
+      font-size: 11px;
+    }
   }
 `;
