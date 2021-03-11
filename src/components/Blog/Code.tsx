@@ -1,6 +1,6 @@
 import React from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwlLight";
+import theme from "./CodeTheme";
 
 export interface CodeProps {
   codeString: string;
