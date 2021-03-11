@@ -1,5 +1,7 @@
 import React from "react";
 import { lightTheme, darkTheme } from "./src/style/theme";
+import { MDXProvider } from "@mdx-js/react";
+import Table from "./src/components/Blog/Table";
 
 const setTheme = () => {
   function getInitialThemeMode() {
@@ -68,4 +70,13 @@ const NoScripStyle = () => {
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setHeadComponents(<NoScripStyle key="no-script" />);
   setPreBodyComponents(<MagicScript key="magic-script" />);
+};
+
+// Gatsby Browser
+const components = {
+  table: Table,
+};
+
+export const wrapRootElement = ({ element }) => {
+  return <MDXProvider components={components}>{element}</MDXProvider>;
 };

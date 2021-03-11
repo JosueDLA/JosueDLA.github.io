@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import Table from "./src/components/Blog/Table";
 
-// You can delete this file if you're not using it
+const components = {
+  table: Table,
+};
+
+export const wrapRootElement = ({ element }) => {
+  return <MDXProvider components={components}>{element}</MDXProvider>;
+};
