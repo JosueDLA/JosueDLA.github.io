@@ -21,7 +21,9 @@ export interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   return (
     <AboutWrapper id="about">
-      <Title className="container" text="About" />
+      <div className="container title">
+        <Title text="About" />
+      </div>
       <AboutBg>
         <AboutContainer className="container">
           <ImgContainer>

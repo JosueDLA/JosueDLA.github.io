@@ -6,6 +6,10 @@ export const AboutWrapper = styled.section`
   min-height: 100vh;
   padding-top: 3.5rem;
 
+  .title {
+    background: inherit;
+  }
+
   @media screen and (max-width: 960px) {
     margin: 0;
   }
