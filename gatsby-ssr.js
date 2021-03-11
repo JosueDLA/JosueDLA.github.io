@@ -1,7 +1,10 @@
 import React from "react";
-import { lightTheme, darkTheme } from "./src/style/theme";
 import { MDXProvider } from "@mdx-js/react";
+import { preToCodeBlock } from "mdx-utils";
+import { lightTheme, darkTheme } from "./src/style/theme";
 import Table from "./src/components/Blog/Table";
+import Code from "./src/components/Blog/Code";
+import "./src/style/language.css";
 
 const setTheme = () => {
   function getInitialThemeMode() {
@@ -75,6 +78,17 @@ export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
 // Gatsby Browser
 const components = {
   table: Table,
+  pre: (preProps) => {
+    const props = preToCodeBlock(preProps);
+
+    // If there's a codeString and some props
+    if (props) {
+      return <Code {...props} />;
+    }
+
+    // Empty pre
+    return <pre {...preProps} />;
+  },
 };
 
 export const wrapRootElement = ({ element }) => {
