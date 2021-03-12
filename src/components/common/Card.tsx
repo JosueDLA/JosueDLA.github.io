@@ -12,6 +12,7 @@ export const CardRow = styled.div`
 
 export const Card = styled.div`
   background: var(--bg-secondary);
+  color: var(--text-primary);
   max-width: 20rem;
   display: flex;
   flex-direction: column;

@@ -13,6 +13,7 @@ export const PostJumbotron = styled.aside`
     max-width: 640px;
     padding: 35px 10px 30px 10px;
     margin: 0 auto;
+    color: var(--text-primary);
   }
 
   h1 {
