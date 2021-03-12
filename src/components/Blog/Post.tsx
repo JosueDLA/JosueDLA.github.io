@@ -1,17 +1,30 @@
 import styled from "styled-components";
 
+export const AllPostTitle = styled.h1`
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1.5rem;
+  }
+`;
+
 export const PostWrapper = styled.div`
   width: 100%;
 `;
 
 export const Post = styled.main`
-  line-height: 5;
   padding: 40px 10px 20px;
   max-width: 640px;
   position: relative;
   margin: 0 auto;
   font-size: 1rem;
-  line-height: 1.6rem;
+  line-height: 1.6;
   color: var(--text-secondary);
   overflow: hidden;
   display: flex;

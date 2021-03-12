@@ -7,6 +7,7 @@ import { ProjectsImages } from "../queries/Projects";
 import SVG from "../components/common/Svg";
 import UnderConstructionImg from "../images/svg/under-construction.svg";
 import SEO from "../components/common/Seo";
+import { AllPostTitle } from "../components/Blog/Post";
 import {
   DescriptionWrapper,
   ImageWrapper,
@@ -56,16 +57,14 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   const next = `${pagePath}${currentPage + 1}`;
 
   // Remove test blog post
-  const posts = data.allMdx.edges.filter(
-    (post: any) => post.node.frontmatter.slug !== "hello-world"
-  );
+  const posts = data.allMdx.edges;
 
   if (posts.length > 0) {
     return (
       <Layout>
         <SEO title="Blog" />
         <main className="container">
-          <h1>AllPosts</h1>
+          <AllPostTitle>Blog</AllPostTitle>
           <PostCardWrapper>
             {posts.map((post: any) => (
               <PostCard key={post.node.frontmatter.slug}>

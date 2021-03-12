@@ -67,6 +67,14 @@ export const PostTitle = styled.h2`
     border-radius: 0.3rem;
     margin-top: 0.4rem;
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const PostDescription = styled.p`

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { noSelect } from "../../style/noSelect";
 
-export const ProjectCardWrapper = styled.div`
+export const ProjectCardWrapper = styled.article`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -83,7 +83,7 @@ export const RightButton = styled.a`
   border-left: 1px solid black;
 `;
 
-export const ProjectCard = styled.div`
+export const ProjectCard = styled.article`
   position: relative;
   display: flex;
   width: 90%;
