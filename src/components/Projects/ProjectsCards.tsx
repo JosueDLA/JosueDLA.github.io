@@ -1,6 +1,4 @@
 import React from "react";
-import ImageGroup from "../common/ImageGroup";
-import { ProjectsImages } from "../../queries/Projects";
 import {
   ProjectCard,
   ProjectCardWrapper,
@@ -13,6 +11,7 @@ import {
   RightButton,
   GroupButton,
 } from "../common/ProjectCard";
+import { StaticImage } from "gatsby-plugin-image";
 
 export interface ProjectCardsProps {}
 
@@ -20,11 +19,13 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
   return (
     <ProjectCardWrapper>
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="django.png"
-          className="post-img"
-          alt="Server"
+        <StaticImage
+          src="../../images/projects/django.png"
+          alt="Django Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={440}
         />
         <ProjectContent>
           <ProjectTitle>Django Store</ProjectTitle>
@@ -57,11 +58,14 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
         </ProjectContent>
       </ProjectCard>
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="javascript.png"
+        <StaticImage
+          src="../../images/projects/javascript.png"
+          alt="Javascript Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={430}
           className="post-img"
-          alt="Server"
         />
         <ProjectContent>
           <ProjectTitle>Readme Creator</ProjectTitle>
@@ -94,11 +98,13 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
         </ProjectContent>
       </ProjectCard>
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="c-sharp.png"
-          className="post-img"
-          alt="Server"
+        <StaticImage
+          src="../../images/projects/c-sharp.png"
+          alt="C Sharp Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={430}
         />
         <ProjectContent>
           <ProjectTitle>MVC5 Store</ProjectTitle>
@@ -131,11 +137,13 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
         </ProjectContent>
       </ProjectCard>
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="javascript.png"
-          className="post-img"
-          alt="Server"
+        <StaticImage
+          src="../../images/projects/javascript.png"
+          alt="Javascript Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={430}
         />
         <ProjectContent>
           <ProjectTitle>Portfolio V1</ProjectTitle>
@@ -167,11 +175,13 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
       </ProjectCard>
 
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="python.png"
-          className="post-img"
-          alt="Server"
+        <StaticImage
+          src="../../images/projects/python.png"
+          alt="Python Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={430}
         />
         <ProjectContent>
           <ProjectTitle>Twitter Bot</ProjectTitle>
@@ -204,11 +214,14 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
         </ProjectContent>
       </ProjectCard>
       <ProjectCard>
-        <ImageGroup
-          query={ProjectsImages}
-          filename="javascript.png"
+        <StaticImage
+          src="../../images/projects/javascript.png"
+          alt="Javascript Code"
+          placeholder="blurred"
+          layout="fixed"
+          width={290}
+          height={430}
           className="post-img"
-          alt="Server"
         />
         <ProjectContent>
           <ProjectTitle>Ghibli Movies</ProjectTitle>

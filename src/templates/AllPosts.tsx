@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout/Layout";
 import Pagination from "../components/common/Pagination";
-import ImageGroup from "../components/common/ImageGroup";
-import { ProjectsImages } from "../queries/Projects";
 import SVG from "../components/common/Svg";
 import UnderConstructionImg from "../images/svg/under-construction.svg";
 import SEO from "../components/common/Seo";
@@ -69,11 +68,13 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
             {posts.map((post: any) => (
               <PostCard key={post.node.frontmatter.slug}>
                 <ImageWrapper>
-                  <ImageGroup
-                    query={ProjectsImages}
-                    filename="django.png"
-                    className="post-img"
-                    alt="Server"
+                  <StaticImage
+                    src="../../images/projects/django.png"
+                    alt="Django Code"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width={290}
+                    height={430}
                   />
                 </ImageWrapper>
                 <DescriptionWrapper>

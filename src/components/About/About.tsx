@@ -1,11 +1,10 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { FaGithub, FaLinkedinIn, FaAngleDown } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import Title from "../common/Title";
-import Image from "../../components/common/Image";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
 import ScrollButton from "../common/ScrollButton";
-import { ProfilePicture } from "../../queries/ProfilePicture";
 import {
   AboutWrapper,
   AboutContainer,
@@ -27,7 +26,14 @@ const About: React.FC<AboutProps> = () => {
       <AboutBg>
         <AboutContainer className="container">
           <ImgContainer>
-            <Image hook={ProfilePicture} className="profile-img" alt="code" />
+            <StaticImage
+              src="../../images/about/profile.jpg"
+              alt="Code"
+              placeholder="blurred"
+              layout="fixed"
+              width={230}
+              height={230}
+            />
           </ImgContainer>
           <AboutP>
             Hello! I’m Josué. <br />

@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout";
 import SEO from "../components/common/Seo";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import Img from "gatsby-image";
 import { PostJumbotron } from "../components/Blog/PostJumbotron";
 import { Post } from "../components/Blog/Post";
 import { PostWrapper } from "./../components/Blog/Post";
@@ -13,7 +12,8 @@ export interface SinglePostProps {
 }
 
 const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
-  const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
+  const featureImage =
+    data.mdx.frontmatter.featureImage.childImageSharp.gatsbyImageData;
 
   return (
     <Layout>
@@ -47,9 +47,7 @@ export const pageQuery = graphql`
         title
         featureImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(layout: FIXED)
           }
         }
       }

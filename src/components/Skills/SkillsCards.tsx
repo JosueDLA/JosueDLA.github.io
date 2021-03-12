@@ -1,6 +1,5 @@
 import React from "react";
-import ImageGroup from "../common/ImageGroup";
-import { SkillsImages } from "../../queries/Skills";
+import { StaticImage } from "gatsby-plugin-image";
 import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
 
 export interface SkillsCardsProps {}
@@ -10,11 +9,13 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
     <CardRow>
       <Card>
         <Banner>
-          <ImageGroup
-            query={SkillsImages}
-            filename="code.png"
-            className="card-img"
+          <StaticImage
+            src="../../images/skills/code.png"
             alt="Code"
+            placeholder="blurred"
+            layout="fixed"
+            width={160}
+            height={160}
           />
         </Banner>
         <CardTitle>Programming</CardTitle>
@@ -26,11 +27,13 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <ImageGroup
-            query={SkillsImages}
-            filename="server.png"
-            className="card-img"
+          <StaticImage
+            src="../../images/skills/server.png"
             alt="Server"
+            placeholder="blurred"
+            layout="fixed"
+            width={160}
+            height={160}
           />
         </Banner>
         <CardTitle>Servers &amp; DBMS</CardTitle>
@@ -42,11 +45,13 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
 
       <Card>
         <Banner>
-          <ImageGroup
-            query={SkillsImages}
-            filename="api.png"
-            className="card-img"
+          <StaticImage
+            src="../../images/skills/api.png"
             alt="API"
+            placeholder="blurred"
+            layout="fixed"
+            width={160}
+            height={160}
           />
         </Banner>
         <CardTitle>Web API</CardTitle>
