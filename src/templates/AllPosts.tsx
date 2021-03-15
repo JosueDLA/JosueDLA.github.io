@@ -84,7 +84,10 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
                     <br />
                     {post.node.frontmatter.date}
                   </PostDescription>
-                  <Link to={post.node.frontmatter.slug} className="post-link">
+                  <Link
+                    to={`/blog/${post.node.frontmatter.slug}`}
+                    className="post-link"
+                  >
                     Read More
                   </Link>
                 </DescriptionWrapper>
