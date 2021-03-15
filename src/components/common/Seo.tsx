@@ -36,13 +36,13 @@ const SEO: React.FC<SEOProps> = ({
     }
   `);
 
-  console.log("location :>> ", location);
-
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const cardUrl =
-    image || `${site.siteMetadata.siteUrl}${location.pathname}home.png`;
+  const cardUrl = image
+    ? `${site.siteMetadata.siteUrl}${image}`
+    : `${site.siteMetadata.siteUrl}/home.png`;
 
+  console.log("cardUrl :>> ", cardUrl);
   return (
     <Helmet
       htmlAttributes={{
