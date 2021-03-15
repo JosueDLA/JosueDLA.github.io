@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import ThemeToggleContext from "./ThemeContext";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const SwitchWrapper = styled.div`
   .switch {
@@ -8,6 +9,24 @@ const SwitchWrapper = styled.div`
     display: inline-block;
     width: 60px;
     height: 34px;
+
+    .left,
+    .right {
+      color: white;
+      position: absolute;
+      font-size: 1.2rem;
+      z-index: 0;
+    }
+
+    .left {
+      top: 7px;
+      left: 7px;
+    }
+
+    .right {
+      top: 7px;
+      right: 7px;
+    }
   }
 
   .switch input {
@@ -40,10 +59,7 @@ const SwitchWrapper = styled.div`
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
-  }
-
-  input:checked + .circle {
-    background-color: var(--accent-secondary);
+    z-index: 1;
   }
 
   input:checked + .circle:before {
@@ -66,7 +82,11 @@ const Toggle: React.FC = () => {
           aria-label="Toggle Theme"
           checked={theme === "dark" ? true : false}
         />
-        <div className="circle"></div>
+
+        <div className="circle">
+          <FiSun className="left" />
+          <FiMoon className="right" />
+        </div>
       </label>
     </SwitchWrapper>
   );
