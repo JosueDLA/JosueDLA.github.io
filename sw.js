@@ -27,54 +27,45 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e932bf175c2f17ebd359.js"
+    "url": "webpack-runtime-ce0b434932247a483215.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
   },
   {
-    "url": "app-424b74895ee8ecc859f9.js"
+    "url": "styles.60fd4f62617ba08037c3.css"
+  },
+  {
+    "url": "app-308236a48c5886d74b4a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0ad7c6babd6b1a82c2dee9260e4a9ca9"
+    "revision": "17ae79a4baaa819eea85d53595f2f2c7"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
   },
   {
-    "url": "polyfill-142d41baf7fe896870c9.js"
+    "url": "polyfill-1fbb6991ecb352e44693.js"
   },
   {
     "url": "1bfc9850-2205f08f552fbcf517ce.js"
   },
   {
+    "url": "5e2a4920-57c854c74c30e9d3b478.js"
+  },
+  {
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "0a78b8368e424aada4e5ce09fe50bf506464101b-94468f4cfee4cc7ceede.js"
+    "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-f35fc1a8b6e101427c46.js"
   },
   {
-    "url": "9c0b8da0626080abac0be1ca59f4774ddc0b6a87-465caae0167d3a9ba78d.js"
-  },
-  {
-    "url": "component---src-pages-index-tsx-d059d216de3357cdd8cb.js"
+    "url": "component---src-pages-index-tsx-59a664a1ff47c2c8a6d6.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "71d60b6e64083f5840ae4ee2a958376d"
-  },
-  {
-    "url": "page-data/sq/d/132551207.json",
-    "revision": "c678bb1ed10fa1dfd19bda5f20d99559"
-  },
-  {
-    "url": "page-data/sq/d/3456921768.json",
-    "revision": "507ae29044b2a6864cda7544725c5c42"
-  },
-  {
-    "url": "page-data/sq/d/486862377.json",
-    "revision": "d632b0a0a2a5a8a550549ff34a4148cf"
+    "revision": "9a6064eba8c8788b5b630cd6ed17d75d"
   },
   {
     "url": "page-data/sq/d/80858887.json",
@@ -82,14 +73,37 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "932e0e006b8f472fc3f8dbce991ec3cc"
+    "revision": "f7d38c70dcab2c97b183f9fbb5d65ac4"
   },
   {
-    "url": "component---src-templates-all-posts-tsx-7e8c3ed242334a222e77.js"
+    "url": "component---src-templates-all-posts-tsx-1acc8ee25013cb98666d.js"
+  },
+  {
+    "url": "page-data/blog/2/page-data.json",
+    "revision": "8ea16b617cd4f9dd5af678c8788cd195"
+  },
+  {
+    "url": "component---src-templates-single-post-tsx-641817da2f6c567816ef.js"
+  },
+  {
+    "url": "page-data/blog/basic-odoo-module/page-data.json",
+    "revision": "08dac1d19b166b1ddd7fc3817b94d8c3"
+  },
+  {
+    "url": "page-data/blog/hello-world/page-data.json",
+    "revision": "8c3e4497fc91d6ed9df898662ab932c4"
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "be05a9a58137f23e7594ec47c52a2568"
+    "revision": "3e0ab581f1b910edabbc0a9ed723f363"
+  },
+  {
+    "url": "page-data/blog/introduction-to-pipenv/page-data.json",
+    "revision": "6d87c3454c44a0dd2cf94bdcf70a103f"
+  },
+  {
+    "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
+    "revision": "973f2f6656fb63262ff9b3a288ebae8c"
   },
   {
     "url": "manifest.webmanifest",
@@ -185,7 +199,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-424b74895ee8ecc859f9.js`))) {
+  if (!resources || !(await caches.match(`/app-308236a48c5886d74b4a.js`))) {
     return await fetch(event.request)
   }
 
