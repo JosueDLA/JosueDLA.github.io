@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ce0b434932247a483215.js"
+    "url": "webpack-runtime-79631fbb1d8ee2b7ef00.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "17ae79a4baaa819eea85d53595f2f2c7"
+    "revision": "8c90616a2cdf3a01f12d3587f9804751"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -58,52 +58,52 @@ self.__precacheManifest = [
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-f35fc1a8b6e101427c46.js"
+    "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-cc2ed3b753321731ea9f.js"
   },
   {
-    "url": "component---src-pages-index-tsx-59a664a1ff47c2c8a6d6.js"
+    "url": "component---src-pages-index-tsx-3a94a73f6ef213c4c04d.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "9a6064eba8c8788b5b630cd6ed17d75d"
+    "revision": "bc3f428ed0009ed74b2f15d10fec39f5"
   },
   {
-    "url": "page-data/sq/d/80858887.json",
-    "revision": "6d35ef94a1a7b283ae9956c0979aa601"
+    "url": "page-data/sq/d/4102384782.json",
+    "revision": "d9ecec2a277405400d74b44b2391ba17"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f7d38c70dcab2c97b183f9fbb5d65ac4"
+    "revision": "b71c2f1f1b5024620eb65a6b3861d47c"
   },
   {
-    "url": "component---src-templates-all-posts-tsx-1acc8ee25013cb98666d.js"
+    "url": "component---src-templates-all-posts-tsx-4113cc7b73ec8fdbdfb4.js"
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "8ea16b617cd4f9dd5af678c8788cd195"
+    "revision": "c44cfbc1e47a05e35edada148a7d2043"
   },
   {
-    "url": "component---src-templates-single-post-tsx-641817da2f6c567816ef.js"
+    "url": "component---src-templates-single-post-tsx-209d6b2e1311eaa4e604.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "08dac1d19b166b1ddd7fc3817b94d8c3"
+    "revision": "b87f0deba09ad26dee5799c4b17693d4"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "8c3e4497fc91d6ed9df898662ab932c4"
+    "revision": "76f5cdeb9de5f4143bf3c958cbd4de38"
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "3e0ab581f1b910edabbc0a9ed723f363"
+    "revision": "a6d4b01d0da454ff5091d27e8ceee01a"
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "6d87c3454c44a0dd2cf94bdcf70a103f"
+    "revision": "7f0151ad724ef5252ba472a13c88f0a0"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "973f2f6656fb63262ff9b3a288ebae8c"
+    "revision": "bfcde2f5c7e1ad5018fabecbff22a3f9"
   },
   {
     "url": "manifest.webmanifest",
