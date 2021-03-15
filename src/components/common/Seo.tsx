@@ -7,10 +7,19 @@ export interface SEOProps {
   description?: string;
   lang?: string;
   meta?: any;
+  image?: string;
+  metaKeywords?: Array<string>;
   title: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
+const SEO: React.FC<SEOProps> = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+  metaKeywords,
+}) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -18,6 +27,8 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
           author
           description
           title
+          image
+          siteUrl
         }
       }
     }
@@ -25,6 +36,8 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const cardUrl =
+    image || `${site.siteMetadata.siteUrl}${location.pathname}home.png`;
 
   return (
     <Helmet
@@ -47,12 +60,16 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: cardUrl,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -66,7 +83,19 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        {
+          name: `twitter:image`,
+          content: cardUrl,
+        },
+      ].concat(
+        meta,
+        metaKeywords && metaKeywords.length > 0
+          ? {
+              name: "keywords",
+              content: metaKeywords.join(", "),
+            }
+          : []
+      )}
     />
   );
 };

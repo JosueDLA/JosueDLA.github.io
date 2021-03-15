@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `JosueDLA`,
     description: `Josué de León is a software developer based in Guatemala, he enjoys learning new things and writing about them.`,
-    author: `@JosueDLA`,
+    author: `JosueDLA`,
+    siteUrl: "https://josuedla.github.io",
+    image: `/home.png`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

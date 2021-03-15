@@ -14,10 +14,15 @@ export interface SinglePostProps {
 const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
   const featureImage =
     data.mdx.frontmatter.featureImage.childImageSharp.gatsbyImageData;
+  const seoImage = data.mdx.frontmatter.featureImage.publicURL;
 
   return (
     <Layout>
-      <SEO title={data.mdx.frontmatter.title} />
+      <SEO
+        title={data.mdx.frontmatter.title}
+        description={data.mdx.frontmatter.excerpt}
+        image={seoImage}
+      />
       <PostJumbotron>
         <header>
           <h1>{data.mdx.frontmatter.title}</h1>
@@ -46,6 +51,7 @@ export const pageQuery = graphql`
         slug
         title
         featureImage {
+          publicURL
           childImageSharp {
             gatsbyImageData(layout: FIXED)
           }
