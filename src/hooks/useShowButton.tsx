@@ -1,6 +1,7 @@
 // @ts-ignore
 import { window } from "browser-monads";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const useShowButton = () => {
   const [visible, setVisible] = useState(false);
@@ -14,8 +15,17 @@ export const useShowButton = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleShow);
-  }, []);
+    let isMounted = true;
+
+    if (isMounted) {
+      window.addEventListener("scroll", toggleShow);
+    }
+
+    return () => {
+      isMounted = false;
+      window.removeEventListener("scroll", toggleShow);
+    };
+  });
 
   return [visible, setVisible] as const;
 };
