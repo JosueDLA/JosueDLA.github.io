@@ -4,21 +4,22 @@ export const PostCardWrapper = styled.article`
   display: grid;
   padding: 2rem 0;
   align-items: center;
-  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: 2rem;
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   flex-basis: 40%;
-  width: 100%;
   overflow: hidden;
 
   @media (max-width: 640px) {
-    height: 15rem;
+    flex-basis: 15rem;
   }
 
   .post-img {
     position: absolute;
+    width: 100%;
   }
 `;
 
@@ -68,11 +69,11 @@ export const PostTitle = styled.h2`
     margin-top: 0.4rem;
   }
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 640px) {
     font-size: 1.5rem;
   }
 
-  @media screen and (max-width: 320px) {
+  @media (max-width: 320px) {
     font-size: 1.2rem;
   }
 `;
@@ -83,22 +84,20 @@ export const PostDescription = styled.p`
 `;
 
 export const PostCard = styled.article`
-  position: relative;
   display: flex;
   overflow: hidden;
   flex-direction: row;
   background-color: var(--bg-secondary);
   line-height: 1.4rem;
-  border-radius: 5px;
-  width: 20rem;
-  color: var(--text-primary);
-  max-width: 60rem;
-  max-height: 15rem;
+  border-radius: 0.3rem;
   width: 100%;
+  height: 100%;
+  color: var(--text-primary);
   margin: 0 auto;
+  justify-content: center;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
 
   @media (max-width: 640px) {
     flex-direction: column;
-    max-height: 25rem;
   }
 `;

@@ -67,16 +67,6 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
           <PostCardWrapper>
             {posts.map((post: any) => (
               <PostCard key={post.node.frontmatter.slug}>
-                <ImageWrapper>
-                  <StaticImage
-                    src="../../images/projects/django.png"
-                    alt="Django Code"
-                    placeholder="blurred"
-                    layout="fixed"
-                    width={290}
-                    height={430}
-                  />
-                </ImageWrapper>
                 <DescriptionWrapper>
                   <PostTitle>{post.node.frontmatter.title}</PostTitle>
                   <PostDescription>
@@ -85,7 +75,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
                     {post.node.frontmatter.date}
                   </PostDescription>
                   <Link
-                    to={`/blog/${post.node.frontmatter.slug}`}
+                    to={`${pagePath}${post.node.frontmatter.slug}`}
                     className="post-link"
                   >
                     Read More
