@@ -95,7 +95,7 @@ export const ProjectCard = styled.article`
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
   overflow: hidden;
 
-  .post-img {
+  .project-img {
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -136,12 +136,14 @@ export const ProjectContent = styled.div`
     background: var(--bg-secondary);
     width: 250%;
     height: 250%;
+    opacity: 0.5;
   }
 
   &:after {
     background: var(--bg-secondary);
     width: 200%;
     height: 200%;
+    opacity: 0.5;
   }
 
   &:hover:before,

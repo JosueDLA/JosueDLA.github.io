@@ -26,6 +26,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={440}
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>Django Store</ProjectTitle>
@@ -65,7 +66,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={430}
-          className="post-img"
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>Readme Creator</ProjectTitle>
@@ -105,6 +106,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={430}
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>MVC5 Store</ProjectTitle>
@@ -144,6 +146,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={430}
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>Portfolio V1</ProjectTitle>
@@ -182,6 +185,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={430}
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>Twitter Bot</ProjectTitle>
@@ -221,7 +225,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           layout="fixed"
           width={290}
           height={430}
-          className="post-img"
+          className="project-img"
         />
         <ProjectContent>
           <ProjectTitle>Ghibli Movies</ProjectTitle>

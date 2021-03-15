@@ -51,6 +51,6 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardDesc = styled.p`
-  text-align: justify;
+  text-align: center;
   padding: 0 2rem 2.5rem;
 `;
