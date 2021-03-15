@@ -5,6 +5,10 @@ import normalize from "./normalize";
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
+  html {
+    overflow-y: scroll;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -13,14 +17,10 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-secondary);
   }
 
-  #gatsby-focus-wrapper{
-    min-height: 100vh; 
+  #gatsby-focus-wrapper, #blog-main{
+    min-height: calc(100vh - 7rem); 
     display: flex; 
     flex-direction: column;
-  }
-
-  html {
-    overflow-y: scroll;
   }
 
   section {

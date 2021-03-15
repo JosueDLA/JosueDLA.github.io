@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout/Layout";
 import Pagination from "../components/common/Pagination";
 import SVG from "../components/common/Svg";
@@ -9,7 +8,6 @@ import SEO from "../components/common/Seo";
 import { AllPostTitle } from "../components/Blog/Post";
 import {
   DescriptionWrapper,
-  ImageWrapper,
   PostCard,
   PostCardWrapper,
   PostTitle,
@@ -62,7 +60,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
     return (
       <Layout>
         <SEO title="Blog" />
-        <main className="container">
+        <main id="blog-main" className="container">
           <AllPostTitle>Blog</AllPostTitle>
           <PostCardWrapper>
             {posts.map((post: any) => (
@@ -84,7 +82,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
               </PostCard>
             ))}
           </PostCardWrapper>
-
+          <div style={{ flexGrow: 1 }}></div>
           <Pagination
             isFirst={isFirst}
             isLast={isLast}
