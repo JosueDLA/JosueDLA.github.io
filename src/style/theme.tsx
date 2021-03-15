@@ -44,6 +44,7 @@ export const lightTheme = {
   "--bg-video": "rgba(56, 86, 139, 0.8)",
   "--text-primary": "#f8f8f8",
   "--text-secondary": "#000000",
+  "--text-disabled": "#6c757d",
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#394b61",
   ...lightCode,
@@ -55,6 +56,7 @@ export const darkTheme = {
   "--bg-video": "#1f2449",
   "--text-primary": "#f8f8f8",
   "--text-secondary": "#f8f8f8",
+  "--text-disabled": "#6c757d",
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#303030",
   ...darkCode,
@@ -65,6 +67,7 @@ export interface DefaultTheme {
   "--bg-secondary": string;
   "--bg-video": string;
   "--text-primary": string;
+  "--text-disabled": string;
   "--text-secondary": string;
   "--accent-primary": string;
   "--accent-secondary": string;

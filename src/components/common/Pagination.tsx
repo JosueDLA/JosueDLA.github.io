@@ -12,15 +12,18 @@ export const PaginationWrapper = styled("div")<IPaginationProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 
   a:nth-child(1) {
-    color: ${({ isFirst }) => (isFirst ? "red" : "blue")};
+    color: ${({ isFirst }) =>
+      isFirst ? "var(--text-disabled)" : "var(--text-secondary)"};
     pointer-events: ${({ isFirst }) => (isFirst ? "none" : "auto")};
     cursor: ${({ isFirst }) => (isFirst ? "default" : "pointer")};
   }
 
   a:nth-child(2) {
-    color: ${({ isLast }) => (isLast ? "red" : "blue")};
+    color: ${({ isLast }) =>
+      isLast ? "var(--text-disabled)" : "var(--text-secondary)"};
     pointer-events: ${({ isLast }) => (isLast ? "none" : "auto")};
     cursor: ${({ isLast }) => (isLast ? "default" : "pointer")};
   }
