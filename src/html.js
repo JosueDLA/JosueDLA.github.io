@@ -19,17 +19,17 @@ export default function HTML(props) {
         {props.preBodyComponents}
         <noscript>
           <NoScriptNav
-            navText="Algunas caracteristicas podrian no estar disponibles."
+            navText="Some features may not be available."
             cardTitle="No JavaScript"
-            navBtn="Leer Más"
-            cardBtn="Salir"
+            navBtn="Read More"
+            cardBtn="Close"
           >
-            Lo sentimos, algunas caracteristicas podrian no funcionar
-            adecuadamente sin JavaScript. Por favor visita&nbsp;
+            Sorry, some features may not work properly without JavaScript.
+            Please visit&nbsp;
             <a href="https://www.enable-javascript.com/" target="blank_">
               Enable-JavaScript
             </a>
-            &nbsp;para habilitarlo.
+            &nbsp;to enable it.
           </NoScriptNav>
         </noscript>
         <div
