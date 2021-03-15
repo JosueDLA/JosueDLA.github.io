@@ -17,6 +17,7 @@ import {
 export interface AllPostsProps {
   pageContext: IPageContext;
   data: IData;
+  location: { pathname: string };
 }
 
 interface IData {
@@ -41,7 +42,7 @@ interface IPageContext {
   skip: number;
 }
 
-const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
+const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
   // Page Route
   const pagePath = "/blog/";
 
@@ -59,7 +60,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   if (posts.length > 0) {
     return (
       <Layout>
-        <SEO title="Blog" />
+        <SEO title="Blog" location={location} />
         <main id="blog-main" className="container">
           <AllPostTitle>Blog</AllPostTitle>
           <PostCardWrapper>
@@ -95,7 +96,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data }) => {
   } else {
     return (
       <Layout>
-        <SEO title="Blog" />
+        <SEO title="Blog" location={location} />
         <SVG
           text="Blog Under Construction"
           image={UnderConstructionImg}

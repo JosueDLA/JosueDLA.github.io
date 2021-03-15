@@ -10,6 +10,7 @@ export interface SEOProps {
   image?: string;
   metaKeywords?: Array<string>;
   title: string;
+  location: { pathname: string };
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -19,6 +20,7 @@ const SEO: React.FC<SEOProps> = ({
   title,
   image,
   metaKeywords,
+  location,
 }) => {
   const { site } = useStaticQuery(graphql`
     query {
@@ -33,6 +35,8 @@ const SEO: React.FC<SEOProps> = ({
       }
     }
   `);
+
+  console.log("location :>> ", location);
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;

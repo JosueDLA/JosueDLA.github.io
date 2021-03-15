@@ -6,10 +6,14 @@ import Skills from "../components/Skills/Skills";
 import Projects from "../components/Projects/Projects";
 import SEO from "../components/common/Seo";
 
-const IndexPage = () => {
+export interface IndexPageProps {
+  location: { pathname: string };
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ location }) => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" location={location} />
       <Home />
       <About />
       <Skills />
