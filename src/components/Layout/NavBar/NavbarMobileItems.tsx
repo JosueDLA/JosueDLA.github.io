@@ -9,15 +9,15 @@ interface ISideBarContainer {
 export const MobileContainer = styled("aside")<ISideBarContainer>`
   position: fixed;
   z-index: 999;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: var(--bg-secondary);
   display: grid;
   align-items: center;
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0%")};
   top: ${({ isOpen }) => (isOpen ? "0%" : "-100%")};
 `;
 

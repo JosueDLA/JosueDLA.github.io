@@ -21,6 +21,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 3.5rem;
@@ -49,16 +50,14 @@ export const NavIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
-    color: var(--text-primary);
+    background: transparent;
+    outline: none;
   }
 `;
 

@@ -28,6 +28,8 @@ export const useMobileMenu = () => {
       );
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}`;
+      document.body.style.left = `0`;
+      document.body.style.right = `0`;
     } else {
       const scrollY = document.body.style.top;
       document.body.style.position = "";
