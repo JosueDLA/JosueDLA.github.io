@@ -14,6 +14,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   const home = path === "/" ? true : false;
   const logoLink = LogoLink(home);
   const navLinks = NavLinks(home);
+  const mobileLinks = NavLinks(false);
 
   return (
     <React.Fragment>
@@ -22,7 +23,11 @@ const Navbar: React.FC<NavbarProps> = () => {
         LogoLink={logoLink}
         NavLinks={navLinks}
       />
-      <NavbarMobile isOpen={isOpen} toggleNav={toggleNav} NavLinks={navLinks} />
+      <NavbarMobile
+        isOpen={isOpen}
+        toggleNav={toggleNav}
+        NavLinks={mobileLinks}
+      />
     </React.Fragment>
   );
 };

@@ -9,8 +9,8 @@ interface ISideBarContainer {
 export const MobileContainer = styled("aside")<ISideBarContainer>`
   position: fixed;
   z-index: 999;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--bg-secondary);
   display: grid;
   align-items: center;
@@ -42,13 +42,13 @@ export const MobileWrapper = styled.div`
 export const MobileMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(4, 80px);
   text-align: center;
   padding: 0;
   margin: 0;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: repeat(4, 80px);
   }
 `;
 
