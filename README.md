@@ -1,27 +1,23 @@
-<div style="text-align:center">
-  <img alt="Logo" src="src/images/logo.png" width="100" />
-</div>
+<p align="center">
+  <img alt="Logo" src="https://github.com/JosueDLA/JosueDLA.github.io/blob/37c012742f3aa026e839bb34ffbf2919bfe5558d/src/images/Logo.png" width="100" />
+</p>
 
-<h1 style="text-align:center">
+<h1 align="center">
   Personal Website
 </h1>
 
-<p style="text-align:center">
+<p align="center">
     Personal website built with Gatsby.
 </p>
 
-<p style="text-align:center">
+<p align="center">
     <img alt="Typescript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" /> 
     <img alt="Gatsby" src="https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=gatsby&logoColor=white" />
     <img alt="Styled Components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
     <img alt="GraphQL" src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql"/>
-    <img alt="" src="" />
-    <img alt="" src="" />
-    <img alt="" src="" />
-    <img alt="" src="" />
 </p>
 
-<div style="text-align:center">
+<div align="center">
     <img alt=="Portfolio Screenshot" src="static/home.png" />
 </div>
 
