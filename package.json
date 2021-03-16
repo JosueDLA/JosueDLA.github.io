@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^3.0.1",
     "gatsby-plugin-styled-components": "^4.0.0",
     "gatsby-remark-images": "^4.0.0",
+    "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "mdx-utils": "^0.2.0",
