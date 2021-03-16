@@ -20,7 +20,6 @@ const SEO: React.FC<SEOProps> = ({
   title,
   image,
   metaKeywords,
-  location,
 }) => {
   const { site } = useStaticQuery(graphql`
     query {
@@ -42,7 +41,6 @@ const SEO: React.FC<SEOProps> = ({
     ? `${site.siteMetadata.siteUrl}${image}`
     : `${site.siteMetadata.siteUrl}/home.png`;
 
-  console.log("cardUrl :>> ", cardUrl);
   return (
     <Helmet
       htmlAttributes={{

@@ -1,7 +1,6 @@
 // @ts-ignore
 import { window } from "browser-monads";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const useShowButton = () => {
   const [visible, setVisible] = useState(false);

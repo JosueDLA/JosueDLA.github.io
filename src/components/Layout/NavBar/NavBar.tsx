@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import { LogoLink, NavLinks } from "./NavLinks";
+import { useMobileMenu } from "../../../hooks/useMobileMenu";
 
 export interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isOpen, toggleNav] = useMobileMenu();
 
   // Render links depending on current page
   const path = typeof window !== "undefined" ? window.location.pathname : "/";

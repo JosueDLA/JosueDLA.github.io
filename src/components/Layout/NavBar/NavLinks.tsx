@@ -17,7 +17,7 @@ export const LogoLink = (home: boolean) => {
     >
       JosueDLA
     </LinkS>,
-    <LinkR className="nav-logo" to="/">
+    <LinkR className="nav-logo" to="/#home">
       JosueDLA
     </LinkR>,
   ];
@@ -32,26 +32,12 @@ export const LogoLink = (home: boolean) => {
 export const NavLinks = (home: boolean) => {
   // Home Page Links
   const HomeLinks = [
-    <LinkS
-      className="nav-link"
-      to="about"
-      smooth={true}
-      duration={500}
-      spy={true}
-      hashSpy={true}
-    >
+    <LinkR className="nav-link" to="/#about">
       About
-    </LinkS>,
-    <LinkS
-      className="nav-link"
-      to="skills"
-      smooth={true}
-      duration={500}
-      spy={true}
-      hashSpy={true}
-    >
+    </LinkR>,
+    <LinkR className="nav-link" to="/#skills">
       Skills
-    </LinkS>,
+    </LinkR>,
     <LinkR className="nav-link" to="/blog">
       Blog
     </LinkR>,

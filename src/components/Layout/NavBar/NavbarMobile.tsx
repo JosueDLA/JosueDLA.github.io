@@ -28,7 +28,7 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
   ));
 
   return (
-    <MobileContainer isOpen={isOpen} onClick={toggleNav}>
+    <MobileContainer id="mobile-menu" isOpen={isOpen} onClick={toggleNav}>
       <Icon onClick={toggleNav}>
         <CloseIcon />
       </Icon>
