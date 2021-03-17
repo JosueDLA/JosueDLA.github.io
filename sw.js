@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "57a80ec259719d6a478b871bde9519ab"
+    "revision": "86c12d3e9b258ae39243d40d5fef64f5"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
@@ -99,19 +99,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "7119abddfd457ca1e8e705d772cb75cc"
+    "revision": "f5697b7455972a6f7cf2799f8b67d59c"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "dde17e12dc644c08ba2312265819f5b0"
+    "revision": "aaf46f02e44ed026d074d99551823ca8"
   },
   {
     "url": "page-data/projects/real-time-store/page-data.json",
-    "revision": "4009b52bd613c30885960db968b58f0d"
+    "revision": "ad2c64d32c1d1cc5fb351d057fecf6d2"
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
-    "revision": "2481833377bfbbf79a4fbc0560329494"
+    "revision": "bee2701f9e70da6a22a7ed7c86e0a5a9"
   },
   {
     "url": "manifest.webmanifest",
