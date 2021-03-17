@@ -80,24 +80,46 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // Create blog post
-  posts.forEach((edge) => {
+  posts.forEach((edge, i) => {
+    // Get previous and next posts
+    const previousIndex = i - 1 < 0 ? 0 : i - 1;
+    const nextIndex = i + 1 > posts.length - 1 ? posts.length - 1 : i + 1;
+    const previous = posts[previousIndex].node.id;
+    const next = posts[nextIndex].node.id;
+
     const slug = edge.node.frontmatter.slug;
     const id = edge.node.id;
+
     actions.createPage({
       path: `/blog/${slug}`,
       component: post,
-      context: { id },
+      context: {
+        id: id,
+        previousPost: previous,
+        nextPost: next,
+      },
     });
   });
 
   // Create project post
-  projects.forEach((edge) => {
+  projects.forEach((edge, i) => {
+    // Get previous and next posts
+    const previousIndex = i - 1 < 0 ? 0 : i - 1;
+    const nextIndex = i + 1 > projects.length - 1 ? "0" : i + 1;
+    const previous = projects[previousIndex].node.id;
+    const next = projects[nextIndex].node.id;
+
     const slug = edge.node.frontmatter.slug;
     const id = edge.node.id;
+
     actions.createPage({
       path: `/projects/${slug}`,
       component: post,
-      context: { id },
+      context: {
+        id: id,
+        previousPost: previous,
+        nextPost: next,
+      },
     });
   });
 };
