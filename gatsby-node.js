@@ -17,13 +17,31 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Get all markdown post sorted by date
   const result = await graphql(`
-    query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    query AllMdx {
+      posts: allMdx(
+        sort: { order: DESC, fields: frontmatter___date }
+        filter: { body: {}, fileAbsolutePath: { regex: "/(posts)/" } }
+      ) {
         edges {
           node {
             id
             frontmatter {
               slug
+              title
+            }
+          }
+        }
+      }
+      projects: allMdx(
+        sort: { order: DESC, fields: frontmatter___date }
+        filter: { body: {}, fileAbsolutePath: { regex: "/(projects)/" } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+              title
             }
           }
         }
@@ -40,7 +58,8 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // Create paginated pages for post
-  const posts = result.data.allMdx.edges;
+  const posts = result.data.posts.edges;
+  const projects = result.data.projects.edges;
 
   if (posts.length > 0) {
     const postPerPage = 3;
@@ -61,12 +80,23 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // Create blog post
-  result.data.allMdx.edges.forEach((edge) => {
+  posts.forEach((edge) => {
     const slug = edge.node.frontmatter.slug;
     const id = edge.node.id;
     actions.createPage({
       path: `/blog/${slug}`,
-      component: require.resolve(post),
+      component: post,
+      context: { id },
+    });
+  });
+
+  // Create project post
+  projects.forEach((edge) => {
+    const slug = edge.node.frontmatter.slug;
+    const id = edge.node.id;
+    actions.createPage({
+      path: `/projects/${slug}`,
+      component: post,
       context: { id },
     });
   });
