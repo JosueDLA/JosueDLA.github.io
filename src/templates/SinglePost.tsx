@@ -43,7 +43,12 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
         </Post>
       </PostWrapper>
 
-      <PostPagination previous={previous} current={current} next={next} />
+      <PostPagination
+        previous={previous}
+        current={current}
+        next={next}
+        location={location}
+      />
     </Layout>
   );
 };

@@ -73,12 +73,14 @@ export interface PostPaginationProps {
   previous: any;
   current: any;
   next: any;
+  location: { pathname: string };
 }
 
 const PostPagination: React.FC<PostPaginationProps> = ({
   previous,
   current,
   next,
+  location,
 }) => {
   const isFirst = previous.slug === current.slug;
   const isLast = current.slug === next.slug || previous.slug === next.slug;
