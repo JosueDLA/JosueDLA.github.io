@@ -9,9 +9,10 @@ import { PostWrapper } from "./../components/Blog/Post";
 
 export interface SinglePostProps {
   data: any;
+  location: { pathname: string };
 }
 
-const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
+const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
   const featureImage =
     data.mdx.frontmatter.featureImage.childImageSharp.gatsbyImageData;
   const seoImage = data.mdx.frontmatter.featureImage.publicURL;
@@ -22,6 +23,7 @@ const SinglePost: React.FC<SinglePostProps> = ({ data }) => {
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.excerpt}
         image={seoImage}
+        location={location}
       />
       <PostJumbotron>
         <header>
