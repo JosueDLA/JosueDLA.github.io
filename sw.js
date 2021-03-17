@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-dcfd7c19af5c3473e4e0.js"
+    "url": "webpack-runtime-2d5f32efdc95377b3593.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
   },
   {
-    "url": "styles.60fd4f62617ba08037c3.css"
+    "url": "styles.4101032c7a0606f79b78.css"
   },
   {
-    "url": "app-03087330e399b9ca1212.js"
+    "url": "app-292ece031a353f026fb6.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a46dea154702ceba4417188e05b38c17"
+    "revision": "ee0ba5f490acaa6ea8c543d6fa70848d"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -61,7 +61,7 @@ self.__precacheManifest = [
     "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-6f366c44db7f4ed803d8.js"
   },
   {
-    "url": "component---src-pages-index-tsx-b753c74e815e3b9e9419.js"
+    "url": "component---src-pages-index-tsx-0e4ff2db7e1b1c256cfe.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -73,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "887eb259e5163b040354a2bac6ec6895"
+    "revision": "1e5fd3aecb77f655a189b28ee2869309"
   },
   {
     "url": "component---src-templates-all-posts-tsx-224ac9ab7d8072a20af7.js"
@@ -83,15 +83,15 @@ self.__precacheManifest = [
     "revision": "c44cfbc1e47a05e35edada148a7d2043"
   },
   {
-    "url": "component---src-templates-single-post-tsx-655060d03f764c3a5b8b.js"
+    "url": "component---src-templates-single-post-tsx-1fa5800ecaf1a761b4ad.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "dab03db2399d496a6b817e88521f4315"
+    "revision": "57a80ec259719d6a478b871bde9519ab"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "0e2578203e40f10f36f2c80a25cea38d"
+    "revision": "71cc5c5ee27755cd96e48faede5fb8bc"
   },
   {
     "url": "page-data/blog/page-data.json",
@@ -99,11 +99,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "8ca32b747b29a916e577dffd25b731f3"
+    "revision": "7119abddfd457ca1e8e705d772cb75cc"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "5c947169d1a2566495839ff40630bca5"
+    "revision": "dde17e12dc644c08ba2312265819f5b0"
+  },
+  {
+    "url": "page-data/projects/real-time-store/page-data.json",
+    "revision": "4009b52bd613c30885960db968b58f0d"
+  },
+  {
+    "url": "page-data/projects/weather-bot/page-data.json",
+    "revision": "2481833377bfbbf79a4fbc0560329494"
   },
   {
     "url": "manifest.webmanifest",
@@ -199,7 +207,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-03087330e399b9ca1212.js`))) {
+  if (!resources || !(await caches.match(`/app-292ece031a353f026fb6.js`))) {
     return await fetch(event.request)
   }
 
