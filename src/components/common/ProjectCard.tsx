@@ -40,13 +40,6 @@ export const Tag = styled.div`
   transition: all, 0.5s;
 `;
 
-export const GroupButton = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0;
-`;
-
 const Button = css`
   display: inline-block;
   padding: 0.5rem;
@@ -71,16 +64,23 @@ const Button = css`
   }
 `;
 
-export const LeftButton = styled.a`
-  ${Button}
-  border-radius: 0.3rem 0 0 0.3rem;
-  border-right: 1px solid black;
-`;
+export const GroupButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
 
-export const RightButton = styled.a`
-  ${Button}
-  border-radius: 0 0.3rem 0.3rem 0;
-  border-left: 1px solid black;
+  .left {
+    ${Button}
+    border-radius: 0.3rem 0 0 0.3rem;
+    border-right: 1px solid black;
+  }
+
+  .right {
+    ${Button}
+    border-radius: 0 0.3rem 0.3rem 0;
+    border-left: 1px solid black;
+  }
 `;
 
 export const ProjectCard = styled.article`

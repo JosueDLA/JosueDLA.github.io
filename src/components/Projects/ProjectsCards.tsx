@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import {
   ProjectCard,
   ProjectCardWrapper,
@@ -7,11 +9,8 @@ import {
   ProjectContent,
   ProjectTags,
   Tag,
-  LeftButton,
-  RightButton,
   GroupButton,
 } from "../common/ProjectCard";
-import { StaticImage } from "gatsby-plugin-image";
 
 export interface ProjectCardsProps {}
 
@@ -39,22 +38,24 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
+            <a
+              className="left"
               href="https://peaceful-chamber-64971.herokuapp.com/"
               target="_blank"
               aria-label="Django Store Demo"
               rel="noreferrer"
             >
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/DjangoStore"
+            </a>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/django-store/"
               target="_blank"
               aria-label="Django Store Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
@@ -79,22 +80,24 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>JavaScript</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
-              href="https://josuedla.github.io/ReadmeCreator/"
+            <a
+              className="left"
+              href="https://josuedla.github.io/readme-creator/"
               target="_blank"
               aria-label="Readme Creator Demo"
               rel="noreferrer"
             >
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/ReadmeCreator"
+            </a>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/readme-creator/"
               target="_blank"
               aria-label="Readme Creator Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
@@ -119,22 +122,18 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
-              href="https://josuedla.github.io/RealTimeStore/"
-              target="_blank"
-              aria-label="MVC Store Demo"
-              rel="noreferrer"
-            >
+            <Link className="left" to="/projects/real-time-store/">
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/RealTimeStore/"
+            </Link>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/real-time-store/"
               target="_blank"
               aria-label="MVC Store Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
@@ -157,22 +156,24 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
+            <a
+              className="left"
               href="https://josuedla.github.io/portfolio-v1/"
               target="_blank"
               aria-label="Portfolio V1 Demo"
               rel="noreferrer"
             >
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/portfolio-v1"
+            </a>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/portfolio-v1/"
               target="_blank"
               aria-label="Portfolio V1 Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
@@ -198,22 +199,18 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Pillow</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
-              href="https://josuedla.github.io/WeatherBot/"
-              target="_blank"
-              aria-label="Twitter Bot Demo"
-              rel="noreferrer"
-            >
+            <Link className="left" to="/projects/weather-bot/">
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/WeatherBot/"
+            </Link>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/weather-bot/"
               target="_blank"
               aria-label="Twitter Bot Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
@@ -238,22 +235,24 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             <Tag>Bootstrap</Tag>
           </ProjectTags>
           <GroupButton>
-            <LeftButton
-              href="https://josuedla.github.io/GhibliMovies/"
+            <a
+              className="left"
+              href="https://josuedla.github.io/ghibli-movies/"
               target="_blank"
               aria-label="Ghibli Movies Demo"
               rel="noreferrer"
             >
               Demo
-            </LeftButton>
-            <RightButton
-              href="https://github.com/JosueDLA/GhibliMovies"
+            </a>
+            <a
+              className="right"
+              href="https://github.com/JosueDLA/ghibli-movies/"
               target="_blank"
               aria-label="Ghibli Movies Code"
               rel="noreferrer"
             >
               Code
-            </RightButton>
+            </a>
           </GroupButton>
         </ProjectContent>
       </ProjectCard>
