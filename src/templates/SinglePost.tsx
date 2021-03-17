@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PostJumbotron } from "../components/Blog/PostJumbotron";
 import { Post } from "../components/Blog/Post";
 import { PostWrapper } from "./../components/Blog/Post";
+import PostPagination from "./../components/common/PostPagination";
 
 export interface SinglePostProps {
   data: any;
@@ -13,30 +14,36 @@ export interface SinglePostProps {
 }
 
 const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
-  const featureImage =
-    data.mdx.frontmatter.featureImage.childImageSharp.gatsbyImageData;
-  const seoImage = data.mdx.frontmatter.featureImage.publicURL;
+  // Posts
+  const previous = data.previous.frontmatter;
+  const current = data.current.frontmatter;
+  const next = data.next.frontmatter;
+
+  // const featureImage = current.featureImage.childImageSharp.gatsbyImageData;
+  const seoImage = current.featureImage.publicURL;
 
   return (
     <Layout>
       <SEO
-        title={data.mdx.frontmatter.title}
-        description={data.mdx.frontmatter.excerpt}
+        title={current.title}
+        description={current.excerpt}
         image={seoImage}
         location={location}
       />
       <PostJumbotron>
         <header>
-          <h1>{data.mdx.frontmatter.title}</h1>
-          <h2>{data.mdx.frontmatter.excerpt}</h2>
+          <h1>{current.title}</h1>
+          <h2>{current.excerpt}</h2>
         </header>
       </PostJumbotron>
 
       <PostWrapper>
         <Post>
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <MDXRenderer>{data.current.body}</MDXRenderer>
         </Post>
       </PostWrapper>
+
+      <PostPagination previous={previous} current={current} next={next} />
     </Layout>
   );
 };
@@ -44,8 +51,8 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
 export default SinglePost;
 
 export const pageQuery = graphql`
-  query SinglePost($id: String!) {
-    mdx(id: { eq: $id }) {
+  query SinglePost($id: String!, $previousPost: String!, $nextPost: String!) {
+    current: mdx(id: { eq: $id }) {
       body
       frontmatter {
         date
@@ -58,6 +65,18 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FIXED)
           }
         }
+      }
+    }
+    previous: mdx(id: { eq: $previousPost }) {
+      frontmatter {
+        title
+        slug
+      }
+    }
+    next: mdx(id: { eq: $nextPost }) {
+      frontmatter {
+        title
+        slug
       }
     }
   }
