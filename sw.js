@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-430e7516c5ba28bb2fa7.js"
+    "url": "webpack-runtime-5a9ed90427c267638929.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a108d7ffa3cb33655324edb7033ce59f"
+    "revision": "28f0206865afaeb59a96acc9311066f7"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -58,7 +58,7 @@ self.__precacheManifest = [
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-6f366c44db7f4ed803d8.js"
+    "url": "7713f8c3c4067ddc8348845fe5a68aaf0a3fbaa6-532316f81831adad7ca9.js"
   },
   {
     "url": "component---src-pages-index-tsx-0e4ff2db7e1b1c256cfe.js"
@@ -73,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "5390977a012609dc365d9eb5b46db971"
+    "revision": "8fd33b1bba45fb1ca121fb2337e3672e"
   },
   {
     "url": "component---src-templates-all-posts-tsx-224ac9ab7d8072a20af7.js"
@@ -86,15 +86,15 @@ self.__precacheManifest = [
     "url": "0c428ae2-e49c5469f13807d67d03.js"
   },
   {
-    "url": "component---src-templates-single-post-tsx-9eb8ea38da7cf1f6d28f.js"
+    "url": "component---src-templates-single-post-tsx-c44872b3cacae625e597.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "39835471b4d7388af5593511dbe1ba8b"
+    "revision": "4efb69702774cd1b0ad5b41689a1e277"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "440a7696bcf7830f65ebb10332aa288c"
+    "revision": "616da731e7855d7f7c45d65feb8a5764"
   },
   {
     "url": "page-data/blog/page-data.json",
@@ -102,19 +102,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "42b290b0aa1dd44b38f2ef6d5286c668"
+    "revision": "30217e1e5f215ec207a46b959178b35a"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "cadb126f7e875b6544127cb8d371baa5"
+    "revision": "943e58652b20f3b900293fdcf6efd92d"
   },
   {
     "url": "page-data/projects/real-time-store/page-data.json",
-    "revision": "071274a2c69860500fceaa75beba9abc"
+    "revision": "40923a6b32961e6d01032c2995141ade"
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
-    "revision": "6d127cb597f7b6ac3ddd31474da4aa66"
+    "revision": "89b50a4a43f9b425b9a050c338a352d6"
   },
   {
     "url": "manifest.webmanifest",
