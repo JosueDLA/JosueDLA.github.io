@@ -1,12 +1,13 @@
+// @ts-ignore
+import { Disqus, CommentCount } from "gatsby-plugin-disqus";
 import React from "react";
-import Layout from "../components/Layout/Layout";
-import SEO from "../components/common/Seo";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import Layout from "../components/Layout/Layout";
+import SEO from "../components/common/Seo";
 import { PostJumbotron } from "../components/Blog/PostJumbotron";
-import { Post } from "../components/Blog/Post";
-import { PostWrapper } from "./../components/Blog/Post";
-import PostPagination from "./../components/common/PostPagination";
+import { PostWrapper, Post } from "../components/Blog/Post";
+import PostPagination from "../components/common/PostPagination";
 
 export interface SinglePostProps {
   data: any;
@@ -21,6 +22,13 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
 
   // const featureImage = current.featureImage.childImageSharp.gatsbyImageData;
   const seoImage = current.featureImage.publicURL;
+
+  // Disqus config
+  const disqusConfig = {
+    url: data.site.siteMetadata.siteUrl + location.pathname,
+    identifier: data.current.id,
+    title: current.title,
+  };
 
   return (
     <Layout>
@@ -49,6 +57,10 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
         next={next}
         location={location}
       />
+
+      <div className="container">
+        <Disqus config={disqusConfig} />
+      </div>
     </Layout>
   );
 };
@@ -71,6 +83,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      id
     }
     previous: mdx(id: { eq: $previousPost }) {
       frontmatter {
@@ -82,6 +95,16 @@ export const pageQuery = graphql`
       frontmatter {
         title
         slug
+      }
+    }
+
+    site {
+      siteMetadata {
+        author
+        description
+        title
+        image
+        siteUrl
       }
     }
   }

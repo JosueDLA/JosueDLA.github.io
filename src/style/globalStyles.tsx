@@ -23,6 +23,14 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 
+  #disqus_thread {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 0.3rem;
+  }
+
   section {
     padding-top: 3.5rem;
   }

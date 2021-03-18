@@ -10,6 +10,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
     "gatsby": "^3.0.4",
+    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.0.1",
     "gatsby-plugin-manifest": "^3.0.0",
