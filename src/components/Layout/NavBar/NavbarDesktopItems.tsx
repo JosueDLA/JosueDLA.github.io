@@ -58,6 +58,7 @@ export const NavIcon = styled.div`
     cursor: pointer;
     background: transparent;
     outline: none;
+    color: var(--text-primary);
   }
 `;
 
