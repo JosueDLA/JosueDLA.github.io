@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "c44cfbc1e47a05e35edada148a7d2043"
+    "revision": "804e4b65e108563769d3d7d0d7375cb6"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -98,11 +98,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "a6d4b01d0da454ff5091d27e8ceee01a"
+    "revision": "76c0fe40fcf942057f439136801f9200"
+  },
+  {
+    "url": "page-data/blog/introduction-to-nodejs/page-data.json",
+    "revision": "0c3347014394ca45488f01440282c528"
+  },
+  {
+    "url": "page-data/blog/introduction-to-npm/page-data.json",
+    "revision": "c3aac34f50ed6dab948d1146f76c1985"
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "30217e1e5f215ec207a46b959178b35a"
+    "revision": "cdd2c2e60a7df6a93c85bdeac76a778a"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
