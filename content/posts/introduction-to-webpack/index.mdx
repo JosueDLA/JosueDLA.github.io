@@ -1,0 +1,163 @@
+---
+title: Introduction to Webpack
+slug: introduction-to-webpack
+date: 2021-03-23
+featureImage: introduction-to-webpack.jpg
+excerpt: Webpack is an open-source JavaScript module bundler.
+---
+
+# Introduction to Webpack with TypeScript
+
+Webpack is an open-source JavaScript module bundler. Made mainly for JavaScript, but it can be used to transform front-end files like HTML, CSS and Images with the corresponding loaders.
+
+Webpack takes the dependencies and generates a graphic of dependencies that allows developers to use a modular approach. It can be used from the command line or configure it with a file called `webpack.config.js`.
+
+```bash
+> npm i webpack webpack-cli ts-loader -D
+```
+
+## webpack.config.js
+
+This file is used to define rules, plugins etc. for a project – webpack can be enhanced with rules that allows developers to customize tasks -.
+This file must be in the root directory of our project – the same folder as the `package.json` – If necessary the path can be changed using the parameter `–config` when calling webpack via command line.
+`Webpack-config.js` uses the node module system since this will be the one in charge of reading and bundle our project.
+
+## Basic structure of Webpack.config.js
+
+```javascript
+const path = require("path");
+
+module.exports = {
+  entry: "./src/index.ts",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+};
+```
+
+- **entry:** is the main file of our project, this is a relative route based on the location of the webpack.config.js file.
+- **output:** this object contains output configuration options of our project.
+- **filename:** is the name of the output file.
+- **path:** is the absolute path of the directory where we store the output files.
+- **mode:** provide the mode configuration - development or production -.
+- **module:** defines the way loaders should behave.
+- **plugins:** defines the plugins used in the project, allow us to enhance webpack capabilities.
+
+## Webpack-dev-server
+
+Webpack provides a development server called `webpack-dev-server` that can be used as a HTTP server to serve our output files while we develop. It also provides a live reloading capability.
+
+```bash
+> npm i webpack-dev-server -D
+```
+
+### Package.json
+
+```json
+//...
+// webpack < 5
+"scripts": {
+  "develop": "webpack-dev-server",
+  "build": "webpack --config ./webpack.config.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+```json
+//...
+// webpack >= 5
+"scripts": {
+  "develop": "webpack serve",
+  "build": "webpack --config ./webpack.config.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+`Webpack-dev-server` recompile when changes are made in our code, but it doesn’t rebuild it by default. To fix this we need to tell `webpack-dev-server` where to output thee rebuild code.
+
+```javascript
+module.exports = {
+  //...
+  // webpack < 5
+  output: {
+    publicPath: "dist", // Output folder
+  },
+};
+```
+
+```javascript
+module.exports = {
+  //...
+  // webpack >= 5
+  devServer: {
+    publicPath: "/",
+    contentBase: "./dist",
+    hot: true,
+  },
+};
+```
+
+- **publicPath:** The path where the files will be available.
+- **contentBase:** Where content will be served.
+- **hot:** enable hot module replacement.
+
+## Resolve: Using ES6 Modules
+
+This option define the way modules are resolve.
+
+```javascript
+module.exports = {
+  //...
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
+};
+```
+
+### resolve.alias
+
+creates aliases for import or require, allowing us to import modules easily.
+
+```javascript
+module.exports = {
+  //...
+  resolve: {
+    alias: {
+      Utilities: path.resolve(__dirname, "src/utilities/"),
+      Template: path.resolve(__dirname, "src/templates/"),
+    },
+  },
+};
+```
+
+Now instead of importing using relative routes, we can do it using the aliases.
+
+```javascript
+import Utility from "../../utilities/utility";
+```
+
+```javascript
+import Utility from "Utilities/utility";
+```
+
+## Source Maps
+
+Source maps is a file that maps the source-code with the webpack compiled code, allowing developers to easily debug.
+
+- **devtool:** this option controls if a source-map file is generated.
+
+```javascript
+module.exports = {
+  devtool: "eval-source-map",
+  //...
+};
+```
+
+```json
+//tsconfig.json
+//...
+"sourceMap": true,
+```
+
+You can learn more about the devtools options [here](https://webpack.js.org/configuration/devtool/).
