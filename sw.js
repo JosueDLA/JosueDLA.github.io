@@ -80,7 +80,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "804e4b65e108563769d3d7d0d7375cb6"
+    "revision": "214b0a4f66ed0da5d9c4bc8ed35fef13"
+  },
+  {
+    "url": "page-data/blog/3/page-data.json",
+    "revision": "32443b48047092e07131b9ecd504e77f"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -98,11 +102,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "76c0fe40fcf942057f439136801f9200"
+    "revision": "4cb41f25772ab10af023e3da02c7fd79"
   },
   {
     "url": "page-data/blog/introduction-to-nodejs/page-data.json",
-    "revision": "0c3347014394ca45488f01440282c528"
+    "revision": "836923d86c3f329c95e881aec0a28d6d"
   },
   {
     "url": "page-data/blog/introduction-to-npm/page-data.json",
@@ -111,6 +115,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
     "revision": "cdd2c2e60a7df6a93c85bdeac76a778a"
+  },
+  {
+    "url": "page-data/blog/introduction-to-webpack/page-data.json",
+    "revision": "77952906c9ac6f1798a9ff2f9815ac6a"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
