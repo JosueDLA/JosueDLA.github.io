@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const SVGWrapper = styled.section`
+export const SVGWrapper = styled.section`
   display: flex;
   padding: 0;
   text-align: center;
