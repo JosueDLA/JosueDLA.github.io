@@ -80,11 +80,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "214b0a4f66ed0da5d9c4bc8ed35fef13"
+    "revision": "0325279c92f1c39094000f10827c2866"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "32443b48047092e07131b9ecd504e77f"
+    "revision": "7b04b72f012aaae5a351ea40af5966fc"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -102,7 +102,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "4cb41f25772ab10af023e3da02c7fd79"
+    "revision": "77a2be9cc010f1b00fa73bddfa15559f"
+  },
+  {
+    "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
+    "revision": "b58e6453ab5d40b132d4d74150946bd3"
   },
   {
     "url": "page-data/blog/introduction-to-nodejs/page-data.json",
@@ -118,7 +122,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-webpack/page-data.json",
-    "revision": "77952906c9ac6f1798a9ff2f9815ac6a"
+    "revision": "c0d2551ecebdafa5e69ad06d819f2d59"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
@@ -130,7 +134,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
-    "revision": "89b50a4a43f9b425b9a050c338a352d6"
+    "revision": "e536f26962ed8a558bf02bfba8b30526"
   },
   {
     "url": "manifest.webmanifest",
