@@ -1,6 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { FaGithub, FaLinkedinIn, FaAngleDown } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaAngleDown,
+  FaHackerrank,
+} from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import Title from "../common/Title";
 import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
@@ -81,6 +86,14 @@ const About: React.FC<AboutProps> = () => {
             rel="noreferrer"
           >
             <FaLinkedinIn />
+          </SocialIconsItem>
+          <SocialIconsItem
+            to="https://www.hackerrank.com/josuedla"
+            target="_blank"
+            aria-label="Hackerrank"
+            rel="noreferrer"
+          >
+            <FaHackerrank />
           </SocialIconsItem>
         </SocialIcons>
         <ScrollButton to="skills">
