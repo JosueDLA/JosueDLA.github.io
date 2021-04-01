@@ -28,6 +28,7 @@ export const ProjectDescription = styled.p`
 
 export const ProjectTags = styled.div`
   display: flex;
+  align-self: center;
 `;
 
 export const Tag = styled.div`
@@ -104,7 +105,7 @@ export const ProjectCard = styled.article`
 
 export const ProjectContent = styled.div`
   position: absolute;
-  text-align: justify;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
