@@ -17,6 +17,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             width={160}
             height={160}
             className="card-img"
+            quality={100}
           />
         </Banner>
         <CardTitle>Programming</CardTitle>
@@ -36,6 +37,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             width={160}
             height={160}
             className="card-img"
+            quality={100}
           />
         </Banner>
         <CardTitle>Servers &amp; DBMS</CardTitle>
@@ -55,6 +57,7 @@ const SkillsCards: React.FC<SkillsCardsProps> = () => {
             width={160}
             height={160}
             className="card-img"
+            quality={100}
           />
         </Banner>
         <CardTitle>Web API</CardTitle>

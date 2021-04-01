@@ -38,6 +38,7 @@ const About: React.FC<AboutProps> = () => {
               layout="fixed"
               width={230}
               height={230}
+              quality={100}
             />
           </ImgContainer>
           <AboutP>
