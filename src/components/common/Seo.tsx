@@ -6,9 +6,8 @@ import { useStaticQuery, graphql } from "gatsby";
 export interface SEOProps {
   description?: string;
   lang?: string;
-  meta?: any;
   image?: string;
-  metaKeywords?: Array<string>;
+  metaKeywords?: Array<string | null | undefined>;
   title: string;
   location: { pathname: string };
 }
@@ -16,7 +15,6 @@ export interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   description,
   lang,
-  meta,
   title,
   image,
   metaKeywords,
@@ -90,7 +88,6 @@ const SEO: React.FC<SEOProps> = ({
           content: cardUrl,
         },
       ].concat(
-        meta,
         metaKeywords && metaKeywords.length > 0
           ? {
               name: "keywords",
@@ -104,14 +101,14 @@ const SEO: React.FC<SEOProps> = ({
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
+  metaKeywords: [],
   description: ``,
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+  metaKeywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
 
