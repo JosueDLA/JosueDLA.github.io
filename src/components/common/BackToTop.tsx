@@ -1,7 +1,7 @@
 import React from "react";
 import { FaAngleUp } from "react-icons/fa";
 import styled from "styled-components";
-import { useShowButton } from "../../hooks/useShowButton";
+import { useShowButton } from "Hooks/useShowButton";
 
 interface IBackToTopButton {
   visible: boolean;

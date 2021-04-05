@@ -1,6 +1,6 @@
 import React from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import theme from "./CodeTheme";
+import theme from "Blog/CodeTheme";
 
 export interface CodeProps {
   codeString: string;

@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
+import styled from "styled-components";
 
 const ScrollButtonWrapper = styled.div`
   color: white;

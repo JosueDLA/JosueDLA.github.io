@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: `JosueDLA`,
@@ -7,6 +9,24 @@ module.exports = {
     image: `/home.png`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        Src: path.join(__dirname, "src"),
+        Components: path.join(__dirname, "src/components"),
+        About: path.join(__dirname, "src/components/About"),
+        Blog: path.join(__dirname, "src/components/Blog"),
+        Common: path.join(__dirname, "src/components/common"),
+        Home: path.join(__dirname, "src/components/Home"),
+        Layout: path.join(__dirname, "src/components/Layout"),
+        Projects: path.join(__dirname, "src/components/Projects"),
+        Skills: path.join(__dirname, "src/components/Skills"),
+        Hooks: path.join(__dirname, "src/hooks"),
+        Images: path.join(__dirname, "src/images"),
+        Style: path.join(__dirname, "src/style"),
+        Videos: path.join(__dirname, "src/videos"),
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {

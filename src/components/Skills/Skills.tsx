@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "../common/Title";
-import SkillsCards from "./SkillsCards";
-import { SkillsWrapper } from "./SkillsItems";
+import Title from "Common/Title";
+import SkillsCards from "Skills/SkillsCards";
+import { SkillsWrapper } from "Skills/SkillsItems";
 
 export interface SkillsProps {}
 

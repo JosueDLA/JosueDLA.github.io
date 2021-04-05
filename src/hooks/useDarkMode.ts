@@ -1,7 +1,7 @@
 // @ts-ignore
 import { window } from "browser-monads";
 import { useEffect, useState } from "react";
-import { lightTheme, darkTheme } from "../style/theme";
+import { lightTheme, darkTheme } from "Style/theme";
 
 export const useDarkMode = () => {
   const [theme, setTheme] = useState("");

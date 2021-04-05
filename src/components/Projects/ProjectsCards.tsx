@@ -1,20 +1,22 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  ProjectCard,
-  ProjectCardWrapper,
-  ProjectTitle,
-  ProjectDescription,
-  ProjectContent,
-  ProjectTags,
-  Tag,
-  GroupButton,
-} from "../common/ProjectCard";
+import * as ProjectCardItems from "Common/ProjectCard";
 
 export interface ProjectCardsProps {}
 
 const ProjectCards: React.FC<ProjectCardsProps> = () => {
+  const {
+    ProjectCard,
+    ProjectCardWrapper,
+    ProjectTitle,
+    ProjectDescription,
+    ProjectContent,
+    ProjectTags,
+    Tag,
+    GroupButton,
+  } = ProjectCardItems;
+
   return (
     <ProjectCardWrapper>
       <ProjectCard>

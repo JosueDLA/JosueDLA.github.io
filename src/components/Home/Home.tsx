@@ -1,19 +1,21 @@
 import React from "react";
-import video from "../../videos/video.mp4";
-import ScrollButton from "../common/ScrollButton";
 import { FaAngleDown } from "react-icons/fa";
-import {
-  HomeContainer,
-  HomeBg,
-  HomeContent,
-  HomeH1,
-  HomeP,
-  VideoBg,
-} from "./HomeItems";
+import ScrollButton from "Common/ScrollButton";
+import * as HomeItems from "Home/HomeItems";
+import video from "Videos/video.mp4";
 
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
+  const {
+    HomeContainer,
+    HomeBg,
+    HomeContent,
+    HomeH1,
+    HomeP,
+    VideoBg,
+  } = HomeItems;
+
   return (
     <HomeContainer id="home">
       <HomeBg>

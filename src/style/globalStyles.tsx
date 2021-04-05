@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import scrollBar from "./scrollBar";
-import normalize from "./normalize";
+import scrollBar from "Style/scrollBar";
+import normalize from "Style/normalize";
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import ThemeToggleContext from "./ThemeContext";
 import { FiSun, FiMoon } from "react-icons/fi";
+import ThemeToggleContext from "Common/ThemeContext";
 
 const SwitchWrapper = styled.div`
   .switch {

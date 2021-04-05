@@ -1,10 +1,10 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
-import Home from "../components/Home/Home";
-import About from "../components/About/About";
-import Skills from "../components/Skills/Skills";
-import Projects from "../components/Projects/Projects";
-import SEO from "../components/common/Seo";
+import Projects from "Components/Projects/Projects";
+import Layout from "Components/Layout/Layout";
+import Skills from "Components/Skills/Skills";
+import About from "Components/About/About";
+import Home from "Components/Home/Home";
+import SEO from "Components/common/Seo";
 
 export interface IndexPageProps {
   location: { pathname: string };

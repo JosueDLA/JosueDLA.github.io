@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { noSelect } from "../../style/noSelect";
+import { noSelect } from "Style/noSelect";
 
 export const ProjectCardWrapper = styled.article`
   display: grid;

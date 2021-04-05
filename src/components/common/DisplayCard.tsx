@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "./Image";
-import { ProfilePicture } from "../../queries/ProfilePicture";
 
 export const DisplayCardWrapper = styled.div`
   display: grid;
@@ -58,7 +56,7 @@ const DisplayCard: React.FC<DisplayCardProps> = () => {
   return (
     <DisplayCardWrapper>
       <DisplayCardImageWrapper>
-        <Image hook={ProfilePicture} className="project-img" alt="code" />
+        {/* <Image hook={ProfilePicture} className="project-img" alt="code" /> */}
       </DisplayCardImageWrapper>
       <DisplayCardDescriptionWrapper>
         <DisplayOverline>Featured</DisplayOverline>

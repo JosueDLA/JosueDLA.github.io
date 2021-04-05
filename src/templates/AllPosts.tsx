@@ -1,18 +1,12 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from "../components/Layout/Layout";
-import Pagination from "../components/common/Pagination";
-import SVG from "../components/common/Svg";
-import UnderConstructionImg from "../images/svg/under-construction.svg";
-import SEO from "../components/common/Seo";
-import { AllPostTitle } from "../components/Blog/Post";
-import {
-  DescriptionWrapper,
-  PostCard,
-  PostCardWrapper,
-  PostTitle,
-  PostDescription,
-} from "../components/Blog/PostCard";
+import UnderConstructionImg from "Images/svg/under-construction.svg";
+import * as PostCardItems from "Components/Blog/PostCard";
+import Pagination from "Components/common/Pagination";
+import { AllPostTitle } from "Components/Blog/Post";
+import Layout from "Components/Layout/Layout";
+import SVG from "Components/common/Svg";
+import SEO from "Components/common/Seo";
 
 export interface AllPostsProps {
   pageContext: IPageContext;
@@ -43,6 +37,14 @@ interface IPageContext {
 }
 
 const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
+  const {
+    DescriptionWrapper,
+    PostCard,
+    PostCardWrapper,
+    PostTitle,
+    PostDescription,
+  } = PostCardItems;
+
   // Page Route
   const pagePath = "/blog/";
 

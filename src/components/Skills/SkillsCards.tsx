@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Banner, Card, CardTitle, CardDesc, CardRow } from "../common/Card";
+import { Banner, Card, CardTitle, CardDesc, CardRow } from "Common/Card";
 
 export interface SkillsCardsProps {}
 

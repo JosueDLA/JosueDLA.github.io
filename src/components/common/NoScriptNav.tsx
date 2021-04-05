@@ -1,7 +1,7 @@
 import React from "react";
-import { css } from "styled-components";
-import { noSelect } from "../../style/noSelect";
 import { FaTimes } from "react-icons/fa";
+import { css } from "styled-components";
+import { noSelect } from "Style/noSelect";
 
 const NoScriptCss = css`
   .no-script {

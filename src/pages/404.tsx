@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
-import SEO from "../components/common/Seo";
 import { StaticImage } from "gatsby-plugin-image";
-import { SVGWrapper } from "./../components/common/Svg";
+import { SVGWrapper } from "Components/common/Svg";
+import Layout from "Components/Layout/Layout";
+import SEO from "Components/common/Seo";
 
 export interface NotFoundPageProps {
   location: { pathname: string };

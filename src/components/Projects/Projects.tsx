@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "../common/Title";
-import { ProjectsWrapper } from "./ProjectsItems";
-import ProjectCards from "./ProjectsCards";
+import { ProjectsWrapper } from "Projects/ProjectsItems";
+import ProjectCards from "Projects/ProjectsCards";
+import Title from "Common/Title";
 
 export interface ProjectsProps {}
 

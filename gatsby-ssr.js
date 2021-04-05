@@ -1,10 +1,10 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { preToCodeBlock } from "mdx-utils";
-import { lightTheme, darkTheme } from "./src/style/theme";
-import Table from "./src/components/Blog/Table";
-import Code from "./src/components/Blog/Code";
-import "./src/style/language.css";
+import { lightTheme, darkTheme } from "Src/style/theme";
+import Table from "Src/components/Blog/Table";
+import Code from "Src/components/Blog/Code";
+import "Src/style/language.css";
 
 const setTheme = () => {
   function getInitialThemeMode() {

@@ -1,28 +1,26 @@
 import React from "react";
+import { FaAngleDown, FaHackerrank } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaAngleDown,
-  FaHackerrank,
-} from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-import Title from "../common/Title";
-import SocialIcons, { SocialIconsItem } from "../common/SocialIcons";
-import ScrollButton from "../common/ScrollButton";
-import {
-  AboutWrapper,
-  AboutContainer,
-  ImgContainer,
-  AboutP,
-  AboutBg,
-  AboutUl,
-  AboutLi,
-} from "./AboutItems";
+import SocialIcons, { SocialIconsItem } from "Common/SocialIcons";
+import * as AboutItems from "About/AboutItems";
+import ScrollButton from "Common/ScrollButton";
+import Title from "Common/Title";
 
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
+  const {
+    AboutWrapper,
+    AboutContainer,
+    ImgContainer,
+    AboutP,
+    AboutBg,
+    AboutUl,
+    AboutLi,
+  } = AboutItems;
+
   return (
     <AboutWrapper id="about">
       <div className="container title">
