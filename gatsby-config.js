@@ -27,6 +27,12 @@ module.exports = {
         Videos: path.join(__dirname, "src/videos"),
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/404`],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
