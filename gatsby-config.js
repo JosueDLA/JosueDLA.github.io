@@ -10,6 +10,19 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-6CXNQYEY7N",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/404/"],
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
+    {
       resolve: "gatsby-plugin-root-import",
       options: {
         Src: path.join(__dirname, "src"),
