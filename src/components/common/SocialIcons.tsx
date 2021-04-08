@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const SocialIconsContainer = styled.div`
   display: flex;
@@ -81,9 +82,9 @@ export const SocialIconsItem: React.FC<SocialIconsItemProps> = ({
 }) => {
   return (
     <li>
-      <a href={to} {...rest}>
+      <OutboundLink href={to} {...rest}>
         {children}
-      </a>
+      </OutboundLink>
     </li>
   );
 };
