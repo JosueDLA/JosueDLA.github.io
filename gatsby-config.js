@@ -10,16 +10,18 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-6CXNQYEY7N",
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-        exclude: ["/404/"],
-        pageTransitionDelay: 0,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
+        trackingIds: ["G-6CXNQYEY7N"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+          exclude: ["/404/"],
+        },
       },
     },
     {
