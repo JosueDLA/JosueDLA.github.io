@@ -1,12 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import UnderConstructionImg from "Images/svg/under-construction.svg";
-import * as PostCardItems from "Components/Blog/PostCard";
-import Pagination from "Components/common/Pagination";
-import { AllPostTitle } from "Components/Blog/Post";
-import Layout from "Components/Layout/Layout";
-import SVG from "Components/common/Svg";
-import SEO from "Components/common/Seo";
+import * as PostCardItems from "Blog/PostCard";
+import Pagination from "Common/Pagination";
+import { AllPostTitle } from "Blog/Post";
+import Layout from "Layout/Layout";
+import SEO from "Common/Seo";
 
 export interface AllPostsProps {
   pageContext: IPageContext;
@@ -55,58 +53,43 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
   const previous =
     currentPage - 1 === 1 ? `${pagePath}` : `${pagePath}${currentPage - 1}`;
   const next = `${pagePath}${currentPage + 1}`;
-
-  // Remove test blog post
   const posts = data.allMdx.edges;
 
-  if (posts.length > 0) {
-    return (
-      <Layout>
-        <SEO title="Blog" location={location} />
-        <main id="blog-main" className="container">
-          <AllPostTitle>Blog</AllPostTitle>
-          <PostCardWrapper>
-            {posts.map((post: any) => (
-              <PostCard key={post.node.frontmatter.slug}>
-                <DescriptionWrapper>
-                  <PostTitle>{post.node.frontmatter.title}</PostTitle>
-                  <PostDescription>
-                    {post.node.frontmatter.excerpt}
-                    <br />
-                    {post.node.frontmatter.date}
-                  </PostDescription>
-                  <Link
-                    to={`${pagePath}${post.node.frontmatter.slug}`}
-                    className="post-link"
-                  >
-                    Read More
-                  </Link>
-                </DescriptionWrapper>
-              </PostCard>
-            ))}
-          </PostCardWrapper>
-          <div style={{ flexGrow: 1 }}></div>
-          <Pagination
-            isFirst={isFirst}
-            isLast={isLast}
-            previousPage={previous}
-            nextPage={next}
-          />
-        </main>
-      </Layout>
-    );
-  } else {
-    return (
-      <Layout>
-        <SEO title="Blog" location={location} />
-        <SVG
-          text="Blog Under Construction"
-          image={UnderConstructionImg}
-          alt="Web Construction"
+  return (
+    <Layout>
+      <SEO title="Blog" location={location} />
+      <main id="blog-main" className="container">
+        <AllPostTitle>Blog</AllPostTitle>
+        <PostCardWrapper>
+          {posts.map((post: any) => (
+            <PostCard key={post.node.frontmatter.slug}>
+              <DescriptionWrapper>
+                <PostTitle>{post.node.frontmatter.title}</PostTitle>
+                <PostDescription>
+                  {post.node.frontmatter.excerpt}
+                  <br />
+                  {post.node.frontmatter.date}
+                </PostDescription>
+                <Link
+                  to={`${pagePath}${post.node.frontmatter.slug}`}
+                  className="post-link"
+                >
+                  Read More
+                </Link>
+              </DescriptionWrapper>
+            </PostCard>
+          ))}
+        </PostCardWrapper>
+        <div style={{ flexGrow: 1 }}></div>
+        <Pagination
+          isFirst={isFirst}
+          isLast={isLast}
+          previousPage={previous}
+          nextPage={next}
         />
-      </Layout>
-    );
-  }
+      </main>
+    </Layout>
+  );
 };
 
 export default AllPosts;

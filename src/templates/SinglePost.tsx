@@ -1,13 +1,13 @@
 // @ts-ignore
 import { Disqus } from "gatsby-plugin-disqus";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import React from "react";
 import { graphql } from "gatsby";
-import PostPagination from "Components/common/PostPagination";
-import { PostJumbotron } from "Components/Blog/PostJumbotron";
-import { PostWrapper, Post } from "Components/Blog/Post";
-import Layout from "Components/Layout/Layout";
-import SEO from "Components/common/Seo";
+import React from "react";
+import PostPagination from "Common/PostPagination";
+import { PostJumbotron } from "Blog/PostJumbotron";
+import { PostWrapper, Post } from "Blog/Post";
+import Layout from "Layout/Layout";
+import SEO from "Common/Seo";
 
 export interface SinglePostProps {
   data: any;
