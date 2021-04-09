@@ -25,6 +25,7 @@
     "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "lodash": "^4.17.21",
     "mdx-utils": "^0.2.0",
     "prism-react-renderer": "^1.2.0",
     "prop-types": "^15.7.2",

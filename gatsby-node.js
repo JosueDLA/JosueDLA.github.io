@@ -1,3 +1,6 @@
+const path = require("path");
+const _ = require("lodash");
+
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   if (stage.startsWith("develop")) {
     actions.setWebpackConfig({
@@ -12,8 +15,12 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 
 exports.createPages = async ({ actions, graphql }) => {
   // Define template
-  const blog = require.resolve("./src/templates/AllPosts.tsx");
-  const post = require.resolve("./src/templates/SinglePost.tsx");
+  const blog = path.resolve("./src/templates/AllPosts.tsx");
+  const post = path.resolve("./src/templates/SinglePost.tsx");
+  const tags = path.resolve("./src/templates/SingleTag.tsx");
+
+  // Post Per Page
+  const postPerPage = 3;
 
   // Get all markdown post sorted by date
   const result = await graphql(`
@@ -46,6 +53,24 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
+      postTags: allMdx(
+        sort: { order: DESC, fields: frontmatter___date }
+        filter: { body: {}, fileAbsolutePath: { regex: "/(posts)/" } }
+      ) {
+        group(field: frontmatter___tags) {
+          tag: fieldValue
+          totalCount
+        }
+      }
+      projectTags: allMdx(
+        sort: { order: DESC, fields: frontmatter___date }
+        filter: { body: {}, fileAbsolutePath: { regex: "/(projects)/" } }
+      ) {
+        group(field: frontmatter___tags) {
+          tag: fieldValue
+          totalCount
+        }
+      }
     }
   `);
 
@@ -57,15 +82,14 @@ exports.createPages = async ({ actions, graphql }) => {
     return;
   }
 
-  // Create paginated pages for post
+  // Create blog index page
   const posts = result.data.posts.edges;
   const projects = result.data.projects.edges;
 
   if (posts.length > 0) {
-    const postPerPage = 3;
     const numPages = Math.ceil(posts.length / postPerPage);
 
-    Array.from({ length: numPages }).forEach((_, i) => {
+    Array.from({ length: numPages }).forEach((__, i) => {
       actions.createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
         component: blog,
@@ -75,6 +99,33 @@ exports.createPages = async ({ actions, graphql }) => {
           numPages,
           currentPage: i + 1,
         },
+      });
+    });
+  }
+
+  // Crete Tags page
+  const postTags = result.data.postTags.group;
+  const projectTags = result.data.projectTags.group;
+
+  if (postTags.length > 0) {
+    postTags.forEach((tag) => {
+      const numPages = Math.ceil(tag.totalCount / postPerPage);
+
+      Array.from({ length: numPages }).forEach((__, i) => {
+        actions.createPage({
+          path:
+            i === 0
+              ? `/blog/tags/${_.kebabCase(tag.tag.toLowerCase())}`
+              : `/blog/tags/${_.kebabCase(tag.tag.toLowerCase())}/${i + 1}`,
+          component: tags,
+          context: {
+            limit: postPerPage,
+            skip: i * postPerPage,
+            numPages,
+            currentPage: i + 1,
+            tag: tag.tag,
+          },
+        });
       });
     });
   }
@@ -91,7 +142,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const id = edge.node.id;
 
     actions.createPage({
-      path: `/blog/${slug}`,
+      path: `/blog/${_.kebabCase(slug.toLowerCase())}`,
       component: post,
       context: {
         id: id,
@@ -113,7 +164,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const id = edge.node.id;
 
     actions.createPage({
-      path: `/projects/${slug}`,
+      path: `/projects/${_.kebabCase(slug.toLowerCase())}`,
       component: post,
       context: {
         id: id,
