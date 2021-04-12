@@ -103,9 +103,8 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   }
 
-  // Crete Tags page
+  // Crete Blog Post Tag page
   const postTags = result.data.postTags.group;
-  const projectTags = result.data.projectTags.group;
 
   if (postTags.length > 0) {
     postTags.forEach((tag) => {
@@ -119,11 +118,39 @@ exports.createPages = async ({ actions, graphql }) => {
               : `/blog/tags/${_.kebabCase(tag.tag.toLowerCase())}/${i + 1}`,
           component: tags,
           context: {
-            limit: postPerPage,
             skip: i * postPerPage,
-            numPages,
+            folder: "/(posts)/",
+            limit: postPerPage,
             currentPage: i + 1,
             tag: tag.tag,
+            numPages,
+          },
+        });
+      });
+    });
+  }
+
+  // Crete Project Tag page
+  const projectTags = result.data.projectTags.group;
+
+  if (projectTags.length > 0) {
+    projectTags.forEach((tag) => {
+      const numPages = Math.ceil(tag.totalCount / postPerPage);
+
+      Array.from({ length: numPages }).forEach((__, i) => {
+        actions.createPage({
+          path:
+            i === 0
+              ? `/projects/tags/${_.kebabCase(tag.tag.toLowerCase())}`
+              : `/projects/tags/${_.kebabCase(tag.tag.toLowerCase())}/${i + 1}`,
+          component: tags,
+          context: {
+            skip: i * postPerPage,
+            folder: "/(projects)/",
+            limit: postPerPage,
+            currentPage: i + 1,
+            tag: tag.tag,
+            numPages,
           },
         });
       });
