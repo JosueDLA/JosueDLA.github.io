@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React from "react";
 import { Link, graphql } from "gatsby";
 import * as PostCardItems from "Blog/PostCard";
@@ -21,6 +22,7 @@ interface IData {
           excerpt: string;
           slug: string;
           title: string;
+          tags: Array<string>;
         };
       }
     ];
@@ -32,6 +34,8 @@ interface IPageContext {
   limit: number;
   numPages: number;
   skip: number;
+  folder: string;
+  tag: string;
 }
 
 const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
@@ -41,13 +45,20 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
     PostCardWrapper,
     PostTitle,
     PostDescription,
+    PostTags,
   } = PostCardItems;
 
   // Page Route
-  const pagePath = "/blog/";
+  const { currentPage, numPages } = pageContext;
+  const pagePath =
+    currentPage === 1
+      ? `${location.pathname}/`.replace("//", "/")
+      : `${location.pathname}/`
+          .replace(`${currentPage}`, "")
+          .replace("//", "/");
+  const pathPrefix = `${pagePath}tags/`.replace("//", "/");
 
   // Pagination props
-  const { currentPage, numPages } = pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const previous =
@@ -69,6 +80,19 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
                   {post.node.frontmatter.excerpt}
                   <br />
                   {post.node.frontmatter.date}
+                  <PostTags>
+                    {post.node.frontmatter.tags.map(
+                      (tag: string, i: number) => (
+                        <Link
+                          key={i}
+                          className="tag"
+                          to={`${pathPrefix}${_.kebabCase(tag.toLowerCase())}`}
+                        >
+                          {tag}
+                        </Link>
+                      )
+                    )}
+                  </PostTags>
                 </PostDescription>
                 <Link
                   to={`${pagePath}${post.node.frontmatter.slug}`}
@@ -109,6 +133,7 @@ export const pageQuery = graphql`
             excerpt
             slug
             title
+            tags
           }
         }
       }

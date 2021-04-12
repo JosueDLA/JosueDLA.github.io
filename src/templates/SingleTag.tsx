@@ -22,6 +22,7 @@ interface IData {
           excerpt: string;
           slug: string;
           title: string;
+          tags: Array<string>;
         };
       }
     ];
@@ -33,6 +34,7 @@ interface IPageContext {
   limit: number;
   numPages: number;
   skip: number;
+  folder: string;
   tag: string;
 }
 
@@ -43,13 +45,22 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
     PostCardWrapper,
     PostTitle,
     PostDescription,
+    PostTags,
   } = PostCardItems;
 
   // Page Route
-  const pagePath = `/blog/tags/${_.kebabCase(pageContext.tag.toLowerCase())}/`;
+  const { currentPage, numPages } = pageContext;
+  const pagePath =
+    currentPage === 1
+      ? `${location.pathname}/`.replace("//", "/")
+      : `${location.pathname}/`
+          .replace(`${currentPage}`, "")
+          .replace("//", "/");
+  const pathPrefix = location.pathname
+    .replace(_.kebabCase(pageContext.tag.toLowerCase()), "")
+    .replace("//", "/");
 
   // Pagination props
-  const { currentPage, numPages } = pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const previous =
@@ -59,7 +70,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO title="Blog Tags" location={location} />
+      <SEO title={pageContext.tag} location={location} />
       <main id="blog-main" className="container">
         <AllPostTitle>{pageContext.tag}</AllPostTitle>
         <PostCardWrapper>
@@ -71,6 +82,19 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
                   {post.node.frontmatter.excerpt}
                   <br />
                   {post.node.frontmatter.date}
+                  <PostTags>
+                    {post.node.frontmatter.tags.map(
+                      (tag: string, i: number) => (
+                        <Link
+                          key={i}
+                          className="tag"
+                          to={`${pathPrefix}${_.kebabCase(tag.toLowerCase())}`}
+                        >
+                          {tag}
+                        </Link>
+                      )
+                    )}
+                  </PostTags>
                 </PostDescription>
                 <Link
                   to={`/blog/${post.node.frontmatter.slug}`}
@@ -97,11 +121,11 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
 export default AllPosts;
 
 export const pageQuery = graphql`
-  query Tag($skip: Int!, $limit: Int!, $tag: String) {
+  query Tag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {
     allMdx(
       sort: { order: DESC, fields: frontmatter___date }
       filter: {
-        fileAbsolutePath: { regex: "/(posts)/" }
+        fileAbsolutePath: { regex: $folder }
         frontmatter: { tags: { in: [$tag] } }
       }
       limit: $limit
@@ -114,6 +138,7 @@ export const pageQuery = graphql`
             excerpt
             slug
             title
+            tags
           }
         }
       }

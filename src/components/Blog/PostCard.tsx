@@ -78,9 +78,27 @@ export const PostTitle = styled.h2`
   }
 `;
 
-export const PostDescription = styled.p`
+export const PostDescription = styled.div`
   padding-bottom: 3rem;
   text-align: left;
+`;
+
+export const PostTags = styled.div`
+  display: flex;
+  align-self: center;
+
+  .tag {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all, 0.5s;
+    border-radius: 0.3rem;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    font-size: 0.75rem;
+    padding: 0 0.5em;
+    cursor: pointer;
+  }
 `;
 
 export const PostCard = styled.article`
