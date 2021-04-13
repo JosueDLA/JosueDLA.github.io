@@ -1,9 +1,10 @@
 import _ from "lodash";
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as ProjectCardItems from "Common/ProjectCard";
 import Pagination from "Common/Pagination";
+import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
 import SEO from "Common/Seo";
 
@@ -74,25 +75,21 @@ const AllProjects: React.FC<AllProjectsProps> = ({
   const next = `${pagePath}${currentPage + 1}`;
   const projects = data.allMdx.edges;
 
-  console.log("projects :>> ", projects);
-
   return (
     <Layout>
       <SEO title="Projects" location={location} />
       <main id="projects-main" className="container">
-        <h1>Projects</h1>
-        <ProjectCardWrapper>
+        <AllPostTitle>Projects</AllPostTitle>
+        <ProjectCardWrapper style={{ padding: "2rem 0" }}>
           {projects.map((project: any) => (
             <ProjectCard key={project.node.frontmatter.slug}>
-              <StaticImage
-                src="../images/projects/django.png"
-                alt="Django Code"
-                placeholder="blurred"
-                layout="fixed"
-                width={290}
-                height={440}
-                className="project-img"
-                quality={100}
+              <GatsbyImage
+                image={
+                  getImage(
+                    project.node.frontmatter.thumbnail
+                  ) as IGatsbyImageData
+                }
+                alt="test"
               />
               <ProjectContent>
                 <ProjectTitle>{project.node.frontmatter.title}</ProjectTitle>
@@ -167,12 +164,22 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             excerpt
-            thumbnail
             slug
             title
             tags
             code
             demo
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 290
+                  height: 440
+                  placeholder: BLURRED
+                  layout: FIXED
+                  quality: 100
+                )
+              }
+            }
           }
         }
       }
