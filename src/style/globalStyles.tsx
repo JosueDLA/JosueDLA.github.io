@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-secondary);
   }
 
-  #gatsby-focus-wrapper, #blog-main{
+  #gatsby-focus-wrapper, #blog-main, #projects-main{
     min-height: calc(100vh - 7rem); 
     display: flex; 
     flex-direction: column;
