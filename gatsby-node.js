@@ -16,18 +16,20 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 exports.createPages = async ({ actions, graphql }) => {
   // Define template
   const blog = path.resolve("./src/templates/AllPosts.tsx");
+  const project = path.resolve("./src/templates/AllProjects.tsx");
   const post = path.resolve("./src/templates/SinglePost.tsx");
   const tags = path.resolve("./src/templates/SingleTag.tsx");
 
   // Post Per Page
   const postPerPage = 3;
+  const projectsPerPage = 6;
 
   // Get all markdown post sorted by date
   const result = await graphql(`
     query AllMdx {
       posts: allMdx(
         sort: { order: DESC, fields: frontmatter___date }
-        filter: { body: {}, fileAbsolutePath: { regex: "/(posts)/" } }
+        filter: { fileAbsolutePath: { regex: "/(posts)/" } }
       ) {
         edges {
           node {
@@ -41,7 +43,10 @@ exports.createPages = async ({ actions, graphql }) => {
       }
       projects: allMdx(
         sort: { order: DESC, fields: frontmatter___date }
-        filter: { body: {}, fileAbsolutePath: { regex: "/(projects)/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/(projects)/" }
+          frontmatter: { demo: { in: "" } }
+        }
       ) {
         edges {
           node {
@@ -55,7 +60,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
       postTags: allMdx(
         sort: { order: DESC, fields: frontmatter___date }
-        filter: { body: {}, fileAbsolutePath: { regex: "/(posts)/" } }
+        filter: { fileAbsolutePath: { regex: "/(posts)/" } }
       ) {
         group(field: frontmatter___tags) {
           tag: fieldValue
@@ -64,7 +69,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
       projectTags: allMdx(
         sort: { order: DESC, fields: frontmatter___date }
-        filter: { body: {}, fileAbsolutePath: { regex: "/(projects)/" } }
+        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       ) {
         group(field: frontmatter___tags) {
           tag: fieldValue
@@ -84,7 +89,6 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create blog index page
   const posts = result.data.posts.edges;
-  const projects = result.data.projects.edges;
 
   if (posts.length > 0) {
     const numPages = Math.ceil(posts.length / postPerPage);
@@ -96,6 +100,26 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           limit: postPerPage,
           skip: i * postPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      });
+    });
+  }
+
+  // Create projects index page
+  const projects = result.data.projects.edges;
+
+  if (projects.length > 0) {
+    const numPages = Math.ceil(projects.length / projectsPerPage);
+
+    Array.from({ length: numPages }).forEach((__, i) => {
+      actions.createPage({
+        path: i === 0 ? `/projects` : `/projects/${i + 1}`,
+        component: project,
+        context: {
+          limit: projectsPerPage,
+          skip: i * projectsPerPage,
           numPages,
           currentPage: i + 1,
         },
