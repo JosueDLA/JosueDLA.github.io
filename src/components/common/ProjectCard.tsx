@@ -4,7 +4,7 @@ import { noSelect } from "Style/noSelect";
 export const ProjectCardWrapper = styled.article`
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   place-items: center;
   padding-bottom: 4rem;
 
@@ -29,16 +29,19 @@ export const ProjectDescription = styled.p`
 export const ProjectTags = styled.div`
   display: flex;
   align-self: center;
-`;
 
-export const Tag = styled.div`
-  font-size: 0.75em;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 0.3rem;
-  padding: 0 0.5em;
-  margin-right: 0.5em;
-  line-height: 1.5em;
-  transition: all, 0.5s;
+  .tag {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all, 0.5s;
+    border-radius: 0.3rem;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    padding: 0 0.5em;
+    cursor: pointer;
+  }
 `;
 
 const Button = css`
@@ -89,6 +92,8 @@ export const ProjectCard = styled.article`
   display: flex;
   width: 90%;
   max-width: 18rem;
+  background-color: red;
+  margin: auto;
   background: var(--bg-secondary);
   border: 10px solid var(--bg-secondary);
   color: white;
@@ -152,7 +157,7 @@ export const ProjectContent = styled.div`
     transform: scale(1);
   }
 
-  &:hover ${ProjectTags} ${Tag} {
+  &:hover ${ProjectTags} .tag {
     background: var(--accent-primary);
     color: white;
   }

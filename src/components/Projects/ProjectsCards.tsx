@@ -13,7 +13,6 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
     ProjectDescription,
     ProjectContent,
     ProjectTags,
-    Tag,
     GroupButton,
   } = ProjectCardItems;
 
@@ -36,9 +35,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Products section and API created with Django 3.1.
           </ProjectDescription>
           <ProjectTags>
-            <Tag>Python</Tag>
-            <Tag>Django</Tag>
-            <Tag>Bootstrap</Tag>
+            <a className="tag">Python</a>
+            <a className="tag">Django</a>
+            <a className="tag">Bootstrap</a>
           </ProjectTags>
           <GroupButton>
             <a
@@ -79,9 +78,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Website to easily create Markdown files.
           </ProjectDescription>
           <ProjectTags>
-            <Tag>HTML</Tag>
-            <Tag>Bootstrap</Tag>
-            <Tag>JavaScript</Tag>
+            <a className="tag">HTML</a>
+            <a className="tag">Bootstrap</a>
+            <a className="tag">JavaScript</a>
           </ProjectTags>
           <GroupButton>
             <a
@@ -122,9 +121,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Product section of store that updates in real time.
           </ProjectDescription>
           <ProjectTags>
-            <Tag>C#</Tag>
-            <Tag>ASP.NET MVC</Tag>
-            <Tag>Bootstrap</Tag>
+            <a className="tag">C#</a>
+            <a className="tag">ASP.NET MVC</a>
+            <a className="tag">Bootstrap</a>
           </ProjectTags>
           <GroupButton>
             <Link className="left" to="/projects/real-time-store/">
@@ -157,9 +156,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           <ProjectTitle>Portfolio V1</ProjectTitle>
           <ProjectDescription>Previous personal portfolio.</ProjectDescription>
           <ProjectTags>
-            <Tag>HTML</Tag>
-            <Tag>CSS</Tag>
-            <Tag>Bootstrap</Tag>
+            <a className="tag">HTML</a>
+            <a className="tag">CSS</a>
+            <a className="tag">Bootstrap</a>
           </ProjectTags>
           <GroupButton>
             <a
@@ -201,9 +200,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Twitter bot that provides weather information.
           </ProjectDescription>
           <ProjectTags>
-            <Tag>Python</Tag>
-            <Tag>NumPy</Tag>
-            <Tag>Pillow</Tag>
+            <a className="tag">Python</a>
+            <a className="tag">NumPy</a>
+            <a className="tag">Pillow</a>
           </ProjectTags>
           <GroupButton>
             <Link className="left" to="/projects/weather-bot/">
@@ -238,9 +237,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
             Landing page for Ghibli movies using Ghibli API.
           </ProjectDescription>
           <ProjectTags>
-            <Tag>HTML</Tag>
-            <Tag>CSS</Tag>
-            <Tag>Bootstrap</Tag>
+            <a className="tag">HTML</a>
+            <a className="tag">CSS</a>
+            <a className="tag">Bootstrap</a>
           </ProjectTags>
           <GroupButton>
             <a
