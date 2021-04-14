@@ -7,7 +7,7 @@ import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
 import SEO from "Common/Seo";
 
-export interface AllPostsProps {
+export interface PostTagProps {
   pageContext: IPageContext;
   data: IData;
   location: { pathname: string };
@@ -38,7 +38,7 @@ interface IPageContext {
   tag: string;
 }
 
-const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
+const PostTag: React.FC<PostTagProps> = ({ pageContext, data, location }) => {
   const {
     DescriptionWrapper,
     PostCard,
@@ -118,10 +118,10 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
   );
 };
 
-export default AllPosts;
+export default PostTag;
 
 export const pageQuery = graphql`
-  query Tag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {
+  query ProjectTag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {
     allMdx(
       sort: { order: DESC, fields: frontmatter___date }
       filter: {

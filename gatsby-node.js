@@ -18,7 +18,8 @@ exports.createPages = async ({ actions, graphql }) => {
   const blog = path.resolve("./src/templates/AllPosts.tsx");
   const project = path.resolve("./src/templates/AllProjects.tsx");
   const post = path.resolve("./src/templates/SinglePost.tsx");
-  const tags = path.resolve("./src/templates/SingleTag.tsx");
+  const blogTag = path.resolve("./src/templates/PostTag.tsx");
+  const projectTag = path.resolve("./src/templates/ProjectTag.tsx");
 
   // Post Per Page
   const postPerPage = 3;
@@ -155,7 +156,7 @@ exports.createPages = async ({ actions, graphql }) => {
             i === 0
               ? `/blog/tags/${_.kebabCase(tag.tag.toLowerCase())}`
               : `/blog/tags/${_.kebabCase(tag.tag.toLowerCase())}/${i + 1}`,
-          component: tags,
+          component: blogTag,
           context: {
             skip: i * postPerPage,
             folder: "/(posts)/",
@@ -182,7 +183,7 @@ exports.createPages = async ({ actions, graphql }) => {
             i === 0
               ? `/projects/tags/${_.kebabCase(tag.tag.toLowerCase())}`
               : `/projects/tags/${_.kebabCase(tag.tag.toLowerCase())}/${i + 1}`,
-          component: tags,
+          component: projectTag,
           context: {
             skip: i * postPerPage,
             folder: "/(projects)/",

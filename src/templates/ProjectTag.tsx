@@ -10,7 +10,7 @@ import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
 import SEO from "Common/Seo";
 
-export interface AllProjectsProps {
+export interface ProjectTagProps {
   pageContext: IPageContext;
   data: IData;
   location: { pathname: string };
@@ -44,7 +44,7 @@ interface IPageContext {
   tag: string;
 }
 
-const AllProjects: React.FC<AllProjectsProps> = ({
+const ProjectTag: React.FC<ProjectTagProps> = ({
   pageContext,
   data,
   location,
@@ -67,7 +67,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({
       : `${location.pathname}/`
           .replace(`/${currentPage}`, "/")
           .replace("//", "/");
-  const pathPrefix = `${pagePath}tags/`.replace("//", "/");
+  const pathPrefix = location.pathname
+    .replace(_.kebabCase(pageContext.tag.toLowerCase()), "")
+    .replace("//", "/");
 
   // Pagination props
   const isFirst = currentPage === 1;
@@ -79,9 +81,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({
 
   return (
     <Layout>
-      <SEO title="Projects" location={location} />
+      <SEO title={pageContext.tag} location={location} />
       <main id="projects-main" className="container">
-        <AllPostTitle>Projects</AllPostTitle>
+        <AllPostTitle>{pageContext.tag}</AllPostTitle>
         <ProjectCardWrapper style={{ padding: "2rem 0" }}>
           {projects.map((project: any) => (
             <ProjectCard key={project.node.frontmatter.slug}>
@@ -146,13 +148,16 @@ const AllProjects: React.FC<AllProjectsProps> = ({
   );
 };
 
-export default AllProjects;
+export default ProjectTag;
 
 export const pageQuery = graphql`
-  query AllProjects($skip: Int!, $limit: Int!) {
+  query BlogTag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {
     allMdx(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      filter: {
+        fileAbsolutePath: { regex: $folder }
+        frontmatter: { tags: { in: [$tag] } }
+      }
       limit: $limit
       skip: $skip
     ) {
