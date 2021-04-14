@@ -54,7 +54,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
     currentPage === 1
       ? `${location.pathname}/`.replace("//", "/")
       : `${location.pathname}/`
-          .replace(`${currentPage}`, "")
+          .replace(`/${currentPage}`, "/")
           .replace("//", "/");
   const pathPrefix = location.pathname
     .replace(_.kebabCase(pageContext.tag.toLowerCase()), "")

@@ -65,7 +65,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({
     currentPage === 1
       ? `${location.pathname}/`.replace("//", "/")
       : `${location.pathname}/`
-          .replace(`${currentPage}`, "")
+          .replace(`/${currentPage}`, "/")
           .replace("//", "/");
   const pathPrefix = `${pagePath}tags/`.replace("//", "/");
 
@@ -76,6 +76,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({
     currentPage - 1 === 1 ? `${pagePath}` : `${pagePath}${currentPage - 1}`;
   const next = `${pagePath}${currentPage + 1}`;
   const projects = data.allMdx.edges;
+
+  console.log("currentPage :>> ", currentPage);
+  console.log("numPages :>> ", numPages);
+  console.log("pageContext :>> ", pageContext);
 
   return (
     <Layout>

@@ -22,7 +22,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Post Per Page
   const postPerPage = 3;
-  const projectsPerPage = 6;
+  const projectsPerPage = 3;
 
   // Get all markdown post sorted by date
   const result = await graphql(`
@@ -47,6 +47,20 @@ exports.createPages = async ({ actions, graphql }) => {
           fileAbsolutePath: { regex: "/(projects)/" }
           frontmatter: { demo: { in: "" } }
         }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+              title
+            }
+          }
+        }
+      }
+      allProjects: allMdx(
+        sort: { order: DESC, fields: frontmatter___date }
+        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       ) {
         edges {
           node {
@@ -109,17 +123,18 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create projects index page
   const projects = result.data.projects.edges;
+  const allProjects = result.data.allProjects.edges;
 
   if (projects.length > 0) {
-    const numPages = Math.ceil(projects.length / projectsPerPage);
+    const numPages = Math.ceil(allProjects.length / postPerPage);
 
     Array.from({ length: numPages }).forEach((__, i) => {
       actions.createPage({
         path: i === 0 ? `/projects` : `/projects/${i + 1}`,
         component: project,
         context: {
-          limit: projectsPerPage,
-          skip: i * projectsPerPage,
+          limit: postPerPage,
+          skip: i * postPerPage,
           numPages,
           currentPage: i + 1,
         },
