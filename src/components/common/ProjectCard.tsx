@@ -4,9 +4,10 @@ import { noSelect } from "Style/noSelect";
 export const ProjectCardWrapper = styled.article`
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-  place-items: center;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 20rem);
   padding-bottom: 4rem;
+  justify-content: space-evenly;
 
   @media (max-width: 360px) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));

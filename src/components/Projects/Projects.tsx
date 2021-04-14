@@ -7,8 +7,8 @@ export interface ProjectsProps {}
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <ProjectsWrapper id="projects" className="container">
-      <Title text="Projects" />
+    <ProjectsWrapper id="featured" className="container">
+      <Title text="Featured" />
       <ProjectCards />
     </ProjectsWrapper>
   );
