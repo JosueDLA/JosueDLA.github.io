@@ -1,8 +1,10 @@
 import _ from "lodash";
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as ProjectCardItems from "Common/ProjectCard";
+import ProjectLink from "Common/ProjectLink";
 import Pagination from "Common/Pagination";
 import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
@@ -110,20 +112,15 @@ const AllProjects: React.FC<AllProjectsProps> = ({
                   )}
                 </ProjectTags>
                 <GroupButton>
-                  <a
+                  <ProjectLink
+                    demo={project.node.frontmatter.demo}
+                    slug={project.node.frontmatter.slug}
+                    title={project.node.frontmatter.title}
                     className="left"
-                    href={
-                      project.node.frontmatter.demo
-                        ? project.node.frontmatter.demo
-                        : `${pagePath}${project.node.frontmatter.slug}`
-                    }
-                    target="_blank"
-                    aria-label="Readme Creator Demo"
-                    rel="noreferrer"
                   >
                     Demo
-                  </a>
-                  <a
+                  </ProjectLink>
+                  <OutboundLink
                     className="right"
                     href={project.node.frontmatter.code}
                     target="_blank"
@@ -131,7 +128,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({
                     rel="noreferrer"
                   >
                     Code
-                  </a>
+                  </OutboundLink>
                 </GroupButton>
               </ProjectContent>
             </ProjectCard>

@@ -1,8 +1,10 @@
 import _ from "lodash";
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as ProjectCardItems from "Common/ProjectCard";
+import ProjectLink from "Common/ProjectLink";
 
 export interface ProjectCardsProps {}
 
@@ -91,28 +93,23 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
               ))}
             </ProjectTags>
             <GroupButton>
-              <a
+              <ProjectLink
+                demo={project.node.frontmatter.demo}
+                slug={project.node.frontmatter.slug}
+                title={project.node.frontmatter.title}
                 className="left"
-                href={
-                  project.node.frontmatter.demo
-                    ? project.node.frontmatter.demo
-                    : `/`
-                }
-                target="_blank"
-                aria-label="Readme Creator Demo"
-                rel="noreferrer"
               >
                 Demo
-              </a>
-              <a
+              </ProjectLink>
+              <OutboundLink
                 className="right"
                 href={project.node.frontmatter.code}
                 target="_blank"
-                aria-label="Readme Creator Code"
+                aria-label={`${project.node.frontmatter.title} Code`}
                 rel="noreferrer"
               >
                 Code
-              </a>
+              </OutboundLink>
             </GroupButton>
           </ProjectContent>
         </ProjectCard>
