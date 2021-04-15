@@ -52,6 +52,9 @@ export const NavLinks = (home: boolean) => {
     >
       Skills
     </LinkS>,
+    <LinkR className="nav-link" to="/projects">
+      Projects
+    </LinkR>,
     <LinkR className="nav-link" to="/blog">
       Blog
     </LinkR>,
@@ -64,6 +67,9 @@ export const NavLinks = (home: boolean) => {
     </LinkR>,
     <LinkR className="nav-link" to="/#skills">
       Skills
+    </LinkR>,
+    <LinkR className="nav-link" to="/projects">
+      Projects
     </LinkR>,
     <LinkR className="nav-link" to="/blog">
       Blog
