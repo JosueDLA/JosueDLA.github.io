@@ -42,16 +42,6 @@ export const NavLinks = (home: boolean) => {
     >
       About
     </LinkS>,
-    <LinkS
-      className="nav-link"
-      to="skills"
-      smooth={true}
-      duration={500}
-      spy={true}
-      hashSpy={true}
-    >
-      Skills
-    </LinkS>,
     <LinkR className="nav-link" to="/projects">
       Projects
     </LinkR>,
@@ -64,9 +54,6 @@ export const NavLinks = (home: boolean) => {
   const RouteLinks = [
     <LinkR className="nav-link" to="/#about">
       About
-    </LinkR>,
-    <LinkR className="nav-link" to="/#skills">
-      Skills
     </LinkR>,
     <LinkR className="nav-link" to="/projects">
       Projects
