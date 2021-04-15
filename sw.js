@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-eeda22e4443384789b32.js"
+    "url": "webpack-runtime-97a2b47dc77e8e0b1719.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cf3d85d5871579be6c364e56c7c4096b"
+    "revision": "2b8794fea09bd1cfd6254e9d3b67860b"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -58,7 +58,7 @@ self.__precacheManifest = [
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-eac9a2c3c98ece40f92d.js"
+    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-0e20b7ac466d123bf76f.js"
   },
   {
     "url": "component---src-pages-index-tsx-3b237f9c3d46e3ababe1.js"
@@ -77,21 +77,21 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "df30b55625fb0ad61a126da13aa01f87"
+    "revision": "a67f176cd43454d6494f5185839adfe7"
   },
   {
     "url": "3c73754e3071f37fff86ea024def9e2612f04d48-5557f8502bd888afb6d3.js"
   },
   {
-    "url": "component---src-templates-all-posts-tsx-05f65b8bbd3a4e9ffca5.js"
+    "url": "component---src-templates-all-posts-tsx-b70e9ee1e1e6d6e0942a.js"
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "be7c77342fe2ccbb93d92140854bd74a"
+    "revision": "ba708ca3a53eb5824c70d87985f6cf0d"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "4a2e7b1ef0956e7e4f4dacf841b5e9fb"
+    "revision": "d326a9dffb84a0cd5d972725660da7ab"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -101,42 +101,42 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "e90948cad9e9e8443e4e795e2a53f5e0"
+    "revision": "620e6877833f91be59d3c4fb1cde36b0"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "431e505fc53a570c2b98015464a6c023"
+    "revision": "5932b23cb3a24013041b34bf115f5ddb"
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "03f206315b853e8897a6cc4247b12873"
+    "revision": "143f1c7a55e1b286fe3d090a09254c3e"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
-    "revision": "5a2c3e82733930800d9710746d4f8070"
+    "revision": "23d739d3db1e031da94972c2bae386bb"
   },
   {
     "url": "page-data/blog/introduction-to-nodejs/page-data.json",
-    "revision": "8737edb079e813781fbb1b3b14f637d3"
+    "revision": "e920d6920f769ec5e6e12e1001efa97a"
   },
   {
     "url": "page-data/blog/introduction-to-npm/page-data.json",
-    "revision": "8240aeb15b5ef738f863fe84dd75849c"
+    "revision": "1f750f1bbd6083fc3dd03acd29cb8e07"
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "f60ecb95d8faf4d6fc075922af768225"
+    "revision": "393654d8ca1e0b2d1b8b21475b7cb3a8"
   },
   {
     "url": "page-data/blog/introduction-to-webpack/page-data.json",
-    "revision": "7d6b746ae87c2110b6f82e4be89c350a"
+    "revision": "f67efee9364cf34ab7ee1072a3e4da8c"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "8ac775b7210d4722b12ec27459e76808"
+    "revision": "be6fd4b8e9174c854bd76146d014c89b"
   },
   {
-    "url": "component---src-templates-all-projects-tsx-4b9794a5a772c23fc6b9.js"
+    "url": "component---src-templates-all-projects-tsx-e6a7a8561a609934265e.js"
   },
   {
     "url": "page-data/projects/2/page-data.json",
