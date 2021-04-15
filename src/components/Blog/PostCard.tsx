@@ -6,18 +6,28 @@ export const PostCardWrapper = styled.article`
   align-items: center;
   grid-auto-rows: 1fr;
   gap: 2rem;
+  width: 80%;
+  align-self: center;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   position: relative;
   flex-basis: 40%;
   overflow: hidden;
+  display: flex;
 
   @media (max-width: 640px) {
     flex-basis: 15rem;
+    display: none;
   }
 
   .post-img {
+    right: 0;
+    top: 0;
     position: absolute;
     width: 100%;
   }

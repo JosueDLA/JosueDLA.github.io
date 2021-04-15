@@ -93,7 +93,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
                     project.node.frontmatter.thumbnail
                   ) as IGatsbyImageData
                 }
-                alt="test"
+                alt={project.node.frontmatter.title}
               />
               <ProjectContent>
                 <ProjectTitle>{project.node.frontmatter.title}</ProjectTitle>

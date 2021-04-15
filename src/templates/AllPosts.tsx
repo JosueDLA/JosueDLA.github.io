@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as PostCardItems from "Blog/PostCard";
 import Pagination from "Common/Pagination";
 import { AllPostTitle } from "Blog/Post";
@@ -23,6 +24,7 @@ interface IData {
           slug: string;
           title: string;
           tags: Array<string>;
+          thumbnail: string;
         };
       }
     ];
@@ -46,6 +48,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
     PostTitle,
     PostDescription,
     PostTags,
+    ImageWrapper,
   } = PostCardItems;
 
   // Page Route
@@ -74,6 +77,17 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
         <PostCardWrapper>
           {posts.map((post: any) => (
             <PostCard key={post.node.frontmatter.slug}>
+              <ImageWrapper>
+                <GatsbyImage
+                  image={
+                    getImage(
+                      post.node.frontmatter.thumbnail
+                    ) as IGatsbyImageData
+                  }
+                  alt={post.node.frontmatter.title}
+                  className="post-img"
+                />
+              </ImageWrapper>
               <DescriptionWrapper>
                 <PostTitle>{post.node.frontmatter.title}</PostTitle>
                 <PostDescription>
@@ -134,6 +148,17 @@ export const pageQuery = graphql`
             slug
             title
             tags
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 480
+                  height: 360
+                  placeholder: BLURRED
+                  layout: FIXED
+                  quality: 100
+                )
+              }
+            }
           }
         }
       }
