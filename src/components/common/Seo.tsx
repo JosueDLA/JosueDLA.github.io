@@ -87,6 +87,10 @@ const SEO: React.FC<SEOProps> = ({
           name: `twitter:image`,
           content: cardUrl,
         },
+        {
+          name: `google-site-verification`,
+          content: `DYujHJoykLb5x9M7oTQ-0f3oB9o0GIffmhKiaXl6U5g`,
+        },
       ].concat(
         metaKeywords && metaKeywords.length > 0
           ? {

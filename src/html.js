@@ -6,10 +6,6 @@ export default function HTML(props) {
   return (
     <html lang="en" {...props.htmlAttributes}>
       <head>
-        <meta
-          name="google-site-verification"
-          content="DYujHJoykLb5x9M7oTQ-0f3oB9o0GIffmhKiaXl6U5g"
-        />
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
