@@ -3,11 +3,12 @@ import { noSelect } from "Style/noSelect";
 
 export const CardRow = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 2rem;
   box-align: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 3rem;
 `;
 
 export const Card = styled.div`
