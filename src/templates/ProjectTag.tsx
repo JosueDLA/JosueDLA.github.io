@@ -8,6 +8,7 @@ import ProjectLink from "Common/ProjectLink";
 import Pagination from "Common/Pagination";
 import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
+import Tags from "Common/Tags";
 import SEO from "Common/Seo";
 
 export interface ProjectTagProps {
@@ -42,6 +43,7 @@ interface IPageContext {
   skip: number;
   folder: string;
   tag: string;
+  tags: Array<object>;
 }
 
 const ProjectTag: React.FC<ProjectTagProps> = ({
@@ -126,7 +128,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
                     className="right"
                     href={project.node.frontmatter.code}
                     target="_blank"
-                    aria-label="Readme Creator Code"
+                    aria-label={`${project.node.frontmatter.title}`}
                     rel="noreferrer"
                   >
                     Code
@@ -136,6 +138,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
             </ProjectCard>
           ))}
         </ProjectCardWrapper>
+        <Tags tags={pageContext.tags} pathPrefix={pathPrefix} />
         <div style={{ flexGrow: 1 }}></div>
         <Pagination
           isFirst={isFirst}

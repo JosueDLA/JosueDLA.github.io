@@ -44,20 +44,17 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
           <h2>{current.excerpt}</h2>
         </header>
       </PostJumbotron>
-
       <PostWrapper>
         <Post>
           <MDXRenderer>{data.current.body}</MDXRenderer>
         </Post>
       </PostWrapper>
-
       <PostPagination
         previous={previous}
         current={current}
         next={next}
         location={location}
       />
-
       <div className="container">
         <Disqus config={disqusConfig} />
       </div>
@@ -97,7 +94,6 @@ export const pageQuery = graphql`
         slug
       }
     }
-
     site {
       siteMetadata {
         author

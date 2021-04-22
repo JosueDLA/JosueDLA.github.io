@@ -168,6 +168,7 @@ exports.createPages = async ({ actions, graphql }) => {
             currentPage: i + 1,
             tag: tag.tag,
             numPages,
+            tags: postTags,
           },
         });
       });
@@ -193,6 +194,7 @@ exports.createPages = async ({ actions, graphql }) => {
             currentPage: i + 1,
             tag: tag.tag,
             numPages,
+            tags: projectTags,
           },
         });
       });

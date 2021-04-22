@@ -8,9 +8,8 @@ export const TagsWrapper = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 auto;
-  align-items: center;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: left;
 
   @media (max-width: 960px) {
     width: 100%;
