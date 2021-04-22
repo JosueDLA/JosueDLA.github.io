@@ -19,7 +19,7 @@ export const PaginationWrapper = styled("div")<IPostPaginationProps>`
   a:nth-child(1) {
     position: relative;
     color: ${({ isFirst }) =>
-      isFirst ? "var(--text-disabled)" : "var(--text-secondary)"};
+      isFirst ? "var(--text-disabled)" : "var(--text-tertiary)"};
     pointer-events: ${({ isFirst }) => (isFirst ? "none" : "auto")};
     display: ${({ isFirst }) => (isFirst ? "none" : "block")};
     cursor: ${({ isFirst }) => (isFirst ? "default" : "pointer")};
@@ -36,7 +36,7 @@ export const PaginationWrapper = styled("div")<IPostPaginationProps>`
   a:nth-child(2) {
     position: relative;
     color: ${({ isLast }) =>
-      isLast ? "var(--text-disabled)" : "var(--text-secondary)"};
+      isLast ? "var(--text-disabled)" : "var(--text-tertiary)"};
     pointer-events: ${({ isLast }) => (isLast ? "none" : "auto")};
     display: ${({ isLast }) => (isLast ? "none" : "block")};
     cursor: ${({ isLast }) => (isLast ? "default" : "pointer")};

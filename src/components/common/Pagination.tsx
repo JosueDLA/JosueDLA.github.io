@@ -16,14 +16,14 @@ export const PaginationWrapper = styled("div")<IPaginationProps>`
 
   a:nth-child(1) {
     color: ${({ isFirst }) =>
-      isFirst ? "var(--text-disabled)" : "var(--text-secondary)"};
+      isFirst ? "var(--text-disabled)" : "var(--text-tertiary)"};
     pointer-events: ${({ isFirst }) => (isFirst ? "none" : "auto")};
     cursor: ${({ isFirst }) => (isFirst ? "default" : "pointer")};
   }
 
   a:nth-child(2) {
     color: ${({ isLast }) =>
-      isLast ? "var(--text-disabled)" : "var(--text-secondary)"};
+      isLast ? "var(--text-disabled)" : "var(--text-tertiary)"};
     pointer-events: ${({ isLast }) => (isLast ? "none" : "auto")};
     cursor: ${({ isLast }) => (isLast ? "default" : "pointer")};
   }

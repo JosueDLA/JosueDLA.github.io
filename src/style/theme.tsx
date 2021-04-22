@@ -57,7 +57,7 @@ export const lightTheme = {
   "--text-primary": "#ffffff",
   "--text-secondary": "#525660",
   "--text-tertiary": "#232529",
-  "--text-disabled": "#0f1113",
+  "--text-disabled": "#6c757d",
   "--accent-primary": "#4e80f5",
   "--accent-secondary": "#99A7D3",
   "--accent-tertiary": "#2663f2",
