@@ -39,7 +39,7 @@ const lightCode = {
 };
 
 export const common = {
-  boxShadow: "0px 1rem 1.5rem rgba(0, 0, 0, 0.5);",
+  boxShadow: "0px 1rem 1.5rem rgba(0, 0, 0, 0.2);",
   media: {
     extraSmall: "max-width: 320px",
     small: "max-width: 480px",
@@ -51,13 +51,16 @@ export const common = {
 
 export const lightTheme = {
   "--bg-primary": "#f8f8f8",
-  "--bg-secondary": "#233554",
-  "--bg-video": "rgba(56, 86, 139, 0.8)",
-  "--text-primary": "#f8f8f8",
-  "--text-secondary": "#000000",
-  "--text-disabled": "#6c757d",
-  "--accent-primary": "#0A66C2",
-  "--accent-secondary": "#394b61",
+  "--bg-secondary": "#6474af",
+  "--bg-tertiary": "#cedaf6",
+  "--bg-video": "rgba(100, 116, 175, 0.8)",
+  "--text-primary": "#ffffff",
+  "--text-secondary": "#525660",
+  "--text-tertiary": "#232529",
+  "--text-disabled": "#0f1113",
+  "--accent-primary": "#4e80f5",
+  "--accent-secondary": "#99A7D3",
+  "--accent-tertiary": "#2663f2",
   ...lightCode,
   ...common,
 };
@@ -65,12 +68,15 @@ export const lightTheme = {
 export const darkTheme = {
   "--bg-primary": "#0a192f",
   "--bg-secondary": "#112240",
+  "--bg-tertiary": "#112240",
   "--bg-video": "#1f2449",
   "--text-primary": "#f8f8f8",
   "--text-secondary": "#f8f8f8",
+  "--text-tertiary": "#f8f8f8",
   "--text-disabled": "#6c757d",
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#303030",
+  "--accent-tertiary": "#303030",
   ...darkCode,
   ...common,
 };
@@ -84,6 +90,7 @@ export interface IDefaultTheme {
   "--text-secondary": string;
   "--accent-primary": string;
   "--accent-secondary": string;
+  "--accent-tertiary": string;
   common: string;
   media: {
     extraSmall: string;

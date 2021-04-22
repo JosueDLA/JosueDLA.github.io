@@ -122,7 +122,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`roboto mono\:500,600,700`, `rubik\:900`],
+        fonts: [
+          `roboto mono\:500,600,700`,
+          `rubik\:900`,
+          `roboto\:500,500i,700`,
+        ],
         display: `swap`,
       },
     },

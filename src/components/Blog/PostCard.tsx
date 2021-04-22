@@ -30,6 +30,7 @@ export const ImageWrapper = styled.div`
     top: 0;
     position: absolute;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -42,7 +43,7 @@ export const DescriptionWrapper = styled.div`
     content: "";
     margin-left: -2rem;
     transform: skewX(-3deg);
-    background: var(--bg-secondary);
+    background: var(--bg-tertiary);
     width: 2rem;
     position: absolute;
     left: -10px;
@@ -99,9 +100,8 @@ export const PostTags = styled.div`
 
   .tag {
     background-color: rgba(255, 255, 255, 0.5);
-    color: var(--text-primary);
+    color: var(--text-tertiary);
     text-decoration: none;
-    transition: all, 0.5s;
     border-radius: 0.3rem;
     margin-right: 0.5em;
     line-height: 1.5em;
@@ -115,15 +115,15 @@ export const PostCard = styled.article`
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-tertiary);
   line-height: 1.4rem;
   border-radius: 0.3rem;
   width: 100%;
   height: 100%;
-  color: var(--text-primary);
+  color: var(--text-tertiary);
   margin: 0 auto;
   justify-content: center;
-  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.boxShadow};
 
   @media screen and (${({ theme }) => theme.media.medium}) {
     flex-direction: column;

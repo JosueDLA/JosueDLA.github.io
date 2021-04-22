@@ -4,6 +4,7 @@ export const AllPostTitle = styled.h1`
   text-align: center;
   font-size: 3rem;
   margin: 1rem 0;
+  color: var(--text-tertiary);
 
   @media screen and (${({ theme }) => theme.media.small}) {
     font-size: 2rem;
@@ -24,6 +25,7 @@ export const Post = styled.main`
   position: relative;
   margin: 0 auto;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-secondary);
   overflow: hidden;
@@ -59,7 +61,7 @@ export const Post = styled.main`
   h6 {
     margin: 10px 0;
     padding: 0;
-    font-weight: bold;
+    font-weight: 700;
     -webkit-font-smoothing: antialiased;
     cursor: text;
     position: relative;
@@ -193,8 +195,8 @@ export const Post = styled.main`
   }
 
   dl dt {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
     font-style: italic;
     padding: 0;
     margin: 15px 0 5px;
@@ -254,7 +256,7 @@ export const Post = styled.main`
   }
 
   table tr th {
-    font-weight: bold;
+    font-weight: 700;
     border: 1px solid #cccccc;
     text-align: left;
     margin: 0;
@@ -372,11 +374,11 @@ export const Post = styled.main`
 
   code,
   tt {
-    margin: 0 2px;
-    padding: 0 5px;
+    margin: 2px;
+    padding: 2px 5px;
     white-space: nowrap;
-    border: 1px solid #eaeaea;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-tertiary);
+    color: var(--accent-tertiary);
     border-radius: 3px;
   }
 
@@ -391,7 +393,7 @@ export const Post = styled.main`
   .highlight pre {
     background-color: var(--bg-primary);
     border: 1px solid #cccccc;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 19px;
     overflow: auto;
     padding: 6px 10px;
@@ -401,7 +403,7 @@ export const Post = styled.main`
   pre {
     background-color: var(--bg-primary);
     border: 1px solid #cccccc;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 19px;
     overflow: auto;
     padding: 6px 10px;
@@ -421,7 +423,7 @@ export const Post = styled.main`
   }
 
   @media screen and (${({ theme }) => theme.media.small}) {
-    font-size: 14px;
+    font-size: 16px;
 
     h1 {
       font-size: 28px;
@@ -449,12 +451,12 @@ export const Post = styled.main`
 
     code,
     pre {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 
   @media screen and (${({ theme }) => theme.media.extraSmall}) {
-    font-size: 14px;
+    font-size: 16px;
 
     h1 {
       font-size: 24px;
@@ -483,7 +485,7 @@ export const Post = styled.main`
     pre {
       min-width: 240px;
       max-width: 320px;
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 `;

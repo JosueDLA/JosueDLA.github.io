@@ -33,7 +33,7 @@ export const ProjectTags = styled.div`
 
   .tag {
     background: rgba(255, 255, 255, 0.5);
-    color: var(--text-primary);
+    color: white;
     text-decoration: none;
     transition: all, 0.5s;
     border-radius: 0.3rem;
@@ -53,7 +53,7 @@ const Button = css`
   text-align: center;
   font-size: 1rem;
   text-decoration: none;
-  color: var(--text-primary);
+  color: white;
   cursor: pointer;
   margin: 0;
   width: 30%;
@@ -78,13 +78,13 @@ export const GroupButton = styled.div`
   .left {
     ${Button}
     border-radius: 0.3rem 0 0 0.3rem;
-    border-right: 1px solid black;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
   }
 
   .right {
     ${Button}
     border-radius: 0 0.3rem 0.3rem 0;
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -93,13 +93,12 @@ export const ProjectCard = styled.article`
   display: flex;
   width: 90%;
   max-width: 18rem;
-  background-color: red;
   margin: auto;
-  background: var(--bg-secondary);
+  background-color: var(--bg-video);
   border: 10px solid var(--bg-secondary);
   color: white;
   border-radius: 1em;
-  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   overflow: hidden;
 
   .project-img {
@@ -122,7 +121,7 @@ export const ProjectContent = styled.div`
 
   &:hover {
     transform: rotate(0);
-    color: var(--text-primary);
+    color: white;
   }
 
   &:before,
@@ -140,21 +139,21 @@ export const ProjectContent = styled.div`
   }
 
   &:before {
-    background: var(--bg-secondary);
+    background-color: var(--bg-secondary);
     width: 250%;
     height: 250%;
     opacity: 0.5;
   }
 
   &:after {
-    background: var(--bg-secondary);
+    background-color: var(--bg-secondary);
     width: 200%;
     height: 200%;
     opacity: 0.5;
   }
 
   &:hover:before,
-  &:hover:after {
+  x &:hover:after {
     transform: scale(1);
   }
 

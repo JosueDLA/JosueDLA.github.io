@@ -12,19 +12,16 @@ export const CardRow = styled.div`
 `;
 
 export const Card = styled.div`
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  color: var(--text-tertiary);
   max-width: 20rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-radius: 2rem;
-  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   justify-content: space-evenly;
-
-  @media (max-width: 1495px) {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 
   ${noSelect}
 `;
@@ -37,7 +34,6 @@ export const Banner = styled.div`
   margin: 2rem 0;
 
   .card-img {
-    background-color: black;
     width: 10rem;
     height: 10rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PostJumbotron = styled.aside`
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
   border: 0;

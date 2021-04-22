@@ -16,8 +16,8 @@ export const AboutWrapper = styled.section`
 `;
 
 export const AboutBg = styled.div`
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
   padding: 4rem 0;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
 
@@ -46,7 +46,6 @@ export const ImgContainer = styled.div`
   height: 230px;
   border-radius: 50%;
   border: 5px solid #fff;
-  background: #000;
   margin: 3rem;
   flex-shrink: 0;
   overflow: hidden;

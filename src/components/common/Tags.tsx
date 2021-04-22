@@ -18,9 +18,8 @@ export const TagsWrapper = styled.div`
   .tag {
     background-color: transparent;
     border: solid 0.15rem var(--accent-primary);
-    color: var(--text-primary);
+    color: var(--text-tertiary);
     text-decoration: none;
-    transition: all, 0.5s;
     border-radius: 3rem;
     padding: 0.3rem 0.8rem;
     font-size: 1rem;
