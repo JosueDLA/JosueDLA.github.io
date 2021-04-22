@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7ea659576d183d9d4746.js"
+    "url": "webpack-runtime-9aa63d0d206250e62184.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
   },
   {
-    "url": "styles.4101032c7a0606f79b78.css"
+    "url": "styles.023b3a085dda52cd4dcb.css"
   },
   {
     "url": "app-24175f4693f93d80fed4.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "94f25622ce2882e54f62c616f720eeaa"
+    "revision": "bc065689a2429a34feed4b75af492d19"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -58,10 +58,10 @@ self.__precacheManifest = [
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-a165ad33fe7e1bc5d99a.js"
+    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-07e7cc1071b8db726ba3.js"
   },
   {
-    "url": "component---src-pages-index-tsx-5fbeffc327f72fd78b95.js"
+    "url": "component---src-pages-index-tsx-1f70c56f0099804e929c.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -77,13 +77,13 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c12deb293d632108e068ab70d33e9f4d"
+    "revision": "de7dbabad323ecafb031ca0027b4d39d"
   },
   {
-    "url": "3c73754e3071f37fff86ea024def9e2612f04d48-66224bc7e88ca577d609.js"
+    "url": "3c73754e3071f37fff86ea024def9e2612f04d48-f34ecff10b1595c74e9f.js"
   },
   {
-    "url": "component---src-templates-all-posts-tsx-82b23c584b3490c2defd.js"
+    "url": "component---src-templates-all-posts-tsx-fb79fed56ad9b1283596.js"
   },
   {
     "url": "page-data/blog/2/page-data.json",
@@ -97,7 +97,7 @@ self.__precacheManifest = [
     "url": "0c428ae2-e49c5469f13807d67d03.js"
   },
   {
-    "url": "component---src-templates-single-post-tsx-c407674f235969926503.js"
+    "url": "component---src-templates-single-post-tsx-309cfda501b892e19b6a.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "revision": "be6fd4b8e9174c854bd76146d014c89b"
   },
   {
-    "url": "component---src-templates-all-projects-tsx-cdbe213f6b008884d904.js"
+    "url": "component---src-templates-all-projects-tsx-42e559c6c767fffa8cd5.js"
   },
   {
     "url": "page-data/projects/2/page-data.json",
