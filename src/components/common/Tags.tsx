@@ -42,7 +42,7 @@ export interface TagsProps {
 
 const Tags: React.FC<TagsProps> = ({ tags, pathPrefix }) => {
   return (
-    <article>
+    <article style={{ width: "80%", padding: "2rem 0" }} className="container">
       <h3>Tags</h3>
       <TagsWrapper>
         {Object.values(tags).map((tag: any, i: number) => (

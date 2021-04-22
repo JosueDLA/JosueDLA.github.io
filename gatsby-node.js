@@ -102,6 +102,10 @@ exports.createPages = async ({ actions, graphql }) => {
     return;
   }
 
+  // Tags
+  const postTags = result.data.postTags.group;
+  const projectTags = result.data.projectTags.group;
+
   // Create blog index page
   const posts = result.data.posts.edges;
 
@@ -117,6 +121,7 @@ exports.createPages = async ({ actions, graphql }) => {
           skip: i * postPerPage,
           numPages,
           currentPage: i + 1,
+          tags: postTags,
         },
       });
     });
@@ -138,14 +143,13 @@ exports.createPages = async ({ actions, graphql }) => {
           skip: i * postPerPage,
           numPages,
           currentPage: i + 1,
+          tags: projectTags,
         },
       });
     });
   }
 
   // Crete Blog Post Tag page
-  const postTags = result.data.postTags.group;
-
   if (postTags.length > 0) {
     postTags.forEach((tag) => {
       const numPages = Math.ceil(tag.totalCount / postPerPage);
@@ -171,8 +175,6 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // Crete Project Tag page
-  const projectTags = result.data.projectTags.group;
-
   if (projectTags.length > 0) {
     projectTags.forEach((tag) => {
       const numPages = Math.ceil(tag.totalCount / postPerPage);

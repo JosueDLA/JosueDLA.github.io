@@ -6,6 +6,7 @@ import * as PostCardItems from "Blog/PostCard";
 import Pagination from "Common/Pagination";
 import { AllPostTitle } from "Blog/Post";
 import Layout from "Layout/Layout";
+import Tags from "Common/Tags";
 import SEO from "Common/Seo";
 
 export interface AllPostsProps {
@@ -37,7 +38,7 @@ interface IPageContext {
   numPages: number;
   skip: number;
   folder: string;
-  tag: string;
+  tags: Array<object>;
 }
 
 const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
@@ -118,6 +119,7 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
             </PostCard>
           ))}
         </PostCardWrapper>
+        <Tags tags={pageContext.tags} pathPrefix={pathPrefix} />
         <div style={{ flexGrow: 1 }}></div>
         <Pagination
           isFirst={isFirst}
