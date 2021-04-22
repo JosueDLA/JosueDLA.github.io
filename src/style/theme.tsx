@@ -68,7 +68,7 @@ export const lightTheme = {
 export const darkTheme = {
   "--bg-primary": "#0a192f",
   "--bg-secondary": "#112240",
-  "--bg-tertiary": "#112240",
+  "--bg-tertiary": "#10223e",
   "--bg-video": "#1f2449",
   "--text-primary": "#f8f8f8",
   "--text-secondary": "#f8f8f8",
@@ -76,7 +76,7 @@ export const darkTheme = {
   "--text-disabled": "#6c757d",
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#303030",
-  "--accent-tertiary": "#303030",
+  "--accent-tertiary": "#5686f5",
   ...darkCode,
   ...common,
 };

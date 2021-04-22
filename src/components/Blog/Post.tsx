@@ -65,6 +65,7 @@ export const Post = styled.main`
     -webkit-font-smoothing: antialiased;
     cursor: text;
     position: relative;
+    color: var(--text-tertiary);
   }
 
   h1:hover a.anchor,
@@ -414,6 +415,10 @@ export const Post = styled.main`
   pre tt {
     background-color: transparent;
     border: none;
+  }
+
+  strong {
+    color: var(--text-tertiary);
   }
 
   @media screen and (${({ theme }) => theme.media.large}) {

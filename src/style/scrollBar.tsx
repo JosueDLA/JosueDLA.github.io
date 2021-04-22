@@ -10,7 +10,7 @@ const scrollBar = css`
   }
 
   body::-webkit-scrollbar-thumb {
-    background: var(--accent-primary);
+    background: var(--accent-tertiary);
   }
 `;
 
