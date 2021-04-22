@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9e255519e747c01b5fda.js"
+    "url": "webpack-runtime-7ea659576d183d9d4746.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "83b089fe6e5fa1834a1ae51feca6af69"
+    "revision": "94f25622ce2882e54f62c616f720eeaa"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
@@ -58,10 +58,10 @@ self.__precacheManifest = [
     "url": "6728d85a-5c7c714d0773ea6facd6.js"
   },
   {
-    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-2e48a20934ed8968bc3f.js"
+    "url": "0e99aa6ecfbaf03ccf621b14e86a3842a7a577b2-a165ad33fe7e1bc5d99a.js"
   },
   {
-    "url": "component---src-pages-index-tsx-925f5efadd004b97cd92.js"
+    "url": "component---src-pages-index-tsx-5fbeffc327f72fd78b95.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -77,27 +77,27 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "97795dca91756a52713b0aa7bb43924e"
+    "revision": "c12deb293d632108e068ab70d33e9f4d"
   },
   {
-    "url": "3c73754e3071f37fff86ea024def9e2612f04d48-5557f8502bd888afb6d3.js"
+    "url": "3c73754e3071f37fff86ea024def9e2612f04d48-66224bc7e88ca577d609.js"
   },
   {
-    "url": "component---src-templates-all-posts-tsx-b70e9ee1e1e6d6e0942a.js"
+    "url": "component---src-templates-all-posts-tsx-82b23c584b3490c2defd.js"
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "ba708ca3a53eb5824c70d87985f6cf0d"
+    "revision": "6e43d07f247146b2142e23388baef2d4"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "d326a9dffb84a0cd5d972725660da7ab"
+    "revision": "079a4ffa6cbfef06b3bfc44eced26ca9"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
   },
   {
-    "url": "component---src-templates-single-post-tsx-74f5b6d1fb32dd60bfd7.js"
+    "url": "component---src-templates-single-post-tsx-c407674f235969926503.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "143f1c7a55e1b286fe3d090a09254c3e"
+    "revision": "d0d60c5741df97b7fc61f6d3d48b50ed"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
@@ -136,15 +136,15 @@ self.__precacheManifest = [
     "revision": "be6fd4b8e9174c854bd76146d014c89b"
   },
   {
-    "url": "component---src-templates-all-projects-tsx-e6a7a8561a609934265e.js"
+    "url": "component---src-templates-all-projects-tsx-cdbe213f6b008884d904.js"
   },
   {
     "url": "page-data/projects/2/page-data.json",
-    "revision": "5b5a001e76d9af7d30bb20001d5e1160"
+    "revision": "5d35059241e34a368c64505b07f32aa7"
   },
   {
     "url": "page-data/projects/page-data.json",
-    "revision": "4d65397a423bd95cb8fe3fb3bf608e9a"
+    "revision": "aed4af9f5427ce1dc1c68025d4ce838e"
   },
   {
     "url": "page-data/projects/real-time-store/page-data.json",
