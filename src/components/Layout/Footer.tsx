@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FooterWraper = styled.div`
   background: var(--bg-secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   height: 3.5rem;
   display: flex;
   justify-content: center;

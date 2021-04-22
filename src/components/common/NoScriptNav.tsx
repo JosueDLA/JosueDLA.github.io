@@ -12,7 +12,7 @@ const NoScriptCss = css`
     width: 100%;
     background: var(--bg-secondary);
     font-size: 1rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin-bottom: 3.5rem;
   }
 
@@ -46,7 +46,7 @@ const NoScriptCss = css`
   }
 
   .no-script-card {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -85,7 +85,7 @@ const NoScriptCss = css`
 
   .title {
     height: 65px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     background: var(--bg-secondary);
     overflow: hidden;
     border-radius: 0.3rem 0.3rem 0 0;

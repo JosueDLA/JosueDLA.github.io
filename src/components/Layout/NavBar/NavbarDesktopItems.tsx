@@ -39,7 +39,7 @@ export const NavLogo = styled.div`
   line-height: 3.5rem;
 
   .nav-logo {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -58,7 +58,7 @@ export const NavIcon = styled.div`
     cursor: pointer;
     background: transparent;
     outline: none;
-    color: var(--text-primary);
+    color: var(--text-secondary);
   }
 `;
 
@@ -80,7 +80,7 @@ export const NavItem = styled.li`
   margin: 0;
 
   .nav-link {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -108,7 +108,7 @@ export const NavBtnLink = styled.button`
   background: var(--accent-secondary);
   white-space: nowrap;
   padding: 10px 22px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 16px;
   outline: none;
   border: none;
@@ -119,6 +119,6 @@ export const NavBtnLink = styled.button`
   &:hover {
     transition: all 0.2 ease-in-out;
     background: var(--accent-primary);
-    color: var(--text-primary);
+    color: var(--text-secondary);
   }
 `;

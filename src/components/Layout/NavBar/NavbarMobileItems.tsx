@@ -22,7 +22,7 @@ export const MobileContainer = styled("aside")<ISideBarContainer>`
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: var(--text-primary);
+  color: var(--text-secondary);
 `;
 
 export const Icon = styled.div`
@@ -64,7 +64,7 @@ export const MobileItem = styled.li`
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     cursor: pointer;
 
     &:hover {
@@ -84,7 +84,7 @@ export const MobileRoute = styled.a`
   background: var(--accent-secondary);
   white-space: nowrap;
   padding: 16px 64px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 16px;
   outline: none;
   border: none;
@@ -96,6 +96,6 @@ export const MobileRoute = styled.a`
   &:hover {
     transition: all 0.2 ease-in-out;
     background: var(--accent-primary);
-    color: var(--text-primary);
+    color: var(--text-secondary);
   }
 `;

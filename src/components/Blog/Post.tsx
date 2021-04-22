@@ -27,7 +27,7 @@ export const Post = styled.main`
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -130,7 +130,7 @@ export const Post = styled.main`
   }
 
   h6 {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 18px;
   }
 

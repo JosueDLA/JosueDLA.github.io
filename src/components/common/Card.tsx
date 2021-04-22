@@ -27,7 +27,7 @@ export const Card = styled.div`
 `;
 
 export const Banner = styled.div`
-  color: var(--text-primary);
+  color: var(--text-secondary);
   height: 10rem;
   display: flex;
   justify-content: center;

@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle<{ theme: IDefaultTheme }>`
     padding: 0;
     font-family: "Roboto Mono", monospace;
     background-color: var(--bg-primary);
-    color: var(--text-secondary);
+    color: var(--text-primary);
   }
 
   #gatsby-focus-wrapper, #blog-main, #projects-main{

@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Header = styled.header`
   position: relative;
   text-align: center;
-  border-top: solid 2px var(--text-secondary);
+  border-top: solid 2px var(--text-primary);
   color: var(--text-tertiary);
   top: 1em;
   margin-top: 2em;
