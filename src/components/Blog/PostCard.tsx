@@ -9,7 +9,7 @@ export const PostCardWrapper = styled.article`
   width: 80%;
   align-self: center;
 
-  @media (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     width: 100%;
   }
 `;
@@ -20,7 +20,7 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   display: flex;
 
-  @media (max-width: 640px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     flex-basis: 15rem;
     display: none;
   }
@@ -79,11 +79,11 @@ export const PostTitle = styled.h2`
     margin-top: 0.4rem;
   }
 
-  @media (max-width: 640px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     font-size: 1.5rem;
   }
 
-  @media (max-width: 320px) {
+  @media screen and (${({ theme }) => theme.media.extraSmall}) {
     font-size: 1.2rem;
   }
 `;
@@ -125,7 +125,7 @@ export const PostCard = styled.article`
   justify-content: center;
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 640px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     flex-direction: column;
   }
 `;

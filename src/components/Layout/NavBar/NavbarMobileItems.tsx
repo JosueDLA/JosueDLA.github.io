@@ -47,7 +47,7 @@ export const MobileMenu = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     grid-template-rows: repeat(4, 80px);
   }
 `;

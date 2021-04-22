@@ -11,7 +11,7 @@ const FooterWraper = styled.div`
   font-size: 1rem;
   top: 0;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     transition: 0.8 all ease;
   }
 `;

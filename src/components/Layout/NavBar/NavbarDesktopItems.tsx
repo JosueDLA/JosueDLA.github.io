@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   margin-bottom: 3.5rem;
   ${noSelect}
 
-  @media screen and (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     transition: 0.8 all ease;
   }
 `;
@@ -49,7 +49,7 @@ export const NavLogo = styled.div`
 export const NavIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     display: inline;
     position: absolute;
     top: 1rem;
@@ -70,7 +70,7 @@ export const NavMenu = styled.ul`
   padding: 0;
   margin-left: -22px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;
@@ -98,7 +98,7 @@ export const NavBtn = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;

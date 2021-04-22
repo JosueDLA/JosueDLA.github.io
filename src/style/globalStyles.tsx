@@ -1,8 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import { IDefaultTheme } from "Style/theme";
 import scrollBar from "Style/scrollBar";
 import normalize from "Style/normalize";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: IDefaultTheme }>`
   ${normalize}
 
   html {
@@ -40,13 +41,13 @@ const GlobalStyle = createGlobalStyle`
     width: 75%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     .container {
       width: 85%;
     }
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     .container {
       width: 95%;
     }

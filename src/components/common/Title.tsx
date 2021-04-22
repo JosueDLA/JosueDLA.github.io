@@ -12,11 +12,11 @@ export const Header = styled.header`
   margin-bottom: 2em;
   background: inherit;
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (${({ theme }) => theme.media.extraLarge}) {
     margin-top: 3em;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     margin-top: 3em;
   }
 

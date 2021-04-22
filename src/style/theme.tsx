@@ -38,6 +38,17 @@ const lightCode = {
   "--namespace": "#bc5454",
 };
 
+export const common = {
+  boxShadow: "0px 1rem 1.5rem rgba(0, 0, 0, 0.5);",
+  media: {
+    extraSmall: "max-width: 320px",
+    small: "max-width: 480px",
+    medium: "max-width: 768px",
+    large: "max-width: 960px",
+    extraLarge: "max-width: 1200px",
+  },
+};
+
 export const lightTheme = {
   "--bg-primary": "#f8f8f8",
   "--bg-secondary": "#233554",
@@ -48,6 +59,7 @@ export const lightTheme = {
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#394b61",
   ...lightCode,
+  ...common,
 };
 
 export const darkTheme = {
@@ -60,9 +72,10 @@ export const darkTheme = {
   "--accent-primary": "#0A66C2",
   "--accent-secondary": "#303030",
   ...darkCode,
+  ...common,
 };
 
-export interface DefaultTheme {
+export interface IDefaultTheme {
   "--bg-primary": string;
   "--bg-secondary": string;
   "--bg-video": string;
@@ -71,4 +84,12 @@ export interface DefaultTheme {
   "--text-secondary": string;
   "--accent-primary": string;
   "--accent-secondary": string;
+  common: string;
+  media: {
+    extraSmall: string;
+    small: string;
+    medium: string;
+    large: string;
+    extraLarge: string;
+  };
 }

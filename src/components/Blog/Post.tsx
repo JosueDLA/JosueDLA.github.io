@@ -5,11 +5,11 @@ export const AllPostTitle = styled.h1`
   font-size: 3rem;
   margin: 1rem 0;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     font-size: 2rem;
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (${({ theme }) => theme.media.extraSmall}) {
     font-size: 1.5rem;
   }
 `;
@@ -414,12 +414,13 @@ export const Post = styled.main`
     border: none;
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     img {
       max-width: 100%;
     }
   }
-  @media screen and (max-width: 480px) {
+
+  @media screen and (${({ theme }) => theme.media.small}) {
     font-size: 14px;
 
     h1 {
@@ -452,7 +453,7 @@ export const Post = styled.main`
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (${({ theme }) => theme.media.extraSmall}) {
     font-size: 14px;
 
     h1 {

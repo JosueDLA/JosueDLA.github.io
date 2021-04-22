@@ -62,11 +62,11 @@ export const HomeH1 = styled.h1`
   text-transform: uppercase;
   text-shadow: 3px 1px 4px rgba(0, 0, 0, 0.9);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     font-size: 5rem;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     font-size: 4rem;
   }
 `;
@@ -78,11 +78,11 @@ export const HomeP = styled.p`
   text-align: center;
   max-width: 600px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (${({ theme }) => theme.media.medium}) {
     font-size: 24px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     font-size: 18px;
   }
 `;

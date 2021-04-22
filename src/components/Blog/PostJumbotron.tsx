@@ -21,11 +21,11 @@ export const PostJumbotron = styled.aside`
     font-weight: 700;
     margin: 0;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (${({ theme }) => theme.media.small}) {
       font-size: 32px;
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (${({ theme }) => theme.media.extraSmall}) {
       font-size: 28px;
     }
   }

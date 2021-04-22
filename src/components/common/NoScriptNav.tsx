@@ -16,7 +16,7 @@ const NoScriptCss = css`
     margin-bottom: 3.5rem;
   }
 
-  @media (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     .no-script {
       height: auto;
       flex-direction: column;

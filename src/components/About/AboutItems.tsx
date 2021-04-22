@@ -10,7 +10,7 @@ export const AboutWrapper = styled.section`
     background: inherit;
   }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     margin: 0;
   }
 `;
@@ -21,7 +21,7 @@ export const AboutBg = styled.div`
   padding: 4rem 0;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
 
-  @media screen and (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
   }
 `;
@@ -36,7 +36,7 @@ export const AboutContainer = styled.div`
     text-align: justify;
   }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     flex-direction: column;
   }
 `;
@@ -65,7 +65,7 @@ export const AboutUl = styled.ul`
   columns: 2;
   padding: 0 4rem;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (${({ theme }) => theme.media.small}) {
     padding: 0;
   }
 `;

@@ -11,7 +11,7 @@ export const TagsWrapper = styled.div`
   width: 100%;
   justify-content: left;
 
-  @media (max-width: 960px) {
+  @media screen and (${({ theme }) => theme.media.large}) {
     width: 100%;
   }
 
