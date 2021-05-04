@@ -129,7 +129,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-webpack/page-data.json",
-    "revision": "f67efee9364cf34ab7ee1072a3e4da8c"
+    "revision": "d1c0e510e5e7b8a0ecdc00cf70d0fc25"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
@@ -148,7 +148,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/projects/real-time-store/page-data.json",
-    "revision": "b44e2e114f54706d8fc2c1d8e9d3a801"
+    "revision": "c76979065341b66d321f99b52d1810bb"
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
