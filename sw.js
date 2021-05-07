@@ -152,7 +152,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
-    "revision": "eee154b59cc6ef2ca298d68da48a9800"
+    "revision": "83d52dcd01e6135b491d36fb29978188"
   },
   {
     "url": "manifest.webmanifest",
