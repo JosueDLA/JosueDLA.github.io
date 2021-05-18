@@ -27,26 +27,26 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9aa63d0d206250e62184.js"
+    "url": "webpack-runtime-d863a595fa1b01a9ee94.js"
   },
   {
     "url": "framework-d197a39db04c1b3f76c8.js"
   },
   {
-    "url": "styles.023b3a085dda52cd4dcb.css"
+    "url": "styles.706fe7486e33938bfd8b.css"
   },
   {
-    "url": "app-24175f4693f93d80fed4.js"
+    "url": "app-c69cc2eddbb68fcfc025.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "bc065689a2429a34feed4b75af492d19"
+    "revision": "09ad95e7d9592da3f33383ab4477df86"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-df8bb7a439f70a910785.js"
   },
   {
-    "url": "polyfill-1fbb6991ecb352e44693.js"
+    "url": "polyfill-a4c3ce179a203f5248ea.js"
   },
   {
     "url": "1bfc9850-b7c65342ac78c9820a74.js"
@@ -77,7 +77,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "de7dbabad323ecafb031ca0027b4d39d"
+    "revision": "94f72ecd27ae678e890ab2b24ba49749"
   },
   {
     "url": "3c73754e3071f37fff86ea024def9e2612f04d48-f34ecff10b1595c74e9f.js"
@@ -87,11 +87,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "6e43d07f247146b2142e23388baef2d4"
+    "revision": "00503aa2b101c61a22258db3bdfb6849"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "079a4ffa6cbfef06b3bfc44eced26ca9"
+    "revision": "ae4969c03329c6f4776e3d3a4feadff2"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -109,11 +109,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "d0d60c5741df97b7fc61f6d3d48b50ed"
+    "revision": "1fe208a2b97acb39637c56bfc1c642b2"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
-    "revision": "23d739d3db1e031da94972c2bae386bb"
+    "revision": "4e98c353cfe02114b21a4b02f75a540b"
+  },
+  {
+    "url": "page-data/blog/introduction-to-linux-command-line/page-data.json",
+    "revision": "68d69cbbc418a56f63bd03bde99d20b8"
   },
   {
     "url": "page-data/blog/introduction-to-nodejs/page-data.json",
@@ -248,7 +252,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-24175f4693f93d80fed4.js`))) {
+  if (!resources || !(await caches.match(`/app-c69cc2eddbb68fcfc025.js`))) {
     return await fetch(event.request)
   }
 

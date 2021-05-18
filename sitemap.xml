@@ -5,10 +5,12 @@
 <url> <loc>https://josuedla.github.io/blog/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://josuedla.github.io/blog/tags/bash</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/express</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/functional-programming</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/javascript/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://josuedla.github.io/blog/tags/linux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/npm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/node-js</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/odoo</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -17,6 +19,7 @@
 <url> <loc>https://josuedla.github.io/blog/tags/putty</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/raspberry-pi</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://josuedla.github.io/blog/tags/shell</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/tags/webpack</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects/tags/asp-net</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects/tags/bootstrap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -28,6 +31,7 @@
 <url> <loc>https://josuedla.github.io/projects/tags/numpy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects/tags/pillow</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/projects/tags/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://josuedla.github.io/blog/introduction-to-linux-command-line</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/introduction-to-functional-programming</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/introduction-to-webpack</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://josuedla.github.io/blog/introduction-to-nodejs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
