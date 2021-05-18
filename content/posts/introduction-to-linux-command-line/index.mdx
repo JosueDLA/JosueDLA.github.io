@@ -1,0 +1,133 @@
+---
+title: Introduction to The Linux Command Line
+slug: introduction-to-linux-command-line
+date: 2021-05-17
+featureImage: introduction-to-linux.jpg
+excerpt: The command line is a useful tool that allows us to give instructions to Software.
+thumbnail: ../images/linux.png
+tags: ["Linux", "Bash", "Shell"]
+---
+
+# The Linux Command Line
+
+## Glossary
+
+### GNU / Linux
+
+GNU/Linux is a generalixed name given to a group of Unix-like operating sistems, these opreating systems are usually open source, multiplatform, multiuser and multitask. This Operating systems are formed by several projects, among which GNU standds out.
+
+Although most people use the work "Linux" to refer to the operating system, in reality Linux is the name of the kernel, since the complete system is also made up of a large number of components of the GNU projec, ranging from compilers to desktop environments.
+
+### GNU
+
+GNU is a collection of computer programs that can be used as an operating system. GNU follows a Unix-like design, and remains compatible with it, but differs from Unix by being free software.
+
+### Unix-like
+
+A Unix-like operating system is a system that behaves similarly to a Unix system, although it does not need to be certified to any version of the Single Unix Specification (SUS).
+
+### Unix
+
+Is a family of portable, multitasking and multiuser computer operating systems initially developed in 1969.
+These systems are totally compatible and certified by the Single Unix Specification.
+
+### Single Unix Specification
+
+Is a family of standards for operating systems that establish the requirements for a system to proclaim itself Unix. The SUS are developed and maintained by The Austin Group and are based on the previous work of the IEEE and The Open Group.
+
+### Kernel
+
+In computing, the kernel is a software that constitutes a fundamental part of the operating system. The kernel is in charge of facilitating programs safe access to the hardware.
+
+### Linux Distributions
+
+A GNU/Linux distribution is a software based on the Linux Kernel that includes certain software packages to meet the needs of a specific group of users.
+
+### Shell
+
+In computing, Shell is a term used to refer to a command interpreter for the Unix-based operating system and Unix-like systems such as GNU/Linux.
+
+### Shell Prompt
+
+The characters or set of characters shown on the command line is called a prompt, it indicates that the shell is waiting for commands. The Shell prompt can vary depending on the interpreter and is usually configurable.
+
+#### Shell Prompt Structure
+
+```shell
+# [user]@[device name]:[location][privileges]
+
+root@my-pc:/#
+jdla@my-pc:/$
+
+# # - Highest Privileges
+# $ - Common user
+```
+
+## Managing packages
+
+### Advance Packagint Tool (APT)
+
+APT is a program that manage packages, it was created by The Debian Project. APT simplifies the installation and elimination of programs in the GNU/Linux systems. APT is not a program in itself, it is a library of C++ functions used by multiple programs on the command line.
+
+```shell
+> apt # List the most common commands.
+> apt list # List available commands.
+> apt update # Updates APT
+> apt install [package] # Install a package
+> apt remove [pacakage] # Remove a package
+```
+
+## Linux File System
+
+The Linux File System is generally a built-in layer of the Linux operating system, it is used to manage stored data. It manages the name, size, date of creation and much more information about a file.
+In Linux the files and directories are organized in a tree. In a hierarchical file structure. In Linux everithing is a file, including devices, directories, sockets, pipes, etc.
+Paths can be relative or absolute. Relative paths are relative to the current working directory. Absolute paths always start with a `/` in reference to the root directory.
+
+```shell
+> pwd # Print working directory
+> ls # List files and directories
+> ls -l # Print a long list
+> cd [path] # Navigate to a path
+> cd .. # Go one level up
+> cd ~ # Go to the home directory
+```
+
+## Manipulating files and directories
+
+```shell
+> mkdir [name] # Create a new directory
+> mv [old name] [new name] # Rename a file/directory
+> touch [file name] # create a file
+> rm [file] # Delete a file
+> rm -r [directory] # Delete a directory recursively
+```
+
+## Editing and viewing files
+
+```shell
+> nano [file] # Edit a file
+> cat [file] # View a file
+> less [file] # View a file with scroll
+> head [file] # View the first 10 lines of a file
+> tail [file] # View the last 10 lines of a file
+```
+
+## Redirection
+
+Linux redirection allows us to manipulate the input / output data flow. Knowing how to manipulate the redirect can increase productivity.
+
+### Overwrite
+
+| Symbol | Description     |
+| ------ | --------------- |
+| >      | Standard Output |
+| <      | Standard Input  |
+| 2>     | Standard Error  |
+
+### Append
+
+| Symbol | Description     |
+| ------ | --------------- |
+| >>     | Standard Output |
+| <<     | Standard Input  |
+| 2>>    | Standard Error  |
