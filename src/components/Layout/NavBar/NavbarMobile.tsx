@@ -1,5 +1,5 @@
 import React from "react";
-import Toggle from "../../common/Toggle";
+import Toggle from "Common/Toggle";
 import {
   MobileContainer,
   Icon,

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { noSelect } from "../../../style/noSelect";
+import { noSelect } from "Style/noSelect";
 
 export const Nav = styled.nav`
   background: var(--bg-secondary);

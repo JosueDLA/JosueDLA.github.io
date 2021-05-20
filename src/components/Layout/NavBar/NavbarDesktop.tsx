@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import Toggle from "../../common/Toggle";
+import Toggle from "Common/Toggle";
 import {
   Nav,
   NavContainer,

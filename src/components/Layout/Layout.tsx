@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../../style/globalStyles";
-import { lightTheme, darkTheme } from "../../style/theme";
-import { useDarkMode } from "../../hooks/useDarkMode";
-import ThemeContext from "../common/ThemeContext";
+import GlobalStyle from "Style/globalStyles";
+import { lightTheme, darkTheme } from "Style/theme";
+import { useDarkMode } from "Hooks/useDarkMode";
+import ThemeContext from "Common/ThemeContext";
+import BackToTopButton from "Common/BackToTop";
 import Navbar from "./Navbar/NavBar";
 import Footer from "./Footer";
-import BackToTopButton from "../common/BackToTop";
 
 export interface LayoutProps {}
 

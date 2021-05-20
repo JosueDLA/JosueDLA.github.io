@@ -2,7 +2,7 @@ import React from "react";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import { LogoLink, NavLinks } from "./NavLinks";
-import { useMobileMenu } from "../../../hooks/useMobileMenu";
+import { useMobileMenu } from "Hooks/useMobileMenu";
 
 export interface NavbarProps {}
 
