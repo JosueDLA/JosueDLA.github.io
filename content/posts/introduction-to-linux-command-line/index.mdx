@@ -81,7 +81,8 @@ APT is a program that manage packages, it was created by The Debian Project. APT
 
 The Linux File System is generally a built-in layer of the Linux operating system, it is used to manage stored data. It manages the name, size, date of creation and much more information about a file.
 In Linux the files and directories are organized in a tree. In a hierarchical file structure. In Linux everithing is a file, including devices, directories, sockets, pipes, etc.
-Paths can be relative or absolute. Relative paths are relative to the current working directory. Absolute paths always start with a `/` in reference to the root directory.
+
+> Paths can be relative or absolute. Relative paths are relative to the current working directory. Absolute paths always start with a `/` in reference to the root directory.
 
 ```shell
 > pwd # Print working directory
@@ -91,6 +92,21 @@ Paths can be relative or absolute. Relative paths are relative to the current wo
 > cd .. # Go one level up
 > cd ~ # Go to the home directory
 ```
+
+### Linux File System Structure
+
+The Linux file system contains the folowing structure.
+
+- / (Root directory)
+  - bin (Binaries / programs)
+  - boot (Booting)
+  - dev (Devices)
+  - etc (Editable Text Configuration)
+  - home (Home directories)
+  - root (Home directory of root user)
+  - lib (Libraries)
+  - var (Variable / log files)
+  - proc (Processes)
 
 ## Manipulating files and directories
 
@@ -131,3 +147,86 @@ Linux redirection allows us to manipulate the input / output data flow. Knowing 
 | >>     | Standard Output |
 | <<     | Standard Input  |
 | 2>>    | Standard Error  |
+
+## Searching for Text
+
+```shell
+> grep [word] [file] # Search for a word in a file
+> grep -i [word] [file] # Case-insensitive search
+> grep -i -r [word] [directory] # Search in the current directory
+```
+
+## Finding files or directories
+
+```shell
+> find # List all the files and directories
+> find -type d # List directories only
+> find -type f # List files only
+> find -name [pattern] # Filter files and directories using a pattern
+```
+
+## Chaining Operators
+
+Linux allow us to combine ocmmands, these commands can take different behaviours based on the operators it uses.
+
+### Semi-colon Operator (;)
+
+It allows us to execute multipel commands in one go. Execution will occur sequentially.
+
+> If an error occurs in any of the commands, the following commands will still be executed.
+
+```shell
+> apt update ; apt upgrade ; mkdir hello-world
+```
+
+### AND Operator (&&)
+
+Executes the second command only if the execution of the fist command is successful.
+
+```shell
+> mkdir hello-world && cd hello-world
+```
+
+### OR Operator (||)
+
+It is similar to an `else` statement. The second command is executed only if the first one fails.
+
+```shell
+> mkdir hello-world || echo "Directory already exist"
+```
+
+### NOT Operator (!)
+
+This command executes everything except the given condition.
+
+### AND-OR Operator (&& - ||)
+
+It is a conbination of the AND and OR operators. It is similat to an if-else statement.
+
+### PIPE Operator (|)
+
+The PIPE operator is useful when the output of the first command serves as the input of the second command.
+
+```shell
+> ls -l | less
+```
+
+### Ampersand Operator (&)
+
+The Ampersand opeartor allow us to run a command in the background.
+
+> More than one command can be eecuted at the same time.
+
+### Command Combination Operator ({})
+
+Combines two or more commands.
+
+> The second command depends on the executino of the first one.
+
+### Precedence Operator (())
+
+Allows you to execute commands in order of precedence.
+
+### Concatenation Operator (/)
+
+Allows to concatenate commands in multiple lines.
