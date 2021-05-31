@@ -22,6 +22,7 @@
 </div>
 
 ## Installation
+
 1. Fork this repo
 
 ```bash
@@ -29,16 +30,19 @@
 ```
 
 2. Install Gatsby
+
 ```bash
 > npm install -g gatsby-cli
 ```
 
 3. Install dependencies
+
 ```bash
 > npm intall
 ```
 
 4. Start the development server
+
 ```bash
 > npm start
 # or
@@ -48,6 +52,7 @@
 ## Building the project
 
 1. Create production build
+
 ```
 > npm run build
 ```
@@ -62,5 +67,13 @@
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Acknowledgments
+
+_Card designs made by:_
+
+- [@ChynoDeluxe](https://codepen.io/ChynoDeluxe/pen/bdXeqQ)
+- [@Booligoosh](https://codepen.io/Booligoosh/pen/mKPpQp)
+
 ## License
+
 [MIT](/LICENSE)
