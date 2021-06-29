@@ -70,3 +70,10 @@
   background: #239120;
   color: white;
 }
+
+.gatsby-highlight pre[class~="language-docker"]::before,
+.gatsby-highlight pre[class~="language-dockerfile"]::before {
+  content: "Docker";
+  background: #2496ed;
+  color: white;
+}

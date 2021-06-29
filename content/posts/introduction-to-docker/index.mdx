@@ -1,9 +1,63 @@
 ---
 title: Introduction to Docker
 slug: introduction-to-docker
-date: 2021-03-31
+date: 2021-06-28
 featureImage: images/docker.jpg
-excerpt: TBD.
+excerpt: Docker is a technology that allows us to build, run, and ship applications consistently..
 thumbnail: ../images/docker.png
 tags: ["Docker"]
 ---
+
+# Docker
+
+## What is Docker?
+
+Docker is an open-source project that allows the user to automate application deployment using software containers, providing an additional layer of abstraction and virtualization automation of applications across multiple operating systems.
+
+Docker uses the resource isolation feature of the Linux kernel, such as cgroups and namespacces. This allows docker “containers” to run independently within a single Linux instance, thus avoiding the overhead of starting and maintaining virtual machines.
+
+Docker solves the problem of the same software not working or behaving the same in different environments. Docker also allows us to run multiple applications with different versions of the same software in parallel without creating conflicts. This is achieved by running the applications in isolation
+
+## Virtual Machines vs Containers
+
+A **container** is an isolated environment to run an application. It is essentially an operating system process with its own file system.
+
+A **virtual machine** is an abstraction of hardware resources. These are created using hypervisors.
+
+A virtual machine allows us to run applications in isolation. With the disadvantage that each virtual machine needs a complete operating system and a part of the available resources. This makes each virtual machine consume much more resources and its startup is slow. On the contrary, the containers are very light and start quickly since they share the Host’s kernel (which is already started).
+
+## Docker Architecture
+
+Docker uses a client/Server architecture. Docker has a component that talks to the server using a RESTful API. This “server” is known as the Docker Engine (or daemon). The server runs in the background and is responsible for doing the heavy lifting.
+
+![Containers are processes](./images/process.png)
+
+> Windows 10 includes the Linux kernel in addition to the windows kernel. So we can run Linux applications natively on windows.
+
+## Installing Docker
+
+You can download docker from [here](https://docs.docker.com/get-docker/).
+
+## Workflow
+
+With Docker we can package an application in an image, once we have an image it can be run on any machine that has docker. El registro de docker más popular es [DockerHub](https://hub.docker.com/).
+
+To package an application we must add a `Dockerfile`, this plain text file includes the instructions to package the image.
+
+### An image usually includes:
+
+- A lightweight operating system.
+- A runtime environment.
+- Application files.
+- Third party libraries.
+- Environment variables, etc.
+
+```dockerfile
+# Basic Node Dockerfile
+FROM node:14.17.0-alpine3.13
+WORKDIR /my_app
+COPY . .
+RUN npm install
+EXPOSE 8000
+ENTRYPOINT ["npm", "start"]
+```
