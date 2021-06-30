@@ -3,9 +3,9 @@ title: Introduction to Docker
 slug: introduction-to-docker
 date: 2021-06-28
 featureImage: images/docker.jpg
-excerpt: Docker is a technology that allows us to build, run, and ship applications consistently..
+excerpt: Docker is a technology that allows us to build, run, and ship applications consistently.
 thumbnail: ../images/docker.png
-tags: ["Docker"]
+tags: ["Linux", "Docker"]
 ---
 
 # Docker
@@ -38,11 +38,11 @@ Docker uses a client/Server architecture. Docker has a component that talks to t
 
 You can download docker from [here](https://docs.docker.com/get-docker/).
 
-## Workflow
+## Docker Images
 
-With Docker we can package an application in an image, once we have an image it can be run on any machine that has docker. El registro de docker más popular es [DockerHub](https://hub.docker.com/).
+An image is a template that contains instructions with which you can create a Docker container. Often an image is initialized with another image with some additional settings.
 
-To package an application we must add a `Dockerfile`, this plain text file includes the instructions to package the image.
+An image is a kind of snapshot or template of a virtual machine, but much lighter.
 
 ### An image usually includes:
 
@@ -51,6 +51,16 @@ To package an application we must add a `Dockerfile`, this plain text file inclu
 - Application files.
 - Third party libraries.
 - Environment variables, etc.
+
+## Workflow
+
+With Docker we can package an application in an image, once we have an image it can be run on any machine that has docker. El registro de docker más popular es [DockerHub](https://hub.docker.com/).
+
+To package an application we must add a `Dockerfile`, this plain text file includes the instructions to package the image.
+
+### Dockerfile
+
+A `Dockerfile` is a configuration file used to create images. This file indicates what the image will contain and the various commands that will be used to install the different tools used by the image.
 
 ```dockerfile
 # Basic Node Dockerfile
@@ -61,3 +71,25 @@ RUN npm install
 EXPOSE 8000
 ENTRYPOINT ["npm", "start"]
 ```
+
+### Dockerfile Instructions
+
+- **`FROM`:** Specifies the base image. A base image does not have a parent image specified in its dockerfile. It is created using the `FROM scratch` directive.
+
+- **`WORKDIR`:** Sets the working directory from any `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instruction.
+
+- **`COPY`:** This instruction copies new files/directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.
+
+- **`ADD`:** This instruction copies new files/directories or remote URLs from `<src>` and adds them to the path `<dest>`.
+
+- **`RUN`:** This instruction will execute any command in a new layer on top of the current image and commit the results. The result image will be used in the next step in the `Dockerfile`.
+
+- **`ENV`:** Sets the environment variable `<key>` to the value `<value>`. This value will be in the environment for all the subsecuent instructions in the building process.
+
+- **`EXPOSE`:** Informs Docker that the container listens on the specified network port at runtime.
+
+- **`USER`:** Sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any `RUN`, `CMD`, `ENTRYPOINT` instruction that follow it in the `Dockerfile`.
+
+- **`CMD`:** This instruction specifies a command or executable to be executed at run time. If omitted an `ENTRYPOINT` instruction must be used.
+
+- **`ENTRYPOINT`:** This instruction allows you to configure a container that will run as an executable.
