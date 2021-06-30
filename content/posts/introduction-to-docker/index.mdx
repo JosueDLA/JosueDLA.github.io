@@ -120,3 +120,62 @@ Docker has an optimization mechanism included. When rebuilding an image, Docker 
 To optimize the construction of containers we must organize our `Dockerfile` in such a way that the instructions that do not change frequently are above the instructions or files that change frequently.
 
 ![Dockerfile Optimization](./images/dockerfile.png)
+
+## Tagging Images
+
+Docker tags are simply lables that provide a better way to manage versioning and realeses. Instead of referencing an image by ID, ou can refer to it using tags. This tag can be a codename or a semantic version control.
+
+Creating a tag is easy, to do it we use the `docker tag` instruction. You can also add a tag during container construction with the `-t` flag.
+
+```shell
+> docker build -t [Image]:[Tag] .
+> docker image tag [Image]:[Current Tag] [Image]:[New tag]
+> docker image tag [ID] [Image]:[Tag]
+```
+
+### Latest doesn't always mean "latest"
+
+The label "latest" tends to be a bit confusing, despite his meaning. It does not always point to the latest version of an image. It's just automatically applied to images for which we don't specify a tag.
+
+## Sharing Images
+
+To publish an image on DockerHub we must follow the following steps:
+
+1. Create the repository in [DockerHub](https://hub.docker.com/repository/create) .
+
+2. Make sure the image matches the name of the repository.
+
+```shell
+# Rename Image
+> docker image tag [ID] [New name]:[Tag]
+```
+
+3. Login to Docker.
+
+```shell
+# Login to Docker
+> docker login
+```
+
+4. Publish the image.
+
+```shell
+# Push image to DockerHub
+> docker push [Name]:[Tag]
+```
+
+## Saving images in compresed files
+
+We can save images as compressed files to share them without using DockerHub.
+
+```shell
+# Save image into a .tar file
+> docker image save -o [Name].tar [Image]
+```
+
+To load these compressed files into an image we use the `load` instruction.
+
+```shell
+# Load image from .tar file
+> docker image load -i [Name]
+```
