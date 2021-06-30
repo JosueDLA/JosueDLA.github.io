@@ -44,6 +44,13 @@ An image is a template that contains instructions with which you can create a Do
 
 An image is a kind of snapshot or template of a virtual machine, but much lighter.
 
+```shell
+> docker build -t [Name]     # Build an image
+> docker images              # See all images
+> docker image ls            # See all images
+> docker run -it [Image] sh  # Run a shell session of a container.
+```
+
 ### An image usually includes:
 
 - A lightweight operating system.
@@ -74,22 +81,42 @@ ENTRYPOINT ["npm", "start"]
 
 ### Dockerfile Instructions
 
-- **`FROM`:** Specifies the base image. A base image does not have a parent image specified in its dockerfile. It is created using the `FROM scratch` directive.
+- **FROM:** Specifies the base image. A base image does not have a parent image specified in its dockerfile. It is created using the `FROM scratch` directive.
 
-- **`WORKDIR`:** Sets the working directory from any `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instruction.
+- **WORKDIR:** Sets the working directory from any `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instruction.
 
-- **`COPY`:** This instruction copies new files/directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.
+- **COPY:** This instruction copies new files/directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.
 
-- **`ADD`:** This instruction copies new files/directories or remote URLs from `<src>` and adds them to the path `<dest>`.
+- **ADD:** This instruction copies new files/directories or remote URLs from `<src>` and adds them to the path `<dest>`.
 
-- **`RUN`:** This instruction will execute any command in a new layer on top of the current image and commit the results. The result image will be used in the next step in the `Dockerfile`.
+- **RUN:** This instruction will execute any command in a new layer on top of the current image and commit the results. The result image will be used in the next step in the `Dockerfile`.
 
-- **`ENV`:** Sets the environment variable `<key>` to the value `<value>`. This value will be in the environment for all the subsecuent instructions in the building process.
+- **ENV:** Sets the environment variable `<key>` to the value `<value>`. This value will be in the environment for all the subsecuent instructions in the building process.
 
-- **`EXPOSE`:** Informs Docker that the container listens on the specified network port at runtime.
+- **EXPOSE:** Informs Docker that the container listens on the specified network port at runtime.
 
-- **`USER`:** Sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any `RUN`, `CMD`, `ENTRYPOINT` instruction that follow it in the `Dockerfile`.
+- **USER:** Sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any `RUN`, `CMD`, `ENTRYPOINT` instruction that follow it in the `Dockerfile`.
 
-- **`CMD`:** This instruction specifies a command or executable to be executed at run time. If omitted an `ENTRYPOINT` instruction must be used.
+- **CMD:** This instruction specifies a command or executable to be executed at run time. If omitted an `ENTRYPOINT` instruction must be used.
 
-- **`ENTRYPOINT`:** This instruction allows you to configure a container that will run as an executable.
+- **ENTRYPOINT:** This instruction allows you to configure a container that will run as an executable.
+
+## Optimizing Docker builds
+
+Docker images work through layers, a layer works as a filesystem that only includes modified files.
+
+![Image Layers](./images/layers.png)
+
+We can imagine each instruction in the `Dockerfile` as a new layer. The layers can be seen with the `history` instruction.
+
+```shell
+> docker history [Image]
+```
+
+> History is read from bottom to top.
+
+Docker has an optimization mechanism included. When rebuilding an image, Docker checks each instruction to see if its conten has changed or not. If it hasn't changed, Docker doesn't rebuild the layer, it just reuses it from its cache.
+
+To optimize the construction of containers we must organize our `Dockerfile` in such a way that the instructions that do not change frequently are above the instructions or files that change frequently.
+
+![Dockerfile Optimization](./images/dockerfile.png)
