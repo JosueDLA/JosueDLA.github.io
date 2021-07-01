@@ -5,7 +5,7 @@ date: 2021-06-28
 featureImage: images/docker.jpg
 excerpt: Docker is a technology that allows us to build, run, and ship applications consistently.
 thumbnail: ../images/docker.png
-tags: ["Linux", "Docker"]
+tags: ["Docker", "Linux"]
 ---
 
 # Docker
@@ -20,7 +20,7 @@ Docker solves the problem of the same software not working or behaving the same 
 
 ## Virtual Machines vs Containers
 
-A **container** is an isolated environment to run an application. It is essentially an operating system process with its own file system.
+A **container** is an isolated environment to run an application. It is essentially an operating system process with its own file system. Containers are running instances of an image.
 
 A **virtual machine** is an abstraction of hardware resources. These are created using hypervisors.
 
@@ -93,7 +93,7 @@ ENTRYPOINT ["npm", "start"]
 
 - **ENV:** Sets the environment variable `<key>` to the value `<value>`. This value will be in the environment for all the subsecuent instructions in the building process.
 
-- **EXPOSE:** Informs Docker that the container listens on the specified network port at runtime.
+- **EXPOSE:** Informs Docker that the container listens on the specified network port at runtime. This instuction does not pubhlish the port automatically on the host, it only works as a form of documentation.
 
 - **USER:** Sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any `RUN`, `CMD`, `ENTRYPOINT` instruction that follow it in the `Dockerfile`.
 
@@ -178,4 +178,76 @@ To load these compressed files into an image we use the `load` instruction.
 ```shell
 # Load image from .tar file
 > docker image load -i [Name]
+```
+
+## Containers
+
+### Starting Containers
+
+When creating a new container, docker assigns a unique name to each ocntainer or UUID (Universally Unique Identifier).We can give our container a name using the `--name` flag.
+
+```shell
+> docker run -d --name [UUID] [Image]
+```
+
+### Container Logs
+
+The `docker logs` instruction shows the logs present at runtime.
+
+```shell
+> docker logs [container]       # See logs
+> docker logs -f [container]    # Follow logs
+> docker logs -t [container]    # See logs with timestamps
+> docker logs -n 10 [container] # See the last 10 lines
+```
+
+### Publishing Ports
+
+There are two ways to publish ports in docker. Using the `-P` or `-p` flag. Using the flag `-P` (uppercase) we can publish all the ports that have been exposed in random order on the host interface. Using the flag `-p` (lowercase) we can publish a specific port of the contaner in a port of the host.
+
+```shell
+# Publish a specific port
+> docker run -p [Host port]:[Container port]
+```
+
+### Executing commands in a runing container
+
+The `docker exec` instruction allows us to execute a commant ina running container.
+The difference between `exec` and `run` is that `run` starts a new container, while `exec` executes a command in a running container.
+
+```shell
+> docker exec [Container] [Command] # Run a command
+> docker exec -it [Vontainer] sh    # Start an interactive shell
+```
+
+### Working with containers
+
+```shell
+# Starting and stopping containers
+> docker stop [Container]
+> docker start [Container]
+```
+
+```shell
+# Listing containers
+> docker ps    # List running containers
+> docker ps -a # List all containers
+```
+
+```shell
+# Removing containers
+> docker rm [Container]    # Remove container
+> docker rm -f [Container] # Force removal
+> docker container prune   # Remove all stopped containers
+```
+
+### Volumes
+
+Volumes are mechanisms that allows us to preserve data generated and used by docker containers. Volumes can be directories on the host or can be stored in the cloud.
+
+```shell
+> docker volume ls                         # List volumes
+> docker volume create [Name]              # Create new volume
+> docker volume inspect [Name]             # Inspect volume
+> docker run -v [Container]:[Path] [Image] # Create container with volume
 ```
