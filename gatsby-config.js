@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/404`],
+        excludes: [`/404`],
       },
     },
     `gatsby-plugin-styled-components`,
