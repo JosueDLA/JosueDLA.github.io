@@ -231,7 +231,7 @@ export const Post = styled.main`
   blockquote {
     border-left: 4px solid #dddddd;
     padding: 0 15px;
-    color: #777777;
+    color: var(--text-disabled);
   }
 
   blockquote > :first-child {
