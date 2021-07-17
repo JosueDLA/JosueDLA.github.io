@@ -100,7 +100,7 @@ export const PostTags = styled.div`
 
   .tag {
     background-color: rgba(255, 255, 255, 0.5);
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     text-decoration: none;
     border-radius: 0.3rem;
     margin-right: 0.5em;
@@ -120,7 +120,7 @@ export const PostCard = styled.article`
   border-radius: 0.3rem;
   width: 100%;
   height: 100%;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   margin: 0 auto;
   justify-content: center;
   box-shadow: ${({ theme }) => theme.boxShadow};

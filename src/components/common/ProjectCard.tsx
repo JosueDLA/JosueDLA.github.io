@@ -95,7 +95,7 @@ export const ProjectCard = styled.article`
   max-width: 18rem;
   margin: auto;
   background-color: var(--bg-video);
-  border: 10px solid var(--bg-secondary);
+  border: 10px solid var(--bg-tertiary);
   color: white;
   border-radius: 1em;
   box-shadow: ${({ theme }) => theme.boxShadow};

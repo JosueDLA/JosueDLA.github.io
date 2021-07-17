@@ -34,7 +34,7 @@ export const Post = styled.main`
   justify-content: center;
 
   a {
-    color: var(--accent-primary);
+    color: var(--text-link);
     text-decoration: none;
   }
 
@@ -378,8 +378,8 @@ export const Post = styled.main`
     margin: 2px;
     padding: 2px 5px;
     white-space: nowrap;
-    background-color: var(--bg-tertiary);
-    color: var(--accent-tertiary);
+    background-color: var(--bg-code);
+    color: var(--text-code);
     border-radius: 3px;
   }
 

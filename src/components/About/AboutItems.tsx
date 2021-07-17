@@ -17,7 +17,7 @@ export const AboutWrapper = styled.section`
 
 export const AboutBg = styled.div`
   background-color: var(--bg-tertiary);
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   padding: 4rem 0;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
 
