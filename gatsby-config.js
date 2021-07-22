@@ -1,4 +1,5 @@
 const path = require("path");
+const siteUrl = `https://josuedla.github.io`;
 
 module.exports = {
   siteMetadata: {
@@ -45,7 +46,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [`/404`],
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }        
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map((page) => {
+            return { ...page };
+          });
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            priority: 0.7,
+            changefreq: `daily`,
+          };
+        },
+        excludes: [`/404`, `/*/tags/*`, `/*/tags/*/*`],
       },
     },
     `gatsby-plugin-styled-components`,
