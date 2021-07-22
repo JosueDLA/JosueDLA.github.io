@@ -71,6 +71,21 @@ module.exports = {
         excludes: [`/404`, `/*/tags/*`, `/*/tags/*/*`],
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
