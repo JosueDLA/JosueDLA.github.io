@@ -87,15 +87,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "2145aa2c96bc50bd3faef5195ba94770"
+    "revision": "d0d81a88a366e77404fd20ab3140bdcd"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "000d498d5871442bf1b85010a04f37a4"
+    "revision": "e7b6b875da8904745d7ffb7ebfe91b81"
   },
   {
     "url": "page-data/blog/4/page-data.json",
-    "revision": "e7183e1bcabbc443deb4a456129ddd64"
+    "revision": "b36ba02ea765116c7e4c1cb08a5e0689"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -113,11 +113,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "1233b6a5410d2f56bf717c2ca4bb55b5"
+    "revision": "43a53890712f280d39d82810b145ca67"
+  },
+  {
+    "url": "page-data/blog/introduction-to-bi/page-data.json",
+    "revision": "e9afbad7868136213f6f1f00f1c5f67f"
   },
   {
     "url": "page-data/blog/introduction-to-docker/page-data.json",
-    "revision": "15e0f0c01146dd5a4a7ff2abc3c176c2"
+    "revision": "325e2267c312113d51ba8e9adc66070e"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
