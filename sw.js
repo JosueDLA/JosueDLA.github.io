@@ -113,11 +113,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "43a53890712f280d39d82810b145ca67"
+    "revision": "d61cc3f294dde7da05ed72d505b725cb"
   },
   {
     "url": "page-data/blog/introduction-to-bi/page-data.json",
-    "revision": "e9afbad7868136213f6f1f00f1c5f67f"
+    "revision": "3d2be7758736341bb649f7418500e752"
   },
   {
     "url": "page-data/blog/introduction-to-docker/page-data.json",
