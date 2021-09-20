@@ -1,0 +1,67 @@
+---
+title: Introduction to Git
+slug: introduction-to-git
+date: 2021-09-19
+featureImage: images/introduction-to-git.jpg
+excerpt: Git is a free and open souce distributed version control system.
+thumbnail: ../images/git.png
+tags: ["Git", "Linux", "Bash", "Shell"]
+---
+
+# Introduction to Git
+
+Git is a version control software designed by Linus Torvalds, designed for efficiency and reliability of maintaining applications versions when they have many source-code files. Git purpose is to keep track of file changes and coordinate the work of several people on shared files.
+
+- Git stores changes in a special database called a repository.
+- Version Control allows you to track change history and work with a team.
+
+## Version Control System
+
+A Version Control System is a system that manages the various changes that are made to the elements of a product or its configuration. There are two types of version control systems:
+
+- Centralized
+- Distributed
+
+### Centralized
+
+In a centralized system, all the team must connect to the server to get the latest version of the code, and to share their changes (Ex. Subversion, Team Foundation Server).
+
+![Centralized System](/images/centralized-git.png)
+
+### Distributed
+
+In a distributed system, each member has a copy of the project, allowing snapshots to be saved locally; it also allows you to synchronize your work with other contributors (Ex. Git, Mercurial).
+
+![Distributed Systems](/images/distributed-git.png)
+
+## Advantages of Using Git
+
+- It’s free
+- Open Source
+- Fast
+- Scalable
+- Allows branching/merging
+
+## Configuration Levels
+
+Git allows us to configure it at different levels:
+
+- **System:** All users
+- **Global:** All repositories of the current user
+- **Local:** The current repository
+
+```shell
+> git config --[level] [setting] "[name]"           # Command structure
+> git config --global user.name "Jhon Doe"          # Set username
+> git config --global user.email jhondoe@gmail.com  # Set user email
+> git config --global core.editor "code --wait"     # Set default editor
+```
+
+### End of Lines
+
+Its important to configure the end of line setting when working with a team that uses different Operating Systems, this is due to the way different Operating Systems manage end of lines. On Windows end of liens are marked with two characters `\r` and `\n` but on other operating systems such as MacOS and Linux end of lines are marked only with one character `\r`. To fix this we need to configure a setting called `core.autocrlf`. This setting will tell Git to manage end of line depending on which OS we are using.
+
+```shell
+> git config --global core.autocrlf input           # MacOS/Linux
+> git config --global core.autocrlf true            # Windows
+```
