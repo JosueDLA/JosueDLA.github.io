@@ -65,3 +65,130 @@ Its important to configure the end of line setting when working with a team that
 > git config --global core.autocrlf input           # MacOS/Linux
 > git config --global core.autocrlf true            # Windows
 ```
+
+# The Basics
+
+## Workflow
+
+When we are working in a project we usually update, create, and delete files. We keep doing this action until we have a version of the project that we are happy with. Once we are happy with our project, we must commit the changes so Git can manage our files. But before we commit changes, we need to include them in the Staging Area. This area stores the files that we want to include in the next snapshot stored by git.
+
+<!--Image -->
+
+## Staging Area
+
+The Staging Area is a space where we can add and organize the files that will be included in the next commit (in other words, the next version of the project).
+
+```shell
+> git add [filename]        # Add a single file to the Staging Area
+> git add .                 # Add all files recursively
+> git add *.txt             # Add files using patterns
+```
+
+## Git Commit
+
+The `commit` command records the changes on the repository that are in the staging area. Each commit stores the following information:
+
+- ID
+- Message
+- Date/Time
+- Author
+- Complete Snapshot
+
+```shell
+> git commit -m "[message]"     # Commits with given message
+> git commit                    # Opens the editor and allow to put descriptions in the commit
+```
+
+> Git compresses the content and doesn’t store duplicate content.
+
+Skip Staging Area
+Sometimes we need to skip the Staging Area, this is possible but risky. It is highly discouraged and should only be used when the code is to be reviewed.
+
+```shell
+> git commit -a -m "[message]"          # Add all files to the Staging Area and commits them
+> git commit -am "[message]"            # Shorter version
+```
+
+## Removing Files
+
+If we need to remove files, we can use the following commands:
+
+```shell
+> git ls-files              # Show information about files and the working tree
+> git rm [file]             # Removes a file from the working tree
+> git rm [file1] [file2]    # Remove multiple files from the working tree
+> git rm *.txt              # Remove files using patterns
+```
+
+## Renaming or Moving Files
+
+Renaming or moving files is a two-step operation:
+
+```shell
+> git add old_file.txt      # Add original file
+> git add new_file.txt      # Add renamed file
+```
+
+Although this solution works, git provides a special command to rename/move files.
+
+```shell
+> git mv -f "[old name]" "[new name]"   # Renaming/moving folders
+> git mv [old file] [new file]          # Renaming/moving files
+```
+
+## Ignoring Files
+
+In almost all projects we need to ignore certain files or directories that are unnecessary for the operations of the projects (e.g. logs, binary files etc.).
+
+The `.gitignore` file specifies intentionally untracked files that Git should ignore. Files that are been tracked already will not be affected.
+
+Remove a File
+We can remove files from the working directory using the `rm` command.
+
+```shell
+> git rm -h                 # Help on rm command
+> git rm [file]             # Remove file from working directory and staging area
+> git rm --cached [file]    # Remove file from staging area
+```
+
+## Showing Working Directory and Staging Area
+
+`git status` shows the current state of your working directory and staging area.
+
+```shell
+> git status        # Shows the state of the working directory
+> git status -s     # Shows the state of the working directory in a concise manner
+```
+
+## Viewing the Staged and Unstaged Changes
+
+The `git diff` command shows the changes between commits, commit and working tree etc.
+
+```shell
+> git diff                 # Shows unstaged changes
+> git diff --staged        # Shows changes between the stage and commits
+```
+
+## Viewing the Logs
+
+The `git log` command shows the commit logs. Each commit has a unique identifier, this identifier is a 40-character hexadecimal string.
+
+```shell
+> git log               # Shows the commit log
+> git log --oneline     # Shows the commit log in one line
+> git log --reverse     # Shows the commit log reversed
+```
+
+## Viewing a Commit
+
+The `show` command give us expanded details on the Git objects, such as blobs, trees, commits, tags, etc.
+
+> blobs == files
+> trees == directories
+
+```shell
+> git show
+> git show [commit ID]      # Show a specific commit
+> git show HEAD             # Show last commit
+> git show HEAD~1           # Show second to last commit
+```
