@@ -87,15 +87,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "d0d81a88a366e77404fd20ab3140bdcd"
+    "revision": "f876bb77dc1a6b4b2e2413e900409ec8"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "e7b6b875da8904745d7ffb7ebfe91b81"
+    "revision": "b04e53190630282f5bfc25bead7614f8"
   },
   {
     "url": "page-data/blog/4/page-data.json",
-    "revision": "b36ba02ea765116c7e4c1cb08a5e0689"
+    "revision": "0388f34e86a1f037bed5fc3a48805c37"
   },
   {
     "url": "0c428ae2-e49c5469f13807d67d03.js"
@@ -113,19 +113,23 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "d61cc3f294dde7da05ed72d505b725cb"
+    "revision": "5bc4d2ec17cbac06b0ab54efe7eeef30"
   },
   {
     "url": "page-data/blog/introduction-to-bi/page-data.json",
-    "revision": "3d2be7758736341bb649f7418500e752"
+    "revision": "6907431960f0c38f688f2faecfdb9e36"
   },
   {
     "url": "page-data/blog/introduction-to-docker/page-data.json",
-    "revision": "325e2267c312113d51ba8e9adc66070e"
+    "revision": "2853f8c49a39b7d3a46142b0155ec975"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
-    "revision": "151c35d02e7bd931726bac8d4129fc1a"
+    "revision": "5be71d43c1e308350ed255cbf18dccc6"
+  },
+  {
+    "url": "page-data/blog/introduction-to-git/page-data.json",
+    "revision": "31615836732276dda6b83a7997268532"
   },
   {
     "url": "page-data/blog/introduction-to-linux-command-line/page-data.json",
