@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = () => {
       </HomeBg>
       <HomeContent>
         <HomeH1>Josué de León</HomeH1>
-        <HomeP>Software Devloper</HomeP>
+        <HomeP>Software Developer</HomeP>
         <ScrollButton to="about">
           <FaAngleDown />
         </ScrollButton>
