@@ -26,11 +26,11 @@ export const ImageWrapper = styled.div`
   }
 
   .post-img {
-    right: 0;
     top: 0;
+    right: 0;
     position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);-
   }
 `;
 
@@ -48,7 +48,7 @@ export const DescriptionWrapper = styled.div`
     position: absolute;
     left: -10px;
     top: 0;
-    bottom: 0;
+    bottom: -1px;
   }
 
   .post-link {
