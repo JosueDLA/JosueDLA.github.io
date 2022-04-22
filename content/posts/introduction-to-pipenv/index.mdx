@@ -68,6 +68,22 @@ If you want to create the requirements.txt of a virtual environment you use:
 > pipenv lock -r > requirements.txt
 ```
 
+## Updating packages
+
+If you want to list the outdated packages you can use:
+
+```bash
+> pip list                          # List all installed packages
+> pip list --outdated               # List outdated packages
+```
+
+You can update packages using the following instructions:
+
+```bash
+> pipenv update                     # Update all packages
+> pipenv update <package>           # Update a specific package
+```
+
 ## CodeRunner
 
 If you try running your project with code runner it will create an import request error. This is because code runner is trying to run your project with the default python interpreter.
