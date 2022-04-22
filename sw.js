@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-git/page-data.json",
-    "revision": "e3299dadeca5fb6a264d2e831762288c"
+    "revision": "84625a96f43c6f199bd17de811328bff"
   },
   {
     "url": "page-data/blog/introduction-to-linux-command-line/page-data.json",
@@ -153,7 +153,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "feb033c7389e4ba73f033ffaf02ad4b0"
+    "revision": "e4eb4e6feae2d22c84e1118f5a5a2681"
   },
   {
     "url": "page-data/blog/introduction-to-webpack/page-data.json",
