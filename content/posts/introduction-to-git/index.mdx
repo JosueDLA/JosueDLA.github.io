@@ -84,6 +84,12 @@ The Staging Area is a space where we can add and organize the files that will be
 > git add *.txt             # Add files using patterns
 ```
 
+If needed files can be removed from the staging area.
+
+```shell
+> git reset HEAD -- path/to/file        # The specified file will be removed from the staging area
+```
+
 ## Git Commit
 
 The `commit` command records the changes on the repository that are in the staging area. Each commit stores the following information:
@@ -107,6 +113,14 @@ Sometimes we need to skip the Staging Area, this is possible but risky. It is hi
 ```shell
 > git commit -a -m "[message]"          # Add all files to the Staging Area and commits them
 > git commit -am "[message]"            # Shorter version
+```
+
+You can also revert a commit if needed; this can be done in three different forms, these are: --hard, --soft and --mixed.
+
+```shell
+> git reset --soft HEAD~1              # Last commit will be removed
+> git reset --hard HEAD~1              # Last commit will be removed, and changes will be reverted
+> git reset --mixed HEAD~1             # Last commit will be removed, and staging area will be reset
 ```
 
 ## Removing Files
