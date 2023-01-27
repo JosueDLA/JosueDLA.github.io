@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <FooterWraper>
       <Span>&copy;</Span>
-      <span> JosueDLA 2021 </span>
+      <span> JosueDLA 2023 </span>
     </FooterWraper>
   );
 };
