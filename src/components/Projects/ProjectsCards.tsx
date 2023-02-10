@@ -30,7 +30,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
           fileAbsolutePath: { regex: "/(projects)/" }
           id: {
             in: [
-              "cc5abf4e-bca4-571b-9daf-41d500c128ac"
+              "eb2c86c0-0c46-530c-8252-115fa711e8d6"
               "b80400a4-7b0d-579d-8612-642d141785e2"
               "1c402c1d-a364-561e-a27c-1e61a0123d1a"
             ]
