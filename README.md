@@ -53,7 +53,7 @@
 
 1. Create production build
 
-```
+```bash
 > npm run build
 ```
 
