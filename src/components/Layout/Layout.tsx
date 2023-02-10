@@ -9,7 +9,9 @@ import BackToTopButton from "Common/BackToTop";
 import Navbar from "./Navbar/NavBar";
 import Footer from "./Footer";
 
-export interface LayoutProps {}
+export interface LayoutProps {
+  children: React.ReactNode;
+}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [theme, toggleTheme] = useDarkMode();

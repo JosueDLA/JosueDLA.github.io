@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 export interface ProjectLinkProps {
+  children: React.ReactNode;
   demo: string;
   slug: string;
   title: string;

@@ -36,6 +36,7 @@ const ScrollButtonWrapper = styled.div`
 `;
 
 export interface ScrollButtonProps {
+  children: React.ReactNode;
   to: string;
 }
 

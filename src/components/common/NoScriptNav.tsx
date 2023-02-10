@@ -131,6 +131,7 @@ const NoScriptCss = css`
 `;
 
 export interface NoScriptNavProps {
+  children: React.ReactNode;
   navText: string;
   cardTitle: string;
   navBtn?: string;

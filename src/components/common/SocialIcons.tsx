@@ -69,6 +69,7 @@ const SocialIconsList = styled.ul`
 
 // Social Icons Item
 export interface SocialIconsItemProps {
+  children: React.ReactNode;
   to: string;
   "aria-label": string;
   target?: string;
@@ -97,7 +98,9 @@ SocialIconsItem.propTypes = {
 };
 
 // Social Icons Container
-export interface SocialIconsProps {}
+export interface SocialIconsProps {
+  children: React.ReactNode;
+}
 
 const SocialIcons: React.FC<SocialIconsProps> = ({ children }) => {
   return (

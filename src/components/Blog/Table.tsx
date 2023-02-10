@@ -5,7 +5,9 @@ export const TableWrapper = styled.div`
   overflow-x: auto;
 `;
 
-export interface TableProps {}
+export interface TableProps {
+  children: React.ReactNode;
+}
 
 const Table: React.FC<TableProps> = ({ children }) => {
   return (
