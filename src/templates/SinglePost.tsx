@@ -37,6 +37,7 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
         description={current.excerpt}
         image={seoImage}
         location={location}
+        lang={current.lang}
       />
       <PostJumbotron>
         <header>
@@ -73,6 +74,7 @@ export const pageQuery = graphql`
         excerpt
         slug
         title
+        lang
         featureImage {
           publicURL
           childImageSharp {
