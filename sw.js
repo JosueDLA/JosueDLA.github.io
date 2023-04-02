@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-03c29f2c5907d9575a7a.js"
+    "url": "webpack-runtime-c1329ee00c900421f359.js"
   },
   {
     "url": "framework-e25487b4bbde20f89010.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cd01c5c3bb3341fcec82df5f738638e1"
+    "revision": "08929a78c0b62781c47904b9852873fb"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-efd5a7eff3f8652501d6.js"
@@ -77,7 +77,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "80ee8788d5d09f94eded4e6ab21eddc8"
+    "revision": "f40ca429d7c13960a6a695622721d6f3"
   },
   {
     "url": "3c73754e3071f37fff86ea024def9e2612f04d48-de972cf45616c585c265.js"
@@ -87,81 +87,85 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/blog/2/page-data.json",
-    "revision": "5650b9dd417ac84c2399890fa6d2aad9"
+    "revision": "560c01c220e6001114cdd784a5bd55b5"
   },
   {
     "url": "page-data/blog/3/page-data.json",
-    "revision": "f5c04e20f7de56f762cb1753f10bd024"
+    "revision": "17ea77b2768a967dd0cc453e8eb8c335"
   },
   {
     "url": "page-data/blog/4/page-data.json",
-    "revision": "54998e28079de901f61f87169c74ba42"
+    "revision": "d1490522249e71af54c66790b8514b28"
   },
   {
     "url": "page-data/blog/5/page-data.json",
-    "revision": "10b66a3b6f7139c163865815319eb37a"
+    "revision": "d5102ddd357c9f02bb6510c1a9689809"
   },
   {
     "url": "0c428ae2-bab0fa3e5243460e5f38.js"
   },
   {
-    "url": "component---src-templates-single-post-tsx-1947b2fe55d7f101a9b9.js"
+    "url": "component---src-templates-single-post-tsx-bab8b3984462eb76bb5b.js"
   },
   {
     "url": "page-data/blog/basic-odoo-module/page-data.json",
-    "revision": "46aac8b64f97ef5a42b7b0cf4fadf34e"
+    "revision": "fcfd77509c07683d89eadf23b55ad5a9"
   },
   {
     "url": "page-data/blog/hello-world/page-data.json",
-    "revision": "6fdf574d4816e5233d6e3eff429c0157"
+    "revision": "bd9f27b21ea8972c0e0813be027644bb"
+  },
+  {
+    "url": "page-data/blog/how-to-ask-questions-the-smart-way/page-data.json",
+    "revision": "afbd10cb55ada985afd57f995483a56e"
   },
   {
     "url": "page-data/blog/page-data.json",
-    "revision": "056e1417347ae1eda1fc5ee7d854118f"
+    "revision": "097a5c2db2c9f991a13d2f93b4db18cb"
   },
   {
     "url": "page-data/blog/introduction-to-bi/page-data.json",
-    "revision": "294bb0a3733a32984050d25c9949b84b"
+    "revision": "9e37cd75a45433302f156bfac9a116e0"
   },
   {
     "url": "page-data/blog/introduction-to-data-warehousing/page-data.json",
-    "revision": "9614169bc4c267e9bb2fde665ac55afa"
+    "revision": "0b16908b10585d7b22f91ead73fabf57"
   },
   {
     "url": "page-data/blog/introduction-to-docker/page-data.json",
-    "revision": "5faa9a5afb4dac5e9c0d566d66177915"
+    "revision": "108b6f25642389ac7e400281adcd2e59"
   },
   {
     "url": "page-data/blog/introduction-to-functional-programming/page-data.json",
-    "revision": "f334832686f63700728ded29783e9670"
+    "revision": "0c548976b49ca549b0f1980473f12d56"
   },
   {
     "url": "page-data/blog/introduction-to-git/page-data.json",
-    "revision": "84625a96f43c6f199bd17de811328bff"
+    "revision": "9c3e07246796c8e8eaa93e8db59c9d20"
   },
   {
     "url": "page-data/blog/introduction-to-linux-command-line/page-data.json",
-    "revision": "149d8380aa23069e3fcf97901c9a5f41"
+    "revision": "32f9e08ee250067871e7631ae0ea6b05"
   },
   {
     "url": "page-data/blog/introduction-to-nodejs/page-data.json",
-    "revision": "2f0263036d938e14b30a8eebece55da0"
+    "revision": "7342341664a91e1ea97db1f33b928d9b"
   },
   {
     "url": "page-data/blog/introduction-to-npm/page-data.json",
-    "revision": "41e9506c3848e8824b76a39f53a11d5d"
+    "revision": "e56ffcbc69e9308fca97c56a1bf0c88e"
   },
   {
     "url": "page-data/blog/introduction-to-pipenv/page-data.json",
-    "revision": "e4eb4e6feae2d22c84e1118f5a5a2681"
+    "revision": "bc53aeab020d399da953bafaafb42952"
   },
   {
     "url": "page-data/blog/introduction-to-webpack/page-data.json",
-    "revision": "c40c31330f2ad1fc9aa25825a3e185fe"
+    "revision": "e528b82ada940ef8fdcb9956c9b8b75e"
   },
   {
     "url": "page-data/blog/raspberry-pi-pbx/page-data.json",
-    "revision": "be75a4bced4ead3659b19badeae2b795"
+    "revision": "39ad3a8e1e17308e28580656266b9482"
   },
   {
     "url": "component---src-templates-all-projects-tsx-acc69f646cdce4cd849f.js"
@@ -180,11 +184,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/projects/real-time-store/page-data.json",
-    "revision": "ca1c8d783f4e7630bd309a4ced9462d5"
+    "revision": "02c89a7b42a33b592bf1c8c54c47e828"
   },
   {
     "url": "page-data/projects/weather-bot/page-data.json",
-    "revision": "6cec8277e4d7af9cd76cecb24e117ff2"
+    "revision": "2b3881cf01b648e75eda56a0fec05721"
   },
   {
     "url": "manifest.webmanifest",
