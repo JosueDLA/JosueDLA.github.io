@@ -17,7 +17,7 @@
     "gatsby-plugin-manifest": "^4.4.0",
     "gatsby-plugin-mdx": "^3.4.0",
     "gatsby-plugin-offline": "^5.4.0",
-    "gatsby-plugin-robots-txt": "^1.7.1",
+    "gatsby-plugin-robots-txt": "1.7.1",
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-plugin-sitemap": "^5.4.0",
     "gatsby-plugin-styled-components": "^5.4.0",
@@ -67,5 +67,10 @@
   },
   "bugs": {
     "url": "https://github.com/JosueDLA/JosueDLA.github.io/issues"
+  },
+  "overrides": {
+    "babel-plugin-lodash": {
+      "@babel/types": "~7.20.0"
+    }
   }
 }
