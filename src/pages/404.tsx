@@ -8,10 +8,9 @@ export interface NotFoundPageProps {
   location: { pathname: string };
 }
 
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ location }) => {
+const NotFoundPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="404: Not found" location={location} />
       <SVGWrapper className="container">
         <h1 className="section-title">Page Not Found</h1>
         <StaticImage
@@ -27,3 +26,7 @@ const NotFoundPage: React.FC<NotFoundPageProps> = ({ location }) => {
 };
 
 export default NotFoundPage;
+
+export const Head: React.FC<NotFoundPageProps> = ({ location }) => {
+  return <SEO title="404: Not found" location={location} />;
+};

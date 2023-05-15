@@ -10,10 +10,9 @@ export interface IndexPageProps {
   location: { pathname: string };
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ location }) => {
+const IndexPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="Home" location={location} />
       <Home />
       <About />
       <Skills />
@@ -23,3 +22,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location }) => {
 };
 
 export default IndexPage;
+
+export const Head: React.FC<IndexPageProps> = ({ location }) => {
+  return <SEO title="Home" location={location} />;
+};

@@ -75,7 +75,6 @@ const PostTag: React.FC<PostTagProps> = ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO title={pageContext.tag} location={location} />
       <main id="blog-main" className="container">
         <AllPostTitle>{pageContext.tag}</AllPostTitle>
         <PostCardWrapper>
@@ -136,6 +135,10 @@ const PostTag: React.FC<PostTagProps> = ({ pageContext, data, location }) => {
 };
 
 export default PostTag;
+
+export const Head: React.FC<PostTagProps> = ({ pageContext, location }) => {
+  return <SEO title={pageContext.tag} location={location} />;
+};
 
 export const pageQuery = graphql`
   query ProjectTag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {

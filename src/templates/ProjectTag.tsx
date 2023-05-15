@@ -83,7 +83,6 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
 
   return (
     <Layout>
-      <SEO title={pageContext.tag} location={location} />
       <main id="projects-main" className="container">
         <AllPostTitle>{pageContext.tag}</AllPostTitle>
         <ProjectCardWrapper style={{ padding: "2rem 0" }}>
@@ -152,6 +151,10 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
 };
 
 export default ProjectTag;
+
+export const Head: React.FC<ProjectTagProps> = ({ pageContext, location }) => {
+  return <SEO title={pageContext.tag} location={location} />;
+};
 
 export const pageQuery = graphql`
   query BlogTag($skip: Int!, $limit: Int!, $tag: String, $folder: String) {

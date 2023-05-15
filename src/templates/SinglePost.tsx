@@ -20,9 +20,6 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
   const current = data.current.frontmatter;
   const next = data.next.frontmatter;
 
-  // const featureImage = current.featureImage.childImageSharp.gatsbyImageData;
-  const seoImage = current.featureImage.publicURL;
-
   // Disqus config
   const disqusConfig = {
     url: data.site.siteMetadata.siteUrl + location.pathname,
@@ -32,13 +29,6 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO
-        title={current.title}
-        description={current.excerpt}
-        image={seoImage}
-        location={location}
-        lang={current.lang}
-      />
       <PostJumbotron>
         <header>
           <h1>{current.title}</h1>
@@ -64,6 +54,24 @@ const SinglePost: React.FC<SinglePostProps> = ({ data, location }) => {
 };
 
 export default SinglePost;
+
+export const Head: React.FC<SinglePostProps> = ({ data, location }) => {
+  // Posts
+  const current = data.current.frontmatter;
+
+  // const featureImage = current.featureImage.childImageSharp.gatsbyImageData;
+  const seoImage = current.featureImage.publicURL;
+
+  return (
+    <SEO
+      title={current.title}
+      description={current.excerpt}
+      image={seoImage}
+      location={location}
+      lang={current.lang}
+    />
+  );
+};
 
 export const pageQuery = graphql`
   query SinglePost($id: String!, $previousPost: String!, $nextPost: String!) {

@@ -80,7 +80,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({
 
   return (
     <Layout>
-      <SEO title="Projects" location={location} />
       <main id="projects-main" className="container">
         <AllPostTitle>Projects</AllPostTitle>
         <ProjectCardWrapper style={{ padding: "2rem 0" }}>
@@ -149,6 +148,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({
 };
 
 export default AllProjects;
+
+export const Head: React.FC<AllProjectsProps> = ({ location }) => {
+  return <SEO title="Projects" location={location} />;
+};
 
 export const pageQuery = graphql`
   query AllProjects($skip: Int!, $limit: Int!) {

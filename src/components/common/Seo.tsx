@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 export interface SEOProps {
@@ -10,6 +9,7 @@ export interface SEOProps {
   metaKeywords?: Array<string | null | undefined>;
   title: string;
   location: { pathname: string };
+  children?: React.ReactNode;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -18,6 +18,7 @@ const SEO: React.FC<SEOProps> = ({
   title,
   image,
   metaKeywords,
+  children,
 }) => {
   const { site } = useStaticQuery(graphql`
     query {
@@ -28,6 +29,7 @@ const SEO: React.FC<SEOProps> = ({
           title
           image
           siteUrl
+          keywords
         }
       }
     }
@@ -40,66 +42,32 @@ const SEO: React.FC<SEOProps> = ({
     : `${site.siteMetadata.siteUrl}/home.png`;
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: lang || `en`,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ``}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:image`,
-          content: cardUrl,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: cardUrl,
-        },
-        {
-          name: `google-site-verification`,
-          content: `DYujHJoykLb5x9M7oTQ-0f3oB9o0GIffmhKiaXl6U5g`,
-        },
-      ].concat(
-        metaKeywords && metaKeywords.length > 0
-          ? {
-              name: "keywords",
-              content: metaKeywords.join(", "),
-            }
-          : []
-      )}
-    />
+    <>
+      <html lang={lang || "en"} />
+      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={cardUrl} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:title" content="title" />
+      <meta name="twitter:description" content="metaDescription" />
+      <meta name="twitter:image" content="cardUrl" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta
+        name="google-site-verification"
+        content="DYujHJoykLb5x9M7oTQ-0f3oB9o0GIffmhKiaXl6U5g"
+      />
+      <meta
+        name="keywords"
+        content={metaKeywords
+          ?.concat(site.siteMetadata.keywords)
+          .concat(title)
+          .join(", ")}
+      />
+      {children}
+    </>
   );
 };
 

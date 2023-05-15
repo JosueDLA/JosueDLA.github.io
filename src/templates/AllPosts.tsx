@@ -72,7 +72,6 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" location={location} />
       <main id="blog-main" className="container">
         <AllPostTitle>Blog</AllPostTitle>
         <PostCardWrapper>
@@ -133,6 +132,10 @@ const AllPosts: React.FC<AllPostsProps> = ({ pageContext, data, location }) => {
 };
 
 export default AllPosts;
+
+export const Head: React.FC<AllPostsProps> = ({ location }) => {
+  return <SEO title="Blog" location={location} />;
+};
 
 export const pageQuery = graphql`
   query AllPosts($skip: Int!, $limit: Int!) {

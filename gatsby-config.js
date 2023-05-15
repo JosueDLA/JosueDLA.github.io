@@ -8,6 +8,7 @@ module.exports = {
     author: `JosueDLA`,
     siteUrl: "https://josuedla.github.io",
     image: `/home.png`,
+    keywords: ["JosueDLA", "Josue de Leon"],
   },
   plugins: [
     {
@@ -87,7 +88,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
