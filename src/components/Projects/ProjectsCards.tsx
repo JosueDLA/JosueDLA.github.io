@@ -26,15 +26,9 @@ const ProjectCards: React.FC<ProjectCardsProps> = () => {
     query FeaturedProjects {
       allMdx(
         sort: { order: DESC, fields: frontmatter___date }
+        limit: 3
         filter: {
           fileAbsolutePath: { regex: "/(projects)/" }
-          id: {
-            in: [
-              "eb2c86c0-0c46-530c-8252-115fa711e8d6"
-              "b80400a4-7b0d-579d-8612-642d141785e2"
-              "1c402c1d-a364-561e-a27c-1e61a0123d1a"
-            ]
-          }
         }
       ) {
         edges {
